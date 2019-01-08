@@ -1,0 +1,90 @@
+suiteName: sms.checkVerifyCode
+testCase:
+  - case 1:
+      testCaseName: 参数正确，验证验证码正确性
+      tag: smoke
+      setup:
+        - name: 发送手机注册验证码
+          api: [boss, sms.verifyCode]
+          params:
+            phoneNumber: $phoneNumber
+            type: 5
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["sms.code", 0]
+        - name: 获取注册验证码
+          api: [boss, sms.getVerifyCode]
+          params:
+            phoneNumber: $phoneNumber
+            type: 5
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["app.code", 0]
+            - set_data: ["sms.data.verifyCode", $file_path]
+      params:
+        phoneNumber: $phoneNumber
+        type: 5
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["sms.code", 0]
+  - case 2:
+      testCaseName: 参数错误，type值与验证码不匹配
+      tag: test
+      params:
+        phoneNumber: $phoneNumber
+        type: 2
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["sms.code", 90001002]
+  - case 3:
+      testCaseName: 参数错误，手机号不匹配
+      tag: test
+      params:
+        phoneNumber: 13899009900
+        type: 5
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["sms.code", 90001002]
+  - case 4:
+      testCaseName: 参数错误，验证码编码规则不对
+      tag: test
+      params:
+        phoneNumber: $phoneNumber
+        type: 5
+        smsVerifyCode: "Qwasf"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["sms.code", 9000109]
+  - case 5:
+      testCaseName: 参数错误，手机号不对
+      tag: test
+      params:
+        phoneNumber: 1845841855
+        type: 5
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["sms.code", 90001006]
+  - case 6:
+      testCaseName: 参数错误，type值为字母
+      tag: test
+      params:
+        phoneNumber: $phoneNumber
+        type: a
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["sms.code", 0]
+  - case 7:
+      testCaseName: 参数错误，type值为null
+      tag: test
+      params:
+        phoneNumber: $phoneNumber
+        type:
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["sms.code", 0]

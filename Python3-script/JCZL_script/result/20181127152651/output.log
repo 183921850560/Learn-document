@@ -1,0 +1,1 @@
+2018-11-27 15:26:51,588 - root - INFO - {'timestamp': '2018-11-27 15:26:49', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/basePlatform/neighborhoodqueryNbhdDetail'}

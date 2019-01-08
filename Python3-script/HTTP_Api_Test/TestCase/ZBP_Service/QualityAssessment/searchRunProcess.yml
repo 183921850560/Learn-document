@@ -1,0 +1,708 @@
+testInterFace: searchRunProcess
+method: POST  # POST/GET/PUT/DELETE
+url: /zbp-service/1.0.0/searchRunProcess
+enable: 1
+data:
+ -
+   caseName: 根据区域查询  # case name
+   paramType: data
+   data:
+     start: 0
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: 根据happenTime范围查询  # case name
+   paramType: data
+   data:
+     start: 0
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":1526151306,"happenEndTime":1526351306}
+   result:
+     check_code: 0
+ -
+   caseName: 根据电梯品牌查询  # case name
+   paramType: data
+   data:
+     start: 0
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": ${get_brand(1)},"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: 根据最大运行时间查询  # case name
+   paramType: data
+   data:
+     start: 0
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":123213,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: 根据最小运行时间查询  # case name
+   paramType: data
+   data:
+     start: 0
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":321,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ #start参数校验
+ -
+   caseName: start参数校验-正确性校验  # case name
+   paramType: data
+   data:
+     start: 10
+     pageSize: 6
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+     check_data:  offset(10:6)
+ -
+   caseName: start参数校验-负数  # case name
+   paramType: data
+   data:
+     start: -1
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: start参数校验-字母  # case name
+   paramType: data
+   data:
+     start: q
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: start参数校验-null值  # case name
+   paramType: data
+   data:
+     start: null
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: start字段名称错误  # case name
+   paramType: data
+   data:
+     starts: 1
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ #pageSize 参数校验
+ -
+   caseName: pageSize 参数校验-正确性校验  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 3
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+     check_data: size(3)
+ -
+   caseName: pageSize 参数校验-负数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: -3
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: pageSize 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: a
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: pageSize 参数校验-null值  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: null
+     orderType: asc  #desc
+     orderField: happenTime # only
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: pageSize 字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSizes: 3
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+#oderType 参数校验
+ -
+   caseName: oderType 参数校验-asc  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: asc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+     check_data: sort(asc:happenTime)
+ -
+   caseName: oderType 参数校验-desc  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: desc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+     check_data: sort(desc:happenTime)
+ -
+   caseName: oderType 参数校验-大写  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: Desc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: oderType 参数校验-不存在  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: ascd  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: oderType 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderTypes: desc  #desc
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: oderType 参数校验-未传该字段  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderField: happenTime # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+     check_data: sort(desc:happenTime)
+ #orderField 参数校验
+ -
+   caseName: orderField 参数校验-不存在  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: desc  #desc
+     orderField: elevatorId # only 
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: orderField 参数校验-大写  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: desc  #desc
+     orderField: HappenTime # only
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: orderField 参数校验-未传该字段 # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: desc  #desc
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: orderField 字段名称错误 # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: desc  #desc
+     orderFields: HappenTime # only
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+#queryJson参数校验
+ -
+   caseName: queryJson参数校验-null值  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     orderType: desc  #desc
+     orderField: HappenTime # only
+     queryJson: null
+   result:
+     check_code: $err_code
+ -
+   caseName: queryJson字段名称错误 # case name
+   paramType: data
+   data:
+     start: 0
+     pageSize: 1
+     orderType: asc  #desc
+     orderField: happenTime # only
+     queryJsons: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+# areaType 参数校验
+ -
+   caseName: areaType 参数校验-负数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": -1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaType 参数校验-零值  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 0,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaType 参数校验-不存在  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 11,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaType 参数校验-与code不匹配  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 2,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: areaType 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": "1","areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaType 参数校验-字母   # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": a,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaType 参数校验-名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaTypes": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+
+# areaCodes 参数校验
+ -
+   caseName: areaCodes 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": [330000] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaCodes 参数校验-非数组 # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": "330000" ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaCodes 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": [zq] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: areaCodes 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCode": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+
+# brandCodes 参数校验
+ -
+   caseName: brandCodes 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": [123],"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: brandCodes 参数校验-非数组  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": "123","minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: brandCodes 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": [zq],"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: brandCodes 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCode": ["123"],"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+# minRunTime 参数校验
+ -
+   caseName: minRunTime 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":"1212131","maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: minRunTime 参数校验-负数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":-1212,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: minRunTime 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":zq,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: minRunTime 参数校验-小数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":21213.52,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: minRunTime 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTimes":1212131,"maxRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+
+# maxRunTime 参数校验
+ -
+   caseName: maxRunTime 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"maxRunTime":"1212131","minRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: maxRunTime 参数校验-负数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"maxRunTime":-1212,"minRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: maxRunTime 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"maxRunTime":zq,"minRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: maxRunTime 参数校验-小数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"maxRunTime":21213.52,"minRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: maxRunTime 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"maxRunTimes":1212131,"minRunTime":null,"happenStartTime":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+
+# happenStartTime 参数校验
+ -
+   caseName: happenStartTime 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTimes":null,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenStartTime 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":"1534646464151","happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenStartTime 参数校验-负数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":-1534646,"happenEndTime":null}
+   result:
+     check_code: 0
+ -
+   caseName: happenStartTime 参数校验-小数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":53464.6464,"happenEndTime":null}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenStartTime 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":zq","happenEndTime":null}
+   result:
+     check_code: $err_code
+
+# happenEndTime 参数校验
+ -
+   caseName: happenEndTime 参数校验-类型错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":"153464645156"}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenEndTime 参数校验-负数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":-1534646}
+   result:
+     check_code: 0
+ -
+   caseName: happenEndTime 参数校验-小数  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":153.4646451}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenEndTime 参数校验-字母  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTime":zq}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenEndTime 参数校验-字段名称错误  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":null,"happenEndTimes":153464645156}
+   result:
+     check_code: $err_code
+ -
+   caseName: happenEndTime 小于 happenStartTimes  # case name
+   paramType: data
+   data:
+     start: 1
+     pageSize: 5
+     queryJson: >
+      {"areaType": 1,"areaCodes": ["330000"] ,"brandCodes": null,"minRunTime":null,"maxRunTime":null,"happenStartTime":153664645156,"happenEndTime": 153464645156}
+   result:
+     check_code: $err_code

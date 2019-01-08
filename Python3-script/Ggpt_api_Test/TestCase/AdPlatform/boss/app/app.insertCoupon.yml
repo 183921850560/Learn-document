@@ -1,0 +1,83 @@
+suiteName: app.insertCoupon 
+testCase:
+  - case 1:
+      testCaseName: 参数正确, 新增优惠券
+      tag: smoke
+      json:
+        amount: ${get_random(150)}
+        couponName: 满188减${get_random(150)}元优惠券
+        endTime: "2019-12-31T00:00:00.000Z"
+        limit: 188
+        startTime: "2019-01-01T00:00:00.000Z"
+        type: 2
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数错误, 重复新增优惠券
+      tag: smoke
+      json:
+        amount: 50
+        couponName: 满188减99元优惠券
+        endTime: "2019-12-31T00:00:00.000Z"
+        limit: 188
+        startTime: "2019-01-01T00:00:00.000Z"
+        type: 0
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 90004011]
+  - case 3:
+      testCaseName: 参数amount校验, 字母
+      tag: test
+      json:
+        amount: a
+        couponName: 满188减99元优惠券
+        endTime: "2019-12-31T00:00:00.000Z"
+        limit: 188
+        startTime: "2019-01-01T00:00:00.000Z"
+        type: 0
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 4:
+      testCaseName: 参数amount校验, 超过最大
+      tag: test
+      json:
+        amount: 1000000001
+        couponName: 满188减99元优惠券
+        endTime: "2019-12-31T00:00:00.000Z"
+        limit: 188
+        startTime: "2019-01-01T00:00:00.000Z"
+        type: 0
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 5:
+      testCaseName: 参数type校验, 字母
+      tag: test
+      json:
+        amount: 10000001
+        couponName: 满188减99元优惠券
+        endTime: "2019-12-31T00:00:00.000Z"
+        limit: 1888888888888888
+        startTime: "2019-01-01T00:00:00.000Z"
+        type: a
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 6:
+      testCaseName: 参数type校验, 负数
+      tag: test
+      json:
+        amount: 100001
+        couponName: 满188减99元优惠券
+        endTime: "2019-12-31T00:00:00.000Z"
+        limit: 188
+        startTime: "2019-01-01T00:00:00.000Z"
+        type: -10
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+
+
+

@@ -1,0 +1,78 @@
+suiteName: app.modifyAppInfo 
+testCase:
+  - case 1:
+      testCaseName: 参数正确，修改应用信息
+      tag: test
+      json:
+        platform: "app测试"
+        contact:   "测试"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数正确，包含特殊字符
+      tag: test
+      json:
+        platform: >
+           app测试！-——_.123\"\#$%^&*\"
+        contact:   "测试"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+
+  - case 3:
+      testCaseName: 参数platform校验，参数platform类型错误
+      tag: test
+      json:
+        platform: 12344
+        contact:   "测试123"
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 4:
+      testCaseName: 参数platform校验，入参null
+      tag: test
+      json:
+        platform:
+        contact:   "测试123"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 5:
+      testCaseName: 参数contact校验，参数contact类型错误
+      tag: test
+      json:
+        platform: "app测试"
+        contact:   123
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 6:
+      testCaseName: 参数contact校验，contact长度超100
+      tag: test
+      json:
+        platform: "app测试"
+        contact:   "在xcvbnmqwertyuiopasdfghjkl沃尔特与ioxghjkxcvbnm刚回家看了他 v 也不你们呢形容词他vygbhnjcvtbyncfvgbhbhjnkhbjnhbjnkhbjnkzxcrvtbyhjnkmxcvgbhjnkm"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 7:
+      testCaseName: 参数校验platform，platform长度超100
+      tag: test
+      json:
+        platform: "在xcvbnmqwertyuiopasdfghjkl沃尔特与ioxghjkxcvbnm刚回家看了他 v 也不你们呢形容词他vygbhnjcvtbyncfvgbhbhjnkhbjnhbjnkhbjnkzxcrvtbyhjnkmxcvgbhjnkm"
+        contact:   "测试人员test123"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 8:
+      testCaseName: 参数contact校验，入参null
+      tag: test
+      json:
+        platform: "测试123"
+        contact:
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+
+

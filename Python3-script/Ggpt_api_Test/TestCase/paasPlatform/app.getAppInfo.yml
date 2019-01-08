@@ -1,0 +1,19 @@
+suiteName: app.getAppInfo
+testCase:
+  - case 1:
+      testCaseName: 参数正确，获取应用信息
+      tag: test
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数header appkey 错误不存在
+      tag: test
+      headers: {"x-xzl-appkey":  "app"}
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+
+
+
+

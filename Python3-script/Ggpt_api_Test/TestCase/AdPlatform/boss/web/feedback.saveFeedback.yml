@@ -1,0 +1,12 @@
+suiteName: feedback.saveFeedback 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        feedbackMsg: 
+        feedbackType: 
+        feedbackUrls:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["feedback.code", 0]

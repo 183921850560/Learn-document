@@ -1,0 +1,24 @@
+suiteName: deviceSlot.getNbhdFilterSlotAll 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        addressCodes: 
+        ageCodes: 
+        budget: 
+        communitys: 
+        contentTime: 
+        lat: 
+        lon: 
+        orderBy: 
+        orderField: 
+        pageIndex: 
+        pageSize: 
+        round: 
+        selectSlotRequest: 
+        sexCode: 
+        type:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["deviceSlot.code", 0]

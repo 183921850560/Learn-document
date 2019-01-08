@@ -1,0 +1,14 @@
+suiteName: app.getOrderContentUsePage 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        orderBy: 
+        orderField: 
+        orderStatus: 
+        pageIndex: 
+        pageSize:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]

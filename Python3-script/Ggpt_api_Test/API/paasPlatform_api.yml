@@ -1,0 +1,46 @@
+app.getAppInfo:
+  summary: 获取应用信息
+  method: get
+  path: api/v1/app
+app.modifyAppInfo:
+  summary: 修改应用信息
+  method: put
+  path: api/v1/app
+  json:
+    platform:
+    contact:
+
+account.addAccount:
+  summary: 添加帐号
+  method: post
+  path: api/v1/call-account
+  json:
+    talktype:
+    account:
+    passwd:
+    priority:
+
+account.queryAccount:
+  summary: 查询帐号
+  method: get
+  path: api/v1/call-account
+  params:
+    account:
+
+account.deleteAccount:
+  summary: 删除帐号
+  method: delete
+  path: api/v1/call-account
+  params:
+    account:
+account.allQueryAccount:
+  summary: 批量查询帐号
+  method: get
+  path: api/v1/call-accounts
+  params:
+    pageNo:
+    pageSize:
+
+
+
+

@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: HelpyFuncs
+Version: 0.0.1
+Summary: Miscellaneous Python "helper" functions
+Home-page: https://github.com/MBALearnsToCode/HelpyFuncs
+Author: MBA Learns to Code
+Author-email: MBALearnsToCode@UChicago.edu
+License: MIT License
+Keywords: help helper functions python chicago booth
+Platform: UNKNOWN
+Requires-Dist: FrozenDict
+
+Miscellaneous Python "helper" functions
+
+

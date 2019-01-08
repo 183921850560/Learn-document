@@ -1,0 +1,25 @@
+suiteName: content.saveContentInfo
+testCase:
+  - case 1:
+      setup:  # tearDown
+        - name: 获取可删除的guids列表
+          operation: do_something # 只执行某个操作，非调用其他接口
+          environment: env_name # 定义在global
+          headers: {"token": "123456789"}
+          method: post
+          path:  dsp/content/v2/getPage
+          json:
+            contentName: "测试at"
+          validate:
+            - eq: ["status_code", 200]
+            - set_data: [ "content.data.list[].guid", $file_path]
+      testCaseName: 参数正确，新增广告内容
+      tag: smoke  # tag值 可在run.py 可选择执行tag值
+      headers: {"token": "123456789"}
+      json:  # 参数类型可 params、data、files、json等
+        advertType: "10002"  # 具体接口参数
+      validate:  # 验证内容格式
+        - eq: ["status_code", 200]
+        - eq: ["code", 0]
+        - set_data: [key，$file_path]  # 写入_global.py文件  key表示返回response的key（也是写入global的参数名称）
+        # 参数化填写规则，$variable变量名称格式 ${function(a,b=1)}函数格式

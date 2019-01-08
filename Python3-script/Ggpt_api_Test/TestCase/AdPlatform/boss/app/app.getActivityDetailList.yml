@@ -1,0 +1,75 @@
+suiteName: app.getActivityDetailList 
+testCase:
+  - case 1:
+      testCaseName: 参数type：1, 获取活动详情
+      tag: test
+      params: 
+        clienteleGuid: $app_clienteleGuid
+        type: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数type：2, 获取活动详情
+      tag: test
+      params:
+        clienteleGuid: $app_clienteleGuid
+        type: 2
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 3:
+      testCaseName: 参数type：3, 获取活动详情
+      tag: test
+      params:
+        clienteleGuid: $app_clienteleGuid
+        type: 3
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 4:
+      testCaseName: 参数type：4, 获取活动详情
+      tag: test
+      params:
+        clienteleGuid: $app_clienteleGuid
+        type: 4
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 5:
+      testCaseName: 参数type校验, 负数
+      tag: test
+      params:
+        clienteleGuid: $app_clienteleGuid
+        type: -1
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 6:
+      testCaseName: 参数type校验, 字母
+      tag: test
+      params:
+        clienteleGuid: $app_clienteleGuid
+        type: a
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 7:
+      testCaseName: 参数clienteleGuid校验, 不存在guid
+      tag: test
+      params:
+        clienteleGuid: 1003
+        type: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 8:
+      testCaseName: 参数clienteleGuid校验, 字符串
+      tag: test
+      params:
+        clienteleGuid: qw1003
+        type: 1
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+

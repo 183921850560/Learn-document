@@ -1,0 +1,43 @@
+suiteName: app.getCustomerInfo 
+testCase:
+  - case 1:
+      testCaseName: 参数正确，获取客户信息
+      tag: test
+      path: boss/app/customer_info/v2/customer/$app_clienteleGuid
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数customerId，入参int值的最大值
+      tag: test
+      path: boss/app/customer_info/v2/customer/2147483647
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 90001026]
+  - case 3:
+      testCaseName: 参数customerId,没有传值
+      tag: test
+      path: boss/app/customer_info/v2/customer
+      validate:
+        - eq: ["status_code", 404]
+  - case 4:
+      testCaseName: 参数customerId，负数
+      tag: test
+      path: boss/app/customer_info/v2/customer/-999
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 90001026]
+  - case 5:
+      testCaseName: 参数customerId，字母
+      tag: test
+      path: boss/app/customer_info/v2/customer/a
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 6:
+      testCaseName: 参数customerId，超过int最大值
+      tag: test
+      path: boss/app/customer_info/v2/customer/2147483648
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]

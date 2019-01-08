@@ -1,0 +1,6 @@
+#!C:\Users\chengxue\PycharmProjects\untitled7\venv\Scripts\python.exe
+
+import timed.client
+
+if __name__ == '__main__':
+  timed.client.main()

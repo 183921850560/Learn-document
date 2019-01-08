@@ -1,0 +1,1150 @@
+2017-11-07 16:20:30,014 - root - INFO - =======Test Start==========
+2017-11-07 16:20:30,015 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 16:20:30,023 - root - INFO - data:{'deviceID': '8A77BEC56961'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,023 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 16:20:30,023 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,023 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 16:20:30,029 - root - INFO - data:{'deviceID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,030 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 16:20:30,030 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,030 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 16:20:30,036 - root - INFO - data:{'deviceID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,037 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 16:20:30,037 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,037 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 16:20:30,043 - root - INFO - data:{'deviceID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,043 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 16:20:30,043 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,043 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 16:20:30,049 - root - INFO - data:{'deviceID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,049 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 16:20:30,049 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,049 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 16:20:30,067 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,068 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:20:30,068 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,069 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 16:20:30,076 - root - INFO - data:{'powerID': 'F0EEA96E8CA8'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:30,076 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:20:30,076 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:30,077 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 16:20:37,084 - root - INFO - data:{'powerID': '8A77BEC56961'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:37,084 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '8A77BEC56961'}} 
+2017-11-07 16:20:37,084 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:37,085 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 16:20:44,102 - root - INFO - data:{'powerID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:44,103 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': 'D075BB8F9BCE'}} 
+2017-11-07 16:20:44,103 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:44,103 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 16:20:44,121 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:44,121 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'harewareVer': 10, 'softwareVer': 20, 'madeTime': '1009900800000', 'madeFactory': 20, 'customID': 30, 'manufacturer': 110, 'designTime': '1387641600000'}} 
+2017-11-07 16:20:44,121 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:44,121 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 16:20:44,130 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:44,131 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'harewareVer': 10, 'softwareVer': 20, 'madeTime': '1012492800000', 'madeFactory': 10, 'customID': 11, 'manufacturer': 10, 'designTime': '978278400000'}} 
+2017-11-07 16:20:44,131 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:44,131 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 16:20:51,139 - root - INFO - data:{'powerID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:51,139 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:20:51,139 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:51,140 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 16:20:51,150 - root - INFO - data:{'powerID': 'D075BB8F1BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:51,150 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:20:51,150 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:51,150 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 16:20:51,169 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:51,169 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'deviceType': 2}} 
+2017-11-07 16:20:51,169 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:51,170 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 16:20:51,189 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:51,189 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'deviceType': 3}} 
+2017-11-07 16:20:51,189 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:51,190 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 16:20:58,208 - root - INFO - data:{'powerID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:58,208 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:20:58,208 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:58,209 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 16:20:58,227 - root - INFO - data:{'powerID': 'D075BB8F1BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:58,227 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:20:58,227 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:58,228 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 16:20:58,240 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:58,240 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'resetMinute': 1}} 
+2017-11-07 16:20:58,240 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:58,240 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 16:20:58,259 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:20:58,259 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'resetHour': 25, 'resetMinute': 80}} 
+2017-11-07 16:20:58,259 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:20:58,259 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 16:21:05,276 - root - INFO - data:{'powerID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:05,276 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:21:05,277 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:05,277 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 16:21:05,284 - root - INFO - data:{'powerID': '01EE23DC7CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:05,284 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:05,284 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:05,285 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 16:21:05,303 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:05,303 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:21:05,303 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:05,303 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 16:21:05,318 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:05,318 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 16:21:05,319 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:05,319 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 16:21:12,332 - root - INFO - data:{'powerID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:12,332 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:12,332 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:12,332 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 16:21:12,350 - root - INFO - data:{'powerID': '01EE23DC7CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:12,350 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:12,350 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:12,351 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 16:21:12,371 - root - INFO - data:{'powerID': 'F0EEA96E8CA7', 'alarmConfig1': 1, 'alarmConfig2': 1, 'alarmConfig3': 1, 'alarmConfig4': 1, 'res1': 1, 'res2': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:12,371 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:21:12,371 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:12,371 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 16:21:12,388 - root - INFO - data:{'powerID': 'B13A4FB3D497', 'alarmConfig1': 2, 'alarmConfig2': 2, 'alarmConfig3': 2, 'alarmConfig4': 2, 'res1': 2, 'res2': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:12,388 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 16:21:12,388 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:12,389 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 16:21:19,396 - root - INFO - data:{'powerID': '01EE23DC6CCC', 'alarmConfig1': 3, 'alarmConfig2': 3, 'alarmConfig3': 3, 'alarmConfig4': 3, 'res1': 3, 'res2': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:19,396 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:19,396 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:19,396 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 16:21:19,413 - root - INFO - data:{'powerID': '01EE23DC7CCC', 'alarmConfig1': 4, 'alarmConfig2': 4, 'alarmConfig3': 4, 'alarmConfig4': 4, 'res1': 4, 'res2': 4} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:19,413 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:19,413 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:19,414 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 16:21:19,432 - root - INFO - data:{'powerID': 'F0EEA96E8CA7', 'achCmd': 'cxzcsafafaf'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:19,433 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'achCmd': 'cxzcsafafaf'}} 
+2017-11-07 16:21:19,433 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:19,433 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 16:21:19,451 - root - INFO - data:{'powerID': 'B13A4FB3D497', 'achCmd': 'gsdggggggggggggggggggggggggggggg'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:19,451 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'achCmd': 'gsdggggggggggggggggggggggggggggg'}} 
+2017-11-07 16:21:19,451 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:19,452 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 16:21:29,460 - root - INFO - data:{'powerID': '01EE23DC6CCC', 'achCmd': 'gds'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:29,460 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:29,460 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:29,460 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 16:21:29,477 - root - INFO - data:{'powerID': '01EE23DC7CCC', 'achCmd': 'gds'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:29,478 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:29,478 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:29,478 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 16:21:29,496 - root - INFO - data:{'powerID': 'F0EEA96E8CA7', 'resetHour': 0, 'resetMinute': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:29,496 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:21:29,496 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:29,496 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 16:21:29,515 - root - INFO - data:{'powerID': 'B13A4FB3D497', 'resetHour': 25, 'resetMinute': 80} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:29,515 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 16:21:29,515 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:29,516 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 16:21:36,526 - root - INFO - data:{'powerID': '01EE23DC6CCC', 'resetHour': 1, 'resetMinute': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:36,526 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:36,526 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:36,526 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 16:21:36,543 - root - INFO - data:{'powerID': '01EE23DC7CCC', 'resetHour': 2, 'resetMinute': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:36,544 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:36,544 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:36,544 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 16:21:36,559 - root - INFO - data:{'powerID': 'F0EEA96E8CA7', 'intervalTime': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:36,559 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:21:36,559 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:36,559 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 16:21:36,570 - root - INFO - data:{'powerID': 'B13A4FB3D497', 'intervalTime': 1000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:36,570 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 16:21:36,570 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:36,571 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 16:21:43,577 - root - INFO - data:{'powerID': '01EE23DC6CCC', 'intervalTime': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,578 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:43,578 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,578 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 16:21:43,595 - root - INFO - data:{'powerID': '01EE23DC7CCC', 'intervalTime': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,595 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,596 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,596 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 16:21:43,613 - root - INFO - data:{'powerID': 'F0EEA96E8CA7', 'time': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,614 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:21:43,614 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,614 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 16:21:43,625 - root - INFO - data:{'powerID': 'B13A4FB3D497', 'time': 1509005978001} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,625 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 16:21:43,625 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,625 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 16:21:43,635 - root - INFO - data:{'powerID': '01EE23DC6CCC', 'time': 1509005978002} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,636 - root - INFO - Response data: {'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:43,636 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,636 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 16:21:43,643 - root - INFO - data:{'powerID': '01EE23DC7CCC', 'time': 1509005978003} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,643 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,643 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,644 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/maintain
+2017-11-07 16:21:43,660 - root - INFO - data:{'screenID': '8A77BEC56961', 'optType': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,661 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,661 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,661 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/maintain
+2017-11-07 16:21:43,670 - root - INFO - data:{'screenID': '8A77BEC56962', 'optType': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,671 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,671 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,671 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/pcap
+2017-11-07 16:21:43,677 - root - INFO - data:{'screenID': '8A77BEC56961', 'optType': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,678 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,678 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,678 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/pcap
+2017-11-07 16:21:43,684 - root - INFO - data:{'screenID': '8A77BEC56962', 'optType': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,684 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,684 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,685 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 16:21:43,703 - root - INFO - data:{'screenID': '8A77BEC56961', 'alarmType': 3000017, 'state': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,720 - root - INFO - Response data: {'errCode': -2, 'errDesc': '智能屏tcp协议错误=[15],含义=[unknow]!', 'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,722 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,734 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 16:21:43,740 - root - INFO - data:{'screenID': '8A77BEC56962', 'alarmType': 3000018, 'state': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,740 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,740 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,740 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 16:21:43,756 - root - INFO - data:{'screenID': 'D075BB8F8BCE', 'alarmType': 3000019, 'state': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,757 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,757 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,757 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 16:21:43,775 - root - INFO - data:{'screenID': 'F0EEA96E8CA6', 'alarmType': 3000020, 'state': 4} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,775 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,775 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,775 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 16:21:43,783 - root - INFO - data:{'screenID': '01EE23DC5CCC', 'alarmType': 3000021, 'state': 5} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,783 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,784 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,785 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setBoardcastConfirm
+2017-11-07 16:21:43,795 - root - INFO - data:{'screenID': '8A77BEC56961', 'warnCode': 3000017, 'warnDatetime': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,795 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,795 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,796 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setBoardcastConfirm
+2017-11-07 16:21:43,803 - root - INFO - data:{'screenID': '8A77BEC56962', 'warnCode': 3000018, 'warnDatetime': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,803 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,803 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,804 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setEstAlarm
+2017-11-07 16:21:43,822 - root - INFO - data:{'screenID': '8A77BEC56961', 'warnCode': 3000017, 'configParam': [{'configParam': 1, 'judgeType': 1, 'threshold': 150}]} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,822 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,822 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,822 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setEstAlarm
+2017-11-07 16:21:43,839 - root - INFO - data:{'screenID': '8A77BEC56961', 'warnCode': 3000018, 'configParam': [{'configParam': 2, 'judgeType': 3, 'threshold': 100}]} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,840 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,840 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,840 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setEstAlarm
+2017-11-07 16:21:43,856 - root - INFO - data:{'screenID': '8A77BEC56962', 'warnCode': 3000019, 'configParam': [{'configParam': 1, 'judgeType': 2, 'threshold': 33333}]} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,856 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,856 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,856 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setFireCtrl
+2017-11-07 16:21:43,872 - root - INFO - data:{'screenID': '8A77BEC56961', 'state': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,872 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,872 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,873 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setFireCtrl
+2017-11-07 16:21:43,878 - root - INFO - data:{'screenID': '8A77BEC56962', 'state': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,878 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,878 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,879 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setLogo
+2017-11-07 16:21:43,896 - root - INFO - data:{'screenID': '8A77BEC56961', 'type': 12, 'url': 'http://gghfhfghgfghgf.fghgfh.hj/hfdhd==-=-.jkj'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,896 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,896 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,896 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setLogo
+2017-11-07 16:21:43,918 - root - INFO - data:{'screenID': '8A77BEC56965', 'type': 1, 'url': 'http://gghfhfghgfghgf.fghgfh.hj/hfdhd==-=-.jkj'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,918 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,918 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,919 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setPlacateVideo
+2017-11-07 16:21:43,937 - root - INFO - data:{'screenID': '8A77BEC56961', 'warnCode': 30000017, 'type': 1, 'url': 'http://www.rdgfgfgfggdgfsdf.hgfgh/hfhgf.y434', 'md5': 'dsadsa'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,937 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,938 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,938 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setPlacateVideo
+2017-11-07 16:21:43,947 - root - INFO - data:{'screenID': '8A77BEC56962', 'warnCode': 24100024, 'type': 1, 'url': 'http://4fdsfdssdddsdf32wr.jhgjgh', 'md5': '4332rsf'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,947 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,947 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,948 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSoundVolume
+2017-11-07 16:21:43,966 - root - INFO - data:{'screenID': '8A77BEC56961', 'soundVolume': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,967 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,967 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,967 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSoundVolume
+2017-11-07 16:21:43,973 - root - INFO - data:{'screenID': '8A77BEC56962', 'soundVolume': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,973 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:43,973 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,974 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSpeaker
+2017-11-07 16:21:43,992 - root - INFO - data:{'screenID': '8A77BEC56961', 'isEnable': 1, 'broadCastMode': 12} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:43,992 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:43,992 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:43,992 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSpeaker
+2017-11-07 16:21:44,008 - root - INFO - data:{'screenID': '8A77BEC56963', 'isEnable': 0, 'broadCastMode': 1212} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,008 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:44,008 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,008 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWaterPressure
+2017-11-07 16:21:44,016 - root - INFO - data:{'screenID': '8A77BEC56961', 'waterPress': [1201], 'normal': [122], 'lowStandard': 2, 'highThr': 22222, 'type': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,016 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:44,016 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,016 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWaterPressure
+2017-11-07 16:21:44,035 - root - INFO - data:{'screenID': '8A77BEC56962', 'waterPress': [1201], 'normal': [122], 'lowStandard': 2, 'highThr': 22222, 'type': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,035 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:44,035 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,035 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWifi
+2017-11-07 16:21:44,054 - root - INFO - data:{'screenID': '8A77BEC56961', 'optType': 1, 'nameLength': 10, 'wifiName': 'abcdefsd', 'passLength': 12, 'wifiPass': 'dscxsd'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,054 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:44,054 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,054 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWifi
+2017-11-07 16:21:44,071 - root - INFO - data:{'screenID': '8A77BEC56962', 'optType': 2, 'nameLength': 10, 'wifiName': 'abcdefsd', 'passLength': 13, 'wifiPass': 'dscxsd'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,071 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:44,071 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,072 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/updatePlaybill
+2017-11-07 16:21:44,078 - root - INFO - data:{'screenID': '8A77BEC56961'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,079 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:44,079 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,079 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/updatePlaybill
+2017-11-07 16:21:44,097 - root - INFO - data:{'screenID': '8A77BEC56962'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,097 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:44,097 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,098 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/upgrade
+2017-11-07 16:21:44,115 - root - INFO - data:{'screenID': '8A77BEC56961', 'deviceType': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,115 - root - INFO - Response data: {'data': {'screenID': '8A77BEC56961'}} 
+2017-11-07 16:21:44,115 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,116 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/upgrade
+2017-11-07 16:21:44,131 - root - INFO - data:{'screenID': '8A77BEC56962', 'deviceType': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,131 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:44,132 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,132 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 16:21:44,152 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'reportCycle': 10000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,152 - root - INFO - Response data: {'errCode': -3, 'errDesc': '设备tcp协议错误=[3],含义=[标定出错]!', 'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:21:44,152 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,174 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 16:21:44,182 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'reportCycle': 10} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:44,183 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:44,183 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:44,183 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 16:21:51,191 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'reportCycle': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:51,191 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:21:51,191 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:51,192 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 16:21:58,200 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'reportCycle': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:58,200 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:21:58,200 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:58,200 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 16:21:58,207 - root - INFO - data:{'signalID': 'B13A4FB3D417', 'reportCycle': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:58,208 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:21:58,208 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:58,208 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 16:21:58,218 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'command': 128} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:58,218 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:21:58,218 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:58,219 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 16:21:58,238 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'command': -127} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:21:58,238 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:21:58,238 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:21:58,238 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 16:22:05,255 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'command': 12} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:05,255 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:22:05,256 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:05,256 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 16:22:12,273 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'command': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:12,273 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:22:12,273 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:12,274 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 16:22:12,282 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'command': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:12,282 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:22:12,282 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:12,282 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 16:22:12,301 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'command': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:12,301 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:22:12,301 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:12,302 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 16:22:19,318 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'command': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:19,319 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:22:19,319 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:19,319 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 16:22:26,335 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'command': 4} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:26,336 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:22:26,336 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:26,336 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 16:22:26,355 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'command': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:26,355 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:22:26,355 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:26,355 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 16:22:26,364 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'command': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:26,364 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:22:26,364 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:26,364 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 16:22:33,373 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'command': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:33,374 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:22:33,374 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:33,374 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 16:22:40,390 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'command': 4} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:40,390 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:22:40,390 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:40,390 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 16:22:40,400 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:40,400 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'ai1LowAlarm': -20, 'ai1HighAlarm': 80}} 
+2017-11-07 16:22:40,400 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:40,401 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 16:22:40,419 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:40,419 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:22:40,419 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:40,420 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 16:22:47,425 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:47,426 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:22:47,426 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:47,426 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 16:22:54,443 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:54,443 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:22:54,444 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:54,444 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 16:22:54,463 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:54,463 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'calicInfo': [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]}} 
+2017-11-07 16:22:54,463 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:54,464 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 16:22:54,483 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:22:54,484 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'calicInfo': [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]}} 
+2017-11-07 16:22:54,484 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:22:54,484 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 16:23:01,501 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:01,502 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:01,502 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:01,502 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 16:23:08,519 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:08,519 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:08,520 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:08,520 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 16:23:08,538 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:08,539 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'temprature': -10}} 
+2017-11-07 16:23:08,539 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:08,539 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 16:23:08,558 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:08,558 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'temprature': 100}} 
+2017-11-07 16:23:08,558 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:08,559 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 16:23:15,567 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:15,567 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:15,567 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:15,568 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 16:23:22,575 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:22,575 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:22,576 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:22,576 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 16:23:22,586 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:22,587 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'hareWareVer': 1, 'softWareVer': 1, 'madeTime': '978278400000', 'madeFactory': 1, 'CustomID': 1, 'manufacturer': 1, 'designTime': '1322668800000'}} 
+2017-11-07 16:23:22,587 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:22,587 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 16:23:22,608 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:22,608 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'hareWareVer': 1, 'softWareVer': 1, 'madeTime': '978278400000', 'madeFactory': 1, 'CustomID': 1, 'manufacturer': 1, 'designTime': '978278400000'}} 
+2017-11-07 16:23:22,608 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:22,608 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 16:23:29,627 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:29,627 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:29,627 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:29,628 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 16:23:36,644 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:36,645 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:36,645 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:36,646 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 16:23:36,654 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:36,654 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'moduleType': 1}} 
+2017-11-07 16:23:36,654 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:36,654 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 16:23:36,674 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:36,675 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'moduleType': 1}} 
+2017-11-07 16:23:36,675 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:36,676 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 16:23:43,684 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:43,684 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:43,684 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:43,685 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 16:23:50,700 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:50,700 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:50,700 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:50,700 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 16:23:50,718 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:50,718 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'compenateValue': 10}} 
+2017-11-07 16:23:50,718 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:50,718 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 16:23:50,727 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:50,727 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'compenateValue': -2}} 
+2017-11-07 16:23:50,727 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:50,727 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 16:23:57,743 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:23:57,744 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:23:57,744 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:23:57,744 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 16:24:04,763 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:04,763 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:04,763 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:04,763 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 16:24:04,776 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:04,776 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'AI1LowRange': 10, 'AI1HighRange': 100, 'AI2LowRange': 4000, 'AI2HighRange': 20000, 'AI3LowRange': 4000, 'AI3HighRange': 20000, 'AI4LowRange': 4000, 'AI4HighRange': 20000, 'AI1LowAlarm': -20, 'AI1HighAlarm': 80, 'AI2LowAlarm': 4000, 'AI2HighAlarm': 20000, 'AI3LowAlarm': 4000, 'AI3HighAlarm': 20000, 'AI4LowAlarm': 4000, 'AI4HighAlarm': 20000}} 
+2017-11-07 16:24:04,776 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:04,776 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 16:24:04,795 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:04,796 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'AI1LowRange': 1, 'AI1HighRange': 20, 'AI2LowRange': 5000, 'AI2HighRange': 20000, 'AI3LowRange': 5000, 'AI3HighRange': 20000, 'AI4LowRange': 5000, 'AI4HighRange': 20000, 'AI2LowAlarm': 5000, 'AI2HighAlarm': 20000, 'AI3LowAlarm': 5000, 'AI3HighAlarm': 20000, 'AI4LowAlarm': 5000, 'AI4HighAlarm': 20000, 'DI1': 1, 'DI2': 1}} 
+2017-11-07 16:24:04,796 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:04,796 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 16:24:11,813 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:11,813 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:11,814 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:11,814 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 16:24:18,822 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:18,822 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:18,822 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:18,822 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 16:24:18,839 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:18,840 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'highestFloor': -56, 'curFloor': -1, 'lowestFloor': -20, 'stopTimeThreshold': 16, 'changeTimeThreshold': 240, 'photoelectricTubeCurStat': 10}} 
+2017-11-07 16:24:18,840 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:18,840 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 16:24:18,848 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:18,848 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'highestFloor': 100, 'lowestFloor': -8, 'stopTimeThreshold': 64, 'changeTimeThreshold': 208, 'selfLearnFlg': 1}} 
+2017-11-07 16:24:18,848 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:18,848 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 16:24:25,855 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:25,855 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:25,856 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:25,856 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 16:24:32,872 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:32,872 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:32,872 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:32,873 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 16:24:32,881 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:32,881 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'highestFloor': -56, 'curFloor': -1, 'lowestFloor': -20, 'direction': 1, 'status': 1}} 
+2017-11-07 16:24:32,881 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:32,881 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 16:24:32,900 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:32,901 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'highestFloor': 100, 'lowestFloor': -8, 'direction': 1, 'status': 1}} 
+2017-11-07 16:24:32,901 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:32,902 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 16:24:39,921 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:39,921 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:39,921 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:39,921 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 16:24:46,938 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:46,938 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:46,938 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:46,939 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 16:24:46,958 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:46,958 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'logInfo': 'gfgf0000ggfdfgdgffd\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}} 
+2017-11-07 16:24:46,959 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:46,959 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 16:24:46,979 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:46,979 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'logInfo': 'bcvvbbvcbvcvbcvcbbvvbvbcbbbvcbcvbcvbbbbbbb\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}} 
+2017-11-07 16:24:46,979 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:46,980 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 16:24:46,990 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:46,990 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'logInfo': 'bcvvbbvcbvcvbcvcbbvvbvbcbbbvcbcvbcvbbbbbbb\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}} 
+2017-11-07 16:24:46,990 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:46,990 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 16:24:54,007 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:24:54,007 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:24:54,008 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:24:54,008 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 16:25:01,025 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:01,025 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:01,025 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:01,026 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 16:25:01,034 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:01,034 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'gd1Info': 1, 'gd2Info': 10}} 
+2017-11-07 16:25:01,034 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:01,035 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 16:25:01,052 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:01,052 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'gd1Info': 10, 'gd2Info': 10}} 
+2017-11-07 16:25:01,053 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:01,053 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 16:25:08,060 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:08,061 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:08,061 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:08,061 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 16:25:15,079 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:15,079 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:15,079 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:15,079 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 16:25:15,099 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:15,099 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'rs232Data': 'ZGVHWltHMwpkRlA8MihGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=='}} 
+2017-11-07 16:25:15,099 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:15,099 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 16:25:15,107 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:15,108 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'rs232Data': 'AQIoCgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=='}} 
+2017-11-07 16:25:15,108 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:15,108 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 16:25:22,115 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:22,115 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:22,115 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:22,115 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 16:25:29,132 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:29,132 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:29,132 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:29,133 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 16:25:29,142 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:29,143 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'Baudrate': 49664, 'Data': 8, 'Stop': 1}} 
+2017-11-07 16:25:29,143 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:29,143 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 16:25:29,164 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:29,164 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'Baudrate': 49664, 'Data': 8, 'Stop': 1}} 
+2017-11-07 16:25:29,165 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:29,166 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 16:25:36,173 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:36,174 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:36,174 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:36,174 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 16:25:43,192 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:43,193 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:43,193 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:43,194 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 16:25:43,219 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:43,220 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'rs485Data': 'MTIzM0RXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=='}} 
+2017-11-07 16:25:43,220 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:43,220 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 16:25:43,227 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:43,227 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'rs485Data': 'AQoUHgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=='}} 
+2017-11-07 16:25:43,227 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:43,227 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 16:25:50,248 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:50,248 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:50,249 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:50,249 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 16:25:57,267 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:57,268 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:25:57,268 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:57,269 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 16:25:57,296 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:57,296 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'braudrate': 49664, 'data': 8, 'stop': 1}} 
+2017-11-07 16:25:57,297 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:57,297 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 16:25:57,309 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:25:57,309 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'braudrate': 49664, 'data': 8, 'stop': 1}} 
+2017-11-07 16:25:57,309 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:25:57,309 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 16:26:04,326 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:04,327 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:26:04,327 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:04,327 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 16:26:11,344 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:11,344 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:26:11,345 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:11,345 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 16:26:11,355 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:11,356 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE', 'time': '1510043171000'}} 
+2017-11-07 16:26:11,356 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:11,356 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 16:26:11,376 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:11,377 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC', 'time': '1510043171000'}} 
+2017-11-07 16:26:11,377 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:11,377 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 16:26:18,395 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:18,395 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:26:18,395 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:18,396 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 16:26:25,413 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:25,414 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {}} 
+2017-11-07 16:26:25,414 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:25,414 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 16:26:25,424 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:25,424 - root - INFO - Response data: {'errCode': -3, 'errDesc': '设备tcp协议错误=[20],含义=[unknow]!', 'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:26:25,425 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:25,432 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 16:26:25,450 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:25,451 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:26:25,451 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:25,451 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 16:26:32,469 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:32,470 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:26:32,470 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:32,470 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 16:26:39,487 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:39,488 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:26:39,488 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:39,488 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 16:26:39,508 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:39,508 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:26:39,509 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:39,509 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 16:26:39,528 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:39,529 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:26:39,529 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:39,529 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 16:26:46,537 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:46,537 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:26:46,537 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:46,538 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 16:26:53,557 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:53,558 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:26:53,558 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:53,559 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 16:26:53,579 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai1LowAlarm': -20, 'ai1HighAlarm': 80} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:53,579 - root - INFO - Response data: {'errCode': -3, 'errDesc': '设备tcp协议错误=[1],含义=[操作地址非法]!', 'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:26:53,579 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:53,580 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 16:26:53,601 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai1LowAlarm': -19, 'ai1HighAlarm': 81} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:26:53,601 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:26:53,601 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:26:53,601 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 16:27:00,608 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai1LowAlarm': -18, 'ai1HighAlarm': 82} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:00,608 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:27:00,608 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:00,608 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 16:27:07,615 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai1LowAlarm': -17, 'ai1HighAlarm': 83} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:07,615 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:27:07,615 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:07,615 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 16:27:07,634 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'ai1LowAlarm': -17, 'ai1HighAlarm': 83} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:07,634 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:27:07,634 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:07,635 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 16:27:07,654 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai2LowAlarm': 4000, 'ai2HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:07,654 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:27:07,654 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:07,655 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 16:27:07,665 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai2LowAlarm': 5000, 'ai2HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:07,666 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:27:07,666 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:07,666 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 16:27:14,672 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai2LowAlarm': 6000, 'ai2HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:14,672 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:27:14,672 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:14,673 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 16:27:21,680 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai2LowAlarm': 7000, 'ai2HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:21,680 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:27:21,681 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:21,681 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 16:27:21,690 - root - INFO - data:{'signalID': 'B13A4FB3D4A7', 'ai2LowAlarm': 7000, 'ai2HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:21,690 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:27:21,691 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:21,691 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 16:27:21,726 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai2LowRange': 4000, 'ai2highRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:21,726 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:27:21,726 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:21,726 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 16:27:21,739 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai2LowRange': 5000, 'ai2highRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:21,739 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:27:21,740 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:21,740 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 16:27:28,756 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai2LowRange': 6000, 'ai2highRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:28,756 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:27:28,756 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:28,757 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 16:27:35,774 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai2LowRange': 7000, 'ai2highRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:35,774 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:27:35,775 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:35,775 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 16:27:35,791 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'ai2LowRange': 7000, 'ai2highRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:35,792 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:27:35,792 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:35,792 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 16:27:35,802 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai3LowAlarm': 4000, 'ai3HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:35,802 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:27:35,802 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:35,803 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 16:27:35,822 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai3LowAlarm': 5000, 'ai3HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:35,822 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:27:35,822 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:35,823 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 16:27:42,839 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai3LowAlarm': 6000, 'ai3HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:42,839 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:27:42,839 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:42,840 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 16:27:49,856 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai3LowAlarm': 7000, 'ai3HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:49,856 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:27:49,857 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:49,857 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 16:27:49,874 - root - INFO - data:{'signalID': 'B11A4FB3D497', 'ai3LowAlarm': 7000, 'ai3HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:49,874 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:27:49,874 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:49,875 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 16:27:49,883 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai3LowRange': 4000, 'ai3HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:49,883 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:27:49,883 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:49,883 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 16:27:49,901 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai3LowRange': 5000, 'ai3HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:49,901 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:27:49,902 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:49,902 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 16:27:56,924 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai3LowRange': 6000, 'ai3HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:27:56,924 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:27:56,924 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:27:56,924 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 16:28:03,931 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai3LowRange': 7000, 'ai3HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:03,931 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:28:03,932 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:03,932 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 16:28:03,948 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'ai3LowRange': 7000, 'ai3HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:03,948 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:28:03,949 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:03,949 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 16:28:03,969 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai4LowAlarm': 4000, 'ai4HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:03,969 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:28:03,969 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:03,970 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 16:28:03,988 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai4LowAlarm': 5000, 'ai4HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:03,988 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:28:03,989 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:03,989 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 16:28:10,996 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai4LowAlarm': 6000, 'ai4HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:10,996 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:28:10,996 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:10,997 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 16:28:18,004 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai4LowAlarm': 7000, 'ai4HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:18,004 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:28:18,005 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:18,005 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 16:28:18,026 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'ai4LowAlarm': 7000, 'ai4HighAlarm': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:18,026 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:28:18,026 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:18,027 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 16:28:18,046 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'ai4LowRange': 4000, 'ai4HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:18,046 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:28:18,046 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:18,046 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 16:28:18,055 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'ai4LowRange': 5000, 'ai4HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:18,055 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:28:18,055 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:18,056 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 16:28:25,073 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'ai4LowRange': 6000, 'ai4HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:25,073 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:28:25,073 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:25,073 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 16:28:32,081 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'ai4LowRange': 7000, 'ai4HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:32,081 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:28:32,081 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:32,081 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 16:28:32,099 - root - INFO - data:{'signalID': 'B13A4FB3D111', 'ai4LowRange': 7000, 'ai4HighRange': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:32,100 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:28:32,100 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:32,100 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 16:28:32,120 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'floor': {'floor': -2, 'validFlag': 2, 'floorDesc': 1}} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:32,121 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:28:32,121 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:32,121 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 16:28:32,129 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'floor': {'floor': -100, 'validFlag': 3, 'floorDesc': 2}} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:32,130 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:28:32,130 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:32,131 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 16:28:39,139 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'floor': {'floor': 0, 'validFlag': 4, 'floorDesc': 3}} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:39,139 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:28:39,139 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:39,140 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 16:28:46,148 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'floor': {'floor': 1, 'validFlag': 5, 'floorDesc': 4}} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:46,148 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:28:46,148 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:46,149 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 16:28:46,157 - root - INFO - data:{'signalID': 'B13A4FB3D492', 'floor': {'floor': 1, 'validFlag': 5, 'floorDesc': 4}} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:46,158 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:28:46,158 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:46,158 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibTemp
+2017-11-07 16:28:46,177 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'temprature': -10} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:46,177 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:28:46,177 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:46,177 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibTemp
+2017-11-07 16:28:46,194 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'temprature': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:46,195 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:28:46,195 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:46,195 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibTemp
+2017-11-07 16:28:53,207 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'temprature': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:28:53,207 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:28:53,207 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:28:53,207 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibTemp
+2017-11-07 16:29:00,225 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'temprature': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:00,225 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:29:00,225 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:00,226 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibTemp
+2017-11-07 16:29:00,236 - root - INFO - data:{'signalID': 'B13A4FB3D498', 'temprature': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:00,236 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:29:00,236 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:00,236 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibTemp
+2017-11-07 16:29:00,254 - root - INFO - data:{'signalID': 'B13A4FB3D499', 'temprature': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:00,254 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:29:00,254 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:00,254 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI1Logic
+2017-11-07 16:29:00,272 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'di1Loginc': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:00,272 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:29:00,272 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:00,272 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI1Logic
+2017-11-07 16:29:00,290 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'di1Loginc': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:00,291 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:29:00,291 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:00,291 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI1Logic
+2017-11-07 16:29:07,308 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'di1Loginc': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:07,308 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:29:07,308 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:07,309 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI1Logic
+2017-11-07 16:29:14,329 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'di1Loginc': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:14,329 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:29:14,329 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:14,329 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI1Logic
+2017-11-07 16:29:14,345 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'di1Loginc': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:14,345 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:29:14,345 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:14,346 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI2Logic
+2017-11-07 16:29:14,354 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'diLogic': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:14,354 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:29:14,354 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:14,355 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI2Logic
+2017-11-07 16:29:14,363 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'diLogic': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:14,363 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:29:14,364 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:14,364 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI2Logic
+2017-11-07 16:29:21,369 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'diLogic': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:21,370 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:29:21,370 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:21,371 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI2Logic
+2017-11-07 16:29:28,391 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'diLogic': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:28,391 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:29:28,391 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:28,392 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDI2Logic
+2017-11-07 16:29:28,408 - root - INFO - data:{'signalID': 'B13A4FB3D412', 'diLogic': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:28,408 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:29:28,408 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:28,409 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDebug
+2017-11-07 16:29:28,418 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'debugFlag': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:28,418 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:29:28,418 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:28,419 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDebug
+2017-11-07 16:29:28,427 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'debugFlag': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:28,427 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:29:28,427 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:28,427 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDebug
+2017-11-07 16:29:35,435 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'debugFlag': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:35,435 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:29:35,435 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:35,436 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDebug
+2017-11-07 16:29:42,454 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'debugFlag': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:42,454 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:29:42,454 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:42,455 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setDebug
+2017-11-07 16:29:42,475 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'debugFlag': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:42,476 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:29:42,476 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:42,476 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorCalcComp
+2017-11-07 16:29:42,496 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'compenateValue': 10} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:42,496 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:29:42,496 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:42,497 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorCalcComp
+2017-11-07 16:29:42,507 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'compenateValue': -2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:42,507 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:29:42,507 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:42,507 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorCalcComp
+2017-11-07 16:29:49,526 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'compenateValue': 10} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:49,526 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:29:49,527 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:49,528 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorCalcComp
+2017-11-07 16:29:56,548 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'compenateValue': 10} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:56,549 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:29:56,549 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:56,549 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorCalcComp
+2017-11-07 16:29:56,555 - root - INFO - data:{'signalID': 'B13A4FB3D412', 'compenateValue': 10} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:56,556 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:29:56,556 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:56,556 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorParam
+2017-11-07 16:29:56,566 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'floorInfo': -2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:56,566 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:29:56,566 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:56,566 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorParam
+2017-11-07 16:29:56,584 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'floorInfo': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:29:56,584 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:29:56,584 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:29:56,585 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorParam
+2017-11-07 16:30:03,601 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'floorInfo': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:03,601 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:30:03,602 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:03,603 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorParam
+2017-11-07 16:30:10,621 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'floorInfo': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:10,622 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:30:10,622 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:10,622 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setFloorParam
+2017-11-07 16:30:10,640 - root - INFO - data:{'signalID': 'B13A4FB3D411', 'floorInfo': 100} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:10,641 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:30:10,641 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:10,641 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelFloor
+2017-11-07 16:30:10,660 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'highestFloor': 200, 'curFloor': -1, 'lowestFloor': -20} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:10,661 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:30:10,661 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:10,661 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelFloor
+2017-11-07 16:30:10,678 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'highestFloor': 100, 'curFloor': 0, 'lowestFloor': -8} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:10,678 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:30:10,678 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:10,679 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelFloor
+2017-11-07 16:30:17,696 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'highestFloor': 100, 'curFloor': 0, 'lowestFloor': -8} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:17,697 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:30:17,697 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:17,698 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelFloor
+2017-11-07 16:30:24,707 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'highestFloor': 100, 'curFloor': 0, 'lowestFloor': -8} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:24,707 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:30:24,707 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:24,708 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelFloor
+2017-11-07 16:30:24,718 - root - INFO - data:{'signalID': 'B13A4FB3D412', 'highestFloor': 100, 'curFloor': 0, 'lowestFloor': -8} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:24,718 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:30:24,719 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:24,719 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelLearn
+2017-11-07 16:30:24,739 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'selfLearnFlag': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:24,740 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:30:24,740 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:24,740 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelLearn
+2017-11-07 16:30:24,759 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'selfLearnFlag': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:24,759 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:30:24,759 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:24,759 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelLearn
+2017-11-07 16:30:31,776 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'selfLearnFlag': 0} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:31,776 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:30:31,777 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:31,777 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelLearn
+2017-11-07 16:30:38,786 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'selfLearnFlag': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:38,787 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:30:38,787 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:38,787 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelLearn
+2017-11-07 16:30:38,795 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'selfLearnFlag': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:38,795 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:30:38,795 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:38,796 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelPreMagThr
+2017-11-07 16:30:38,814 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'pressureThreshold': 10000, 'magneticThreshold': 20000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:38,815 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:30:38,815 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:38,815 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelPreMagThr
+2017-11-07 16:30:38,825 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'pressureThreshold': 10001, 'magneticThreshold': 20001} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:38,825 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:30:38,825 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:38,825 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelPreMagThr
+2017-11-07 16:30:45,842 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'pressureThreshold': 10002, 'magneticThreshold': 20002} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:45,843 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:30:45,843 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:45,844 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelPreMagThr
+2017-11-07 16:30:52,863 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'pressureThreshold': 10003, 'magneticThreshold': 20003} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:52,863 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:30:52,863 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:52,864 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelPreMagThr
+2017-11-07 16:30:52,871 - root - INFO - data:{'signalID': 'B13A4FB3D412', 'pressureThreshold': 10003, 'magneticThreshold': 20003} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:52,871 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:30:52,871 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:52,872 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelTimeThr
+2017-11-07 16:30:52,881 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'flatLayerStopTimeThreshold': 10000, 'floorChangeTimeThreshold': 22000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:52,882 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:30:52,882 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:52,883 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelTimeThr
+2017-11-07 16:30:52,901 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'flatLayerStopTimeThreshold': 200000, 'floorChangeTimeThreshold': 2402000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:52,901 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:30:52,901 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:52,901 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelTimeThr
+2017-11-07 16:30:59,907 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'flatLayerStopTimeThreshold': 10000, 'floorChangeTimeThreshold': 22000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:30:59,908 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:30:59,908 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:30:59,908 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelTimeThr
+2017-11-07 16:31:06,918 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'flatLayerStopTimeThreshold': 10000, 'floorChangeTimeThreshold': 22000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:06,918 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:31:06,918 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:06,919 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setLevelTimeThr
+2017-11-07 16:31:06,940 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'flatLayerStopTimeThreshold': 10000, 'floorChangeTimeThreshold': 22000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:06,940 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:31:06,941 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:06,941 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs232Param
+2017-11-07 16:31:06,950 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy4vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:06,950 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:31:06,950 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:06,950 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs232Param
+2017-11-07 16:31:06,962 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy5vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:06,963 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:31:06,963 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:06,963 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs232Param
+2017-11-07 16:31:13,970 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy6vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:13,970 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:31:13,970 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:13,971 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs232Param
+2017-11-07 16:31:21,390 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy7vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:21,391 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:31:21,391 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:21,391 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs232Param
+2017-11-07 16:31:21,399 - root - INFO - data:{'signalID': 'B13A4FB3D411', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy7vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:21,400 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:31:21,400 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:21,400 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs485Param
+2017-11-07 16:31:21,420 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy4vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:21,421 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:31:21,421 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:21,421 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs485Param
+2017-11-07 16:31:21,440 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy5vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:21,441 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:31:21,441 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:21,441 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs485Param
+2017-11-07 16:31:28,458 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy6vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:28,459 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:31:28,459 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:28,459 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs485Param
+2017-11-07 16:31:35,479 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy7vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,479 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:31:35,479 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,480 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setRs485Param
+2017-11-07 16:31:35,497 - root - INFO - data:{'signalID': 'B13A4FB3D491', 'braudrate': 115200, 'data': 8, 'stop': 1, 'check': 0, 'comType': 0, 'cmd': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy7vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,498 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:31:35,498 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,499 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setTime
+2017-11-07 16:31:35,516 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'time': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,517 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:31:35,518 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,518 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setTime
+2017-11-07 16:31:35,529 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'time': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,529 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:31:35,529 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,529 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setTime
+2017-11-07 16:31:35,542 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'time': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,542 - root - INFO - Response data: {'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:31:35,542 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,542 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setTime
+2017-11-07 16:31:35,555 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'time': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,555 - root - INFO - Response data: {'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:31:35,555 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,555 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setTime
+2017-11-07 16:31:35,560 - root - INFO - data:{'signalID': 'B13A4FB3D197', 'time': 1509005978000} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,561 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:31:35,561 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,561 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/switchPartition
+2017-11-07 16:31:35,572 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,572 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:31:35,572 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,572 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/switchPartition
+2017-11-07 16:31:35,579 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:35,579 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:31:35,580 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:35,580 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/switchPartition
+2017-11-07 16:31:42,598 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:42,598 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:31:42,598 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:42,599 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/switchPartition
+2017-11-07 16:31:49,608 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:49,608 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:31:49,608 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:49,608 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/switchPartition
+2017-11-07 16:31:49,625 - root - INFO - data:{'signalID': 'B13A4FB3D197'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:49,625 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:31:49,625 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:49,627 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgrade
+2017-11-07 16:31:49,638 - root - INFO - data:{'signalID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:49,639 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:31:49,639 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:49,639 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgrade
+2017-11-07 16:31:49,657 - root - INFO - data:{'signalID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:49,658 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:31:49,658 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:49,658 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgrade
+2017-11-07 16:31:56,665 - root - INFO - data:{'signalID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:31:56,666 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:31:56,666 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:31:56,667 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgrade
+2017-11-07 16:32:03,684 - root - INFO - data:{'signalID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:32:03,684 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:32:03,684 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:32:03,685 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgrade
+2017-11-07 16:32:03,702 - root - INFO - data:{'signalID': 'B13A4FB3D197'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:32:03,702 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 16:32:03,702 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:32:03,703 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgradeDataPush
+2017-11-07 16:32:03,711 - root - INFO - data:{'signalID': 'D075BB8F9BCE', 'upgradeData': 'D07ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy4vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl5BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:32:03,711 - root - INFO - Response data: {'data': {'signalID': 'D075BB8F9BCE'}} 
+2017-11-07 16:32:03,711 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:32:03,711 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgradeDataPush
+2017-11-07 16:32:03,730 - root - INFO - data:{'signalID': '01EE23DC6CCC', 'upgradeData': 'D07ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy4vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl5BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:32:03,730 - root - INFO - Response data: {'data': {'signalID': '01EE23DC6CCC'}} 
+2017-11-07 16:32:03,730 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:32:03,730 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgradeDataPush
+2017-11-07 16:32:10,739 - root - INFO - data:{'signalID': 'F0EEA96E8CA7', 'upgradeData': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy4vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:32:10,739 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'F0EEA96E8CA7'}} 
+2017-11-07 16:32:10,739 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:32:10,740 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/upgradeDataPush
+2017-11-07 16:32:17,748 - root - INFO - data:{'signalID': 'B13A4FB3D497', 'upgradeData': 'ZmRzZGZzZndlcnIyczIzMjE1MzQ1Njg2Nzc5NjA4Ny09PS0wODc1NjU0MjExYDFga2xrOycnLy4vMzVkZnNmZGRmZHNmZmRzZWZmZWZlZmVl'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 16:32:17,749 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'signalID': 'B13A4FB3D497'}} 
+2017-11-07 16:32:17,749 - root - INFO - ================================================================================================================================================================
+2017-11-07 16:32:17,812 - root - INFO - ===========Test End=============

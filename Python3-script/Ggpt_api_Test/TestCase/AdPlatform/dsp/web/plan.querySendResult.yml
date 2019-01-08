@@ -1,0 +1,15 @@
+suiteName: plan.querySendResult 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        contentGuid: 
+        execStatus: 
+        orderBy: 
+        orderField: 
+        pageIndex: 
+        pageSize:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["plan.code", 0]

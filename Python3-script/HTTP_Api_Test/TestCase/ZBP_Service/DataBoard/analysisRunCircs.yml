@@ -1,0 +1,137 @@
+testInterFace: analysisRunCircs
+method: POST
+url: /zbp-service/1.0.0/analysisRunCircs
+enable: 1
+data:
+  -
+    caseName: 单个电梯，dataType参数 1  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1,"elevatorId": "${get_elevatorId($elevatorIds)}"}
+    result:
+      check_code: 0
+      check_data: key(elevatorId:$elevatorIds)
+  -
+    caseName: 单个电梯，dataType参数 2  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":2,"elevatorId": "${get_elevatorId($elevatorIds)}"}
+    result:
+      check_code: 0
+      check_data: key(elevatorId:$elevatorIds)
+ #queryJson参数校验
+  -
+    caseName: queryJson 字段名称错误   # case name
+    paramType: data
+    data:
+      queryJsons: >
+        {"dataType":1,"elevatorId": "330110004-0112-2599"}
+    result:
+      check_code:  $err_code
+  -
+    caseName: queryJson参数校验-null值   # case name
+    paramType: data
+    data:
+      queryJson: null
+    result:
+      check_code:  $err_code
+    # dataType 参数校验
+  -
+    caseName: dataType 参数校验-负数  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":-3,"elevatorId": null}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType 参数校验-小数  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1.1,"elevatorId": null}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType 参数校验-字母  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":q,"elevatorId": null}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType 参数校验-类型错误  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":"3","elevatorId": null}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType 参数校验-null值  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":null,"elevatorId": null}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType 参数校验-不存在  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":4,"elevatorId": null}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType 字段名称错误  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataTypes":3,"elevatorId": null}
+    result:
+      check_code:  $err_code
+  #elevatorId参数校验
+  -
+    caseName: elevatorId参数校验-非string型  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1,"elevatorId": 330110004-0112-2599}
+    result:
+      check_code:  $err_code
+  -
+    caseName: elevatorId参数校验-不合法数字  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1,"elevatorId": 330110004}
+    result:
+      check_code:  $err_code
+  -
+    caseName: elevatorId参数校验-不合法字母  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1,"elevatorId": zqzq}
+    result:
+      check_code:  $err_code
+  -
+    caseName: elevatorId参数校验-字符串数组  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1,"elevatorId": "${get_elevatorIds($elevatorIds,1)}"}
+    result:
+      check_code: $err_code
+  -
+    caseName: elevatorId字段名称错误  # case name
+    paramType: data
+    data:
+      queryJson: >
+        {"dataType":1,"elevatorIds": null}
+    result:
+      check_code:  $err_code

@@ -1,0 +1,303 @@
+suiteName: account.addAccount
+testCase:
+  - case 1:
+      testCaseName: 参数正确，talktyp:1 添加帐号
+      tag: test
+      setup:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: test_40010a01101
+          validate:
+            - eq: ["status_code", 200]
+            - contained_by: ["account.code", [0,10001]]
+      json:
+        talktype: 1
+        account: test_40010a01101
+        passwd: q123456
+        priority: 1
+      validate:
+        - contained_by: ["status_code", [200,201]]
+        - contained_by: ["account.code", [0,10001]]
+        - set_data: ["account.data.Account", $file_path]
+  - case 2:
+      testCaseName: 参数错误，talktyp:2 添加帐号（appkey对应talktype：1）
+      tag: test
+      json:
+        talktype: 2
+        account: test_40010a01102
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10003]
+  - case 3:
+      testCaseName: 参数错误，talkType:3 添加帐号（appkey对应talktype：1）
+      tag: test
+      json:
+        talktype: 3
+        account: test_40010a01103
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10003]
+
+  - case 4:
+      testCaseName: 参数account已存在
+      tag: test
+      json:
+        talktype: 1
+        account: test_40010a01101
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10001]
+  - case 5:
+      testCaseName: 参数type入参不存在
+      tag: test
+      json:
+        talktype: 4
+        account: 40010a01101
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10003]
+  - case 6:
+      testCaseName: 参数type，参数类型错误
+      tag: test
+      json:
+        talktype: "1"
+        account: 50010a01101
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 7:
+      testCaseName: 参数type，入参字母
+      tag: test
+      json:
+        talktype: a
+        account: 40010a01101
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 8:
+      testCaseName: 参数type，入参负数
+      tag: test
+      json:
+        talktype: -1
+        account: 40010a01101
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10003]
+  - case 9:
+      testCaseName: 参数type，超过int最大值
+      tag: test
+      json:
+        talktype: 214748364711
+        account: $account
+        passwd: "qq123456"
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 10:
+      testCaseName: 参数account，参数类型错误，入参int
+      tag: test
+      json:
+        talktype: 1
+        account: 10023
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 11:
+      testCaseName: 参数account校验，入参长度超过100
+      tag: test
+      json:
+        talktype: 1
+        account: q1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+        passwd: q123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 201]
+        - eq: ["account.code", 0]
+      tearDown:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: q1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["account.code", 0]
+  - case 12:
+      testCaseName: 参数passwd，参数类型错误，入参int
+      tag: test
+      json:
+        talktype: 1
+        account: "110023"
+        passwd: 123456
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 13:
+      testCaseName: 参数passwd，包含特殊字符
+      tag: test
+      json:
+        talktype: 1
+        account: "Test_account"
+        passwd: "去玩电脑、12～！@#¥%……^ - ^|。，/"
+        priority: 1
+      validate:
+        - eq: ["status_code", 201]
+        - eq: ["account.code", 0]
+      tearDown:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: "Test_account"
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["account.code", 0]
+  - case 14:
+      testCaseName: 参数passwd，长度超过100
+      tag: test
+      json:
+        talktype: 1
+        account: "Test_account"
+        passwd: "q1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"
+        priority: 1
+      validate:
+        - eq: ["status_code", 201]
+        - eq: ["account.code", 0]
+      tearDown:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: "Test_account"
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["account.code", 0]
+  - case 15:
+      testCaseName: 参数priority，参数类型错误，入参string
+      tag: test
+      json:
+        talktype: 1
+        account: "110023"
+        passwd: "123456"
+        priority: "1"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 16:
+      testCaseName: 参数priority，负数
+      tag: test
+      json:
+        talktype: 1
+        account: "Test_account"
+        passwd: "123456"
+        priority: -1
+      validate:
+        - eq: ["status_code", 201]
+        - eq: ["account.code", 0]
+      tearDown:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: "Test_account"
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["account.code", 0]
+  - case 17:
+      testCaseName: 参数priority，超过int最大值
+      tag: test
+      json:
+        talktype: 1
+        account: "110023"
+        passwd: "123456"
+        priority: 2147483648
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+  - case 18:
+      testCaseName: 参数priority，入参字母
+      tag: test
+      json:
+        talktype: 1
+        account: "110023"
+        passwd: "123456"
+        priority: a
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10002]
+
+  - case 19:
+      testCaseName: 参数priority，入参null
+      tag: test
+      json:
+        talktype: 1
+        account: "Test_account"
+        passwd: "123456"
+        priority:
+      validate:
+        - eq: ["status_code", 201]
+        - eq: ["account.code", 0]
+      tearDown:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: "Test_account"
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["account.code", 0]
+  - case 20:
+      testCaseName: 参数talktype，入参null
+      tag: test
+      json:
+        talktype:
+        account: $account
+        passwd: "123456"
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10003]
+  - case 21:
+      testCaseName: 参数account，入参null
+      tag: test
+      json:
+        talktype: 1
+        account:
+        passwd: "123456"
+        priority: 1
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 10003]
+  - case 22:
+      testCaseName: 参数passwd，入参null
+      tag: test
+      json:
+        talktype: 1
+        account: "Test_account"
+        passwd:
+        priority: 1
+      validate:
+        - eq: ["status_code", 201]
+        - eq: ["account.code", 0]
+      tearDown:
+        - name: 删除帐号
+          api: [paasPlatform, account.deleteAccount]
+          params:
+            account: "Test_account"
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["account.code", 0]

@@ -1,0 +1,4 @@
+2018-11-27 15:41:03,601 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/neighborhood/addNbhd
+2018-11-27 15:41:03,729 - root - INFO - data:{"pageNum": 2, "pageSize": 20, "operatorUserId": 43} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
+2018-11-27 15:41:03,729 - root - INFO - Response data: {'code': 40000006, 'data': None, 'message': '街道编码不能为空！(streetCode),省编码不能为空！(provinceCode),小区名字不能为空！(nbhdName),纬度不能为空！(lat),联系人不能为空！(contacter),区编码不能为空！(townCode),小区的详细地址不能为空(address),经度不能为空！(lon),市编码不能为空！(cityCode),联系电话不能为空！(contactPhone),'} 
+2018-11-27 15:41:03,743 - root - INFO - ================================================================================================================================================================

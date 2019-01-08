@@ -1,0 +1,4 @@
+2018-11-05 14:33:55,071 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/createUser
+2018-11-05 14:33:55,201 - root - INFO - data:{'address': '陕西省西安市未央区368号', 'unitGuid': 368, 'mobilephone': '1839218857', 'telephone': 'null', 'userName': '小明', 'userCode': '22289', 'userPwsd': '123456.0', 'roleGuids': [5], 'operatorUserId': 1, 'remark': 'null', 'expireDate': '2018-08-22', 'userGroupGuid': 112233, 'loginSmsVarify': 56, 'sessionTimeOut': 1} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
+2018-11-05 14:33:55,201 - root - INFO - Response data: {'code': 0, 'data': {'userGuid': 19960}, 'message': '操作成功！'} 
+2018-11-05 14:33:55,201 - root - INFO - ================================================================================================================================================================

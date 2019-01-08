@@ -1,0 +1,4 @@
+2018-12-21 14:19:40,547 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:60972
+2018-12-21 14:19:40,663 - urllib3.connectionpool - DEBUG - http://127.0.0.1:60972 "GET http://10.10.0.244:9999/basePlatform/user/curUserInfo?operatorUserId=43 HTTP/1.1" 200 1112
+2018-12-21 14:19:40,671 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:60972
+2018-12-21 14:19:40,690 - urllib3.connectionpool - DEBUG - http://127.0.0.1:60972 "GET http://10.10.0.244:9999/basePlatform/user/curUserInfo?operatorUserId=1999999999999 HTTP/1.1" 200 120

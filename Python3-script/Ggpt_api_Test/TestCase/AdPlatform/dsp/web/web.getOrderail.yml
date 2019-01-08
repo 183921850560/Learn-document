@@ -1,0 +1,10 @@
+suiteName: web.getOrderail 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      params: 
+        guid:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["web.code", 0]

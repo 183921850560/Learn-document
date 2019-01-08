@@ -1,0 +1,23 @@
+suiteName: customer_info.list 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        advertiserType: 
+        applyType: 
+        checkPass: 
+        cityCode: 
+        companyName: 
+        companyType: 
+        contactPhone: 
+        contacter: 
+        customerGuid: 
+        email: 
+        licenceNo: 
+        pageNum: 
+        pageSize: 
+        provinceCode:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["customer_info.code", 0]

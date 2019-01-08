@@ -1,0 +1,44 @@
+suiteName: app.modifyLogo 
+testCase:
+  - case 1:
+      testCaseName: 参数正确, 设置用户logo
+      tag: test
+      json:
+        customerGuid: $app_clienteleGuid
+        url: "http://12.123.421.412/1414141.jpg"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数customerGuid校验, 不存在guid
+      tag: test
+      json:
+        customerGuid: 1001
+        url: "http://12.123.421.412/1414141.jpg"
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 3:
+      testCaseName: 参数customerGuid校验, 字母
+      tag: test
+      json:
+        customerGuid: 1001
+        url: "http://12.123.421.412/1414141.jpg"
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+  - case 4:
+      testCaseName: 参数customerGuid校验, 入参null
+      tag: test
+      json:
+        customerGuid:
+        url: "http://12.123.421.412/1414141.jpg"
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["app.code", 0]
+
+
+
+
+
+

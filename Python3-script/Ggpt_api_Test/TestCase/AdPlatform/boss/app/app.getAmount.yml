@@ -1,0 +1,11 @@
+suiteName: app.getAmount 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: test
+      params:
+        amount:
+        guid:
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]

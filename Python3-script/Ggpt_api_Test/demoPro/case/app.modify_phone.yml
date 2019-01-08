@@ -1,0 +1,11 @@
+suiteName: app.modify_phone 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        phoneNumber: 
+        smsVerifyCode:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]

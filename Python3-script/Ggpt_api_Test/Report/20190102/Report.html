@@ -1,0 +1,2176 @@
+       
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>InterfaceTesting</title>
+<style type="text/css">
+            div#global{
+                width: 100%;
+                height: 800px;
+                background-color: silver; 
+            }
+            #heading{
+                border:1px solid #000;
+                width: 100%;
+                height: 120px;
+            }
+            #content_menu{
+                border:1px solid #000;
+                width: 30%;
+                height: 700px;
+                border-right: 0px;
+                border-top: 0px;
+                border-bottom: 0px;
+                float: left;
+            }
+            #content_body{
+                border:1px solid #000;
+                width: 69%;
+                height: 700px;
+                border-left: 0px;
+                border-top: 0px;
+                border-bottom: 0px;
+                float: right;
+            }
+            #floor{
+                border:1px solid #000;
+                clear: both;
+            }
+            table{font-size:13px;}
+            input#intest{
+                font-weight:bold;
+            } 
+        </style>
+    <script language="javascript" type="text/javascript">
+        var row_array = new Array() 
+        var btn_array = new Array()
+        function removeByValue(arr, val){
+            for(var i=0; i<arr.length;i++){
+                if(arr[i] == val){
+                    arr.splice(i,1);
+                    break;
+                }
+            }
+        }
+        function setDetailMsgRow(rowID, btn) {  
+            for (n in rowID){
+                var row = document.getElementById(rowID[n]);  
+                if (row != null) {  
+                    if (row.style.display == (document.all ? "block" : "table-row")) {  
+                        row.style.display = "none";  
+                        btn.style.color='black';
+                        removeByValue(row_array, rowID[n])
+                        removeByValue(btn_array, btn)
+                    }  
+                    else {  
+                        row.style.display = (document.all ? "block" : "table-row");
+                        btn.style.color='orange';  
+                        row_array.push(rowID[n])
+                        btn_array.push(btn)
+                    }  
+                }
+            } 
+            if (btn != null){
+                if (btn.value != "Show Detail"){
+                    btn.value = "Show Detail"
+                }else{
+                    btn.value = "Hide"
+                }
+            }  
+        }
+        function showRow(a, btn) { 
+            var arr = new Array()
+            var row_arr = new Array()
+            for (i=0;i<a[1];i++ ){
+                arr[i] = ("if"+a[0]+"-") + (i+1)
+                row_arr[i] = ("row"+a[0]+"-") + (i+1)
+                }
+            for (rowID in arr){
+                var row = document.getElementById(arr[rowID]);  
+                if (row != null) {  
+                    if (row.style.display == (document.all ? "block" : "table-row")) {  
+                        row.style.display = "none";  
+                        btn.style.color='black';
+                        if (row_array.length > 0){
+                            for (j in row_array){
+                                if(row_array[j] == row_arr[rowID]){
+                                    var row_case = document.getElementById(row_array[j])
+                                    row_case.style.display="none"
+                                    var param_row = document.getElementById(row_array[j]+'-'+1)
+                                    param_row.style.display="none"
+                                    btn_array[j].style.color = "black"
+                                    btn_array[j].value = "Show Detail"
+                                    btn_array.splice(j,1)
+                                    row_array.splice(j,1)
+                                }
+                            }                            
+                        }
+                    }  
+                    else {  
+                        row.style.display = (document.all ? "block" : "table-row");
+                        btn.style.color='brown';  
+                    }  
+                } 
+            
+            }
+            if (btn != null){
+                if (btn.value != "查看详情"){
+                    btn.value = "查看详情"
+                }else{
+                    btn.value = "收起"
+                }
+            } 
+        } 
+function FillRect(cxt, x1, y1, width, height, color) {
+    cxt.fillStyle = color;
+    cxt.fillRect(x1, y1, width, height);
+}
+function drawBar(pass, fail, error){
+ 
+    var color = ["#6c6","orchid","#c00"]; 
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var canvas = document.getElementById("bar"); 
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        DrawLine(ctx,x[i],h[i],x[i],158,color[i]);
+        DrawLine(ctx,x[i],h[i],y[i],h[i],color[i]);
+        DrawLine(ctx,y[i],h[i],y[i],158,color[i]);
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        FillRect(ctx, x[i], h[i], 40, 158-h[i], color[i]);
+    }
+}
+ 
+function DrawLine(cxt, x1, y1, x2, y2, color) {
+ 
+    cxt.strokeStyle = color;
+    cxt.beginPath();
+    cxt.moveTo(x1, y1);
+    cxt.lineTo(x2, y2);
+    cxt.stroke();
+}
+ 
+function DrawString(cxt, text, font, color, align, v_align, x, y) {
+    if (font == "") {
+        cxt.font = "10px";
+    }
+    else {
+        cxt.font = font;
+    }
+    if (color == "") {
+        cxt.fillStyle = "#000000";
+    }
+    else {
+        cxt.fillStyle = color;
+    }
+    if (align == "") {
+        cxt.textAlign = "left";
+    }
+    else {
+        cxt.textAlign = align;
+    }
+    if (v_align == "") {
+        cxt.textBaseline = "top";
+    }
+    else {
+        cxt.textBaseline = v_align;
+    }
+    cxt.fillText(text, x, y);
+}
+ 
+
+    </script> 
+</head>
+
+<body>
+    <div id="heading" style="background:#DBDBDB">
+    <p style="font-family:verdana;color:black;font-size:18"><B>Project:  "AdPlatform"  Interface Test Report</B></p>
+        <p style="font-family:verdana;color:black;font-size:13px;">       
+        测试套件总数：12，用例总数：78，成功：56，失败：22， 错误：0。</p>
+        <p style="font-family:verdana;color:black;font-size:13px;">       
+        执行时间：2019-01-02 17:46:36， 运行时长：64.731191 s </p>
+    </div>
+    <div id="left-body" style="overflow:auto;">
+        <table  width="100%" border="1" cellpadding="0" cellspacing="0" style="table-layout:fixed" bgcolor="#FAFAFA">
+            <tr align="center" >
+                <td width="25%" align="left" style="font-family:verdana;color:blue;font-size:14"><B>Test Case</B></td> 
+                <td width="7%" style="font-family:verdana;color:blue;font-size:16"><B>Time</B></td> 
+                <td width="7%" style="font-family:verdana;color:blue;font-size:16"><B>Result</B></td> 
+                <td width="44%" style="font-family:verdana;color:blue;font-size:16"><B>Result Message</B></td> 
+                <td width="15%" style="font-family:verdana;color:blue;font-size:16"><B>Detail</B></td> 
+            </tr>
+            
+        <tr align="center" style=background-color:white>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getAccountBalance 
+        </th>
+         <th colspan="1" style="font-size: 15">1.629145</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：1,  通过：1, 失败：0, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([1,1],this)">
+        </th>
+        </tr>
+        
+<tr id="if1-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 获取信息</th>
+    <th>1.6291451</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row1-1', 'row1-1-1'],this)"></th>
+</tr>
+        <tr id="row1-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/account/v2/getAccountBalance'}
+        </th>
+        </tr>
+        <tr id="row1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"cashBalance":10.00,"giveBalance":1500.00,"avalibleBalance":1510.00}}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:seashell>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getActivityDetailList 
+        </th>
+         <th colspan="1" style="font-size: 15">3.934494</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：8,  通过：4, 失败：4, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([2,8],this)">
+        </th>
+        </tr>
+        
+<tr id="if2-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数type：1, 获取活动详情</th>
+    <th>0.5498428</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-1', 'row2-1-1'],this)"></th>
+</tr>
+        <tr id="row2-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 10000124, 'type': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"name":"邀请好友赚现金","desc":"邀请好友,100元现金，无限赚","code":"1004","url":"https://test.yun-ti.com:10092/h5/invite.html","pic":"http://122.112.251.59:8082/fs/files/advert/20181224/20181224175723000331.png","widePic":"http://122.112.251.59:8082/fs/files/advert/20181224/20181224175702000330.png","isUse":"1,2","createTime":null,"ruleNumber":"1003","detailRule":null,"ruleParam":"100"}}
+        </th>
+        </tr>
+<tr id="if2-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数type：2, 获取活动详情</th>
+    <th>0.4545732</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-2', 'row2-2-1'],this)"></th>
+</tr>
+        <tr id="row2-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 10000124, 'type': 2}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"name":"邀请好友赚现金","desc":"邀请好友,100元现金，无限赚","code":"1004","url":"https://test.yun-ti.com:10092/h5/invite.html","pic":"http://122.112.251.59:8082/fs/files/advert/20181224/20181224175723000331.png","widePic":"http://122.112.251.59:8082/fs/files/advert/20181224/20181224175702000330.png","isUse":"1,2","createTime":null,"ruleNumber":"1003","detailRule":null,"ruleParam":"100"}}
+        </th>
+        </tr>
+<tr id="if2-3" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数type：3, 获取活动详情</th>
+    <th>0.5532370</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-3', 'row2-3-1'],this)"></th>
+</tr>
+        <tr id="row2-3-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 10000124, 'type': 3}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-3" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"name":"开户送500元赠款余额","desc":"开户送500元赠款余额","code":"1001","url":null,"pic":null,"widePic":null,"isUse":"3","createTime":null,"ruleNumber":"1004","detailRule":null,"ruleParam":"500"}}
+        </th>
+        </tr>
+<tr id="if2-4" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数type：4, 获取活动详情</th>
+    <th>0.4773262</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-4', 'row2-4-1'],this)"></th>
+</tr>
+        <tr id="row2-4-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 10000124, 'type': 4}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-4" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if2-5" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数type校验, 负数</th>
+    <th>0.4739063</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-5', 'row2-5-1'],this)"></th>
+</tr>
+        <tr id="row2-5-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 10000124, 'type': -1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-5" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if2-6" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数type校验, 字母</th>
+    <th>0.4930990</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-6', 'row2-6-1'],this)"></th>
+</tr>
+        <tr id="row2-6-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 10000124, 'type': 'a'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-6" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if2-7" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数clienteleGuid校验, 不存在guid</th>
+    <th>0.4597342</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-7', 'row2-7-1'],this)"></th>
+</tr>
+        <tr id="row2-7-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 1003, 'type': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-7" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"name":"邀请好友赚现金","desc":"邀请好友,100元现金，无限赚","code":"1004","url":"https://test.yun-ti.com:10092/h5/invite.html","pic":"http://122.112.251.59:8082/fs/files/advert/20181224/20181224175723000331.png","widePic":"http://122.112.251.59:8082/fs/files/advert/20181224/20181224175702000330.png","isUse":"1,2","createTime":null,"ruleNumber":"1003","detailRule":null,"ruleParam":"100"}}
+        </th>
+        </tr>
+<tr id="if2-8" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数clienteleGuid校验, 字符串</th>
+    <th>0.4727750</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row2-8', 'row2-8-1'],this)"></th>
+</tr>
+        <tr id="row2-8-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'clienteleGuid': 'qw1003', 'type': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityDetailList'}
+        </th>
+        </tr>
+        <tr id="row2-8" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:white>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getActivityRewardList 
+        </th>
+         <th colspan="1" style="font-size: 15">8.017113</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：12,  通过：6, 失败：6, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([3,12],this)">
+        </th>
+        </tr>
+        
+<tr id="if3-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,指定registerTime按ASC排序，获取活动奖励</th>
+    <th>0.6141078</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.list[].registerTime: is_sort  ASC ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-1', 'row3-1-1'],this)"></th>
+</tr>
+        <tr id="row3-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'ASC', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': 20, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":20,"size":5,"startRow":1,"endRow":5,"total":5,"pages":1,"list":[{"invitedClienteleGuid":10000075,"invitedPhone":"15700107242","registerTime":"2018-12-21 15:33:07","reward":"100元现金","state":"0"},{"invitedClienteleGuid":10000103,"invitedPhone":"18201336349","registerTime":"2018-12-27 11:40:16","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000117,"invitedPhone":"18201336349","registerTime":"2018-12-28 16:51:53","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000118,"invitedPhone":"18201336349","registerTime":"2018-12-28 17:40:36","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"}],"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":8,"navigatepageNums":[1],"navigateFirstPage":1,"navigateLastPage":1,"firstPage":1,"lastPage":1}}
+        </th>
+        </tr>
+<tr id="if3-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 指定registerTime按DESC排序，获取活动奖励</th>
+    <th>2.3716559</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.list[].registerTime: is_sort  DESC ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-2', 'row3-2-1'],this)"></th>
+</tr>
+        <tr id="row3-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': 20, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":20,"size":5,"startRow":1,"endRow":5,"total":5,"pages":1,"list":[{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000118,"invitedPhone":"18201336349","registerTime":"2018-12-28 17:40:36","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000117,"invitedPhone":"18201336349","registerTime":"2018-12-28 16:51:53","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000103,"invitedPhone":"18201336349","registerTime":"2018-12-27 11:40:16","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000075,"invitedPhone":"15700107242","registerTime":"2018-12-21 15:33:07","reward":"100元现金","state":"0"}],"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":8,"navigatepageNums":[1],"navigateFirstPage":1,"navigateLastPage":1,"firstPage":1,"lastPage":1}}
+        </th>
+        </tr>
+<tr id="if3-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数clienteleGuid校验, 不存在Guid</th>
+    <th>0.4059057</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-3', 'row3-3-1'],this)"></th>
+</tr>
+        <tr id="row3-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if3-4" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数orderBy校验, 入参错误</th>
+    <th>0.4412527</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-4', 'row3-4-1'],this)"></th>
+</tr>
+        <tr id="row3-4-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC123', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-4" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":1,"size":1,"startRow":1,"endRow":1,"total":5,"pages":5,"list":[{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"}],"prePage":0,"nextPage":2,"isFirstPage":true,"isLastPage":false,"hasPreviousPage":false,"hasNextPage":true,"navigatePages":8,"navigatepageNums":[1,2,3,4,5],"navigateFirstPage":1,"navigateLastPage":5,"firstPage":1,"lastPage":5}}
+        </th>
+        </tr>
+<tr id="if3-5" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数orderField校验, 不存在字段名称</th>
+    <th>0.4596071</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-5', 'row3-5-1'],this)"></th>
+</tr>
+        <tr id="row3-5-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC123', 'orderField': 'register', 'pageIndex': 1, 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-5" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":1,"size":1,"startRow":1,"endRow":1,"total":5,"pages":5,"list":[{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"}],"prePage":0,"nextPage":2,"isFirstPage":true,"isLastPage":false,"hasPreviousPage":false,"hasNextPage":true,"navigatePages":8,"navigatepageNums":[1,2,3,4,5],"navigateFirstPage":1,"navigateLastPage":5,"firstPage":1,"lastPage":5}}
+        </th>
+        </tr>
+<tr id="if3-6" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数pageIndex校验, 超过设备总数</th>
+    <th>0.4506733</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-6', 'row3-6-1'],this)"></th>
+</tr>
+        <tr id="row3-6-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 11111, 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-6" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if3-7" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数pageIndex校验, 负数</th>
+    <th>0.5332341</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-7', 'row3-7-1'],this)"></th>
+</tr>
+        <tr id="row3-7-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': -111, 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-7" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":-111,"pageSize":1,"size":1,"startRow":1,"endRow":1,"total":5,"pages":5,"list":[{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"}],"prePage":0,"nextPage":-110,"isFirstPage":false,"isLastPage":false,"hasPreviousPage":false,"hasNextPage":true,"navigatePages":8,"navigatepageNums":[1,2,3,4,5],"navigateFirstPage":1,"navigateLastPage":5,"firstPage":1,"lastPage":5}}
+        </th>
+        </tr>
+<tr id="if3-8" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数pageIndex校验, 零值</th>
+    <th>0.5520890</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-8', 'row3-8-1'],this)"></th>
+</tr>
+        <tr id="row3-8-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 0, 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-8" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":0,"pageSize":1,"size":1,"startRow":1,"endRow":1,"total":5,"pages":5,"list":[{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"}],"prePage":0,"nextPage":1,"isFirstPage":false,"isLastPage":false,"hasPreviousPage":false,"hasNextPage":true,"navigatePages":8,"navigatepageNums":[1,2,3,4,5],"navigateFirstPage":1,"navigateLastPage":5,"firstPage":1,"lastPage":5}}
+        </th>
+        </tr>
+<tr id="if3-9" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数pageIndex校验, 字母</th>
+    <th>0.5385892</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-9', 'row3-9-1'],this)"></th>
+</tr>
+        <tr id="row3-9-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 'a', 'pageSize': 1, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-9" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if3-10" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数pageSize校验, 正确性校验</th>
+    <th>0.5826488</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.list: length_less_than_or_equals  2 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-10', 'row3-10-1'],this)"></th>
+</tr>
+        <tr id="row3-10-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': 2, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-10" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":2,"size":2,"startRow":1,"endRow":2,"total":5,"pages":3,"list":[{"invitedClienteleGuid":10000120,"invitedPhone":"18201336349","registerTime":"2018-12-29 11:13:08","reward":"100元体验金","state":"0"},{"invitedClienteleGuid":10000118,"invitedPhone":"18201336349","registerTime":"2018-12-28 17:40:36","reward":"100元体验金","state":"0"}],"prePage":0,"nextPage":2,"isFirstPage":true,"isLastPage":false,"hasPreviousPage":false,"hasNextPage":true,"navigatePages":8,"navigatepageNums":[1,2,3],"navigateFirstPage":1,"navigateLastPage":3,"firstPage":1,"lastPage":3}}
+        </th>
+        </tr>
+<tr id="if3-11" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数pageSize校验, 负数</th>
+    <th>0.6113529</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-11', 'row3-11-1'],this)"></th>
+</tr>
+        <tr id="row3-11-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': -2, 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-11" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if3-12" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数pageSize校验, 字母</th>
+    <th>0.4559960</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row3-12', 'row3-12-1'],this)"></th>
+</tr>
+        <tr id="row3-12-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'clienteleGuid': 10000073, 'orderBy': 'DESC', 'orderField': 'registerTime', 'pageIndex': 1, 'pageSize': 'a', 'state': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/activity/v2/getActivityRewardList'}
+        </th>
+        </tr>
+        <tr id="row3-12" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:seashell>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getBrokerageAndActivityInfo 
+        </th>
+         <th colspan="1" style="font-size: 15">0.671396</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：1,  通过：1, 失败：0, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([4,1],this)">
+        </th>
+        </tr>
+        
+<tr id="if4-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 获取所有佣金及佣金活动</th>
+    <th>0.6713960</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row4-1', 'row4-1-1'],this)"></th>
+</tr>
+        <tr id="row4-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageAndActivityInfo'}
+        </th>
+        </tr>
+        <tr id="row4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"totalAmount":0.00,"activities":[{"name":"邀请新用户下单反实付金额的3%佣金","desc":"邀请新用户下单反实付金额的3%佣金","code":"1005","url":null,"pic":"http://122.112.251.59:8082/fs/files/advert/20181128/20181128092308000078.png","widePic":null,"isUse":null,"createTime":"2018-11-11T04:12:12.000+0000","ruleNumber":"10011","detailRule":null}]}}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:white>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getBrokerageHistory 
+        </th>
+         <th colspan="1" style="font-size: 15">3.164173</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：6,  通过：4, 失败：2, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([5,6],this)">
+        </th>
+        </tr>
+        
+<tr id="if5-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,获取当前用户的佣金历史记录</th>
+    <th>0.5323422</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row5-1', 'row5-1-1'],this)"></th>
+</tr>
+        <tr id="row5-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'pageIndex': 1, 'pageSize': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageHistory'}
+        </th>
+        </tr>
+        <tr id="row5-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":1,"size":0,"startRow":0,"endRow":0,"total":0,"pages":0,"list":[],"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":8,"navigatepageNums":[],"navigateFirstPage":0,"navigateLastPage":0,"firstPage":0,"lastPage":0}}
+        </th>
+        </tr>
+<tr id="if5-2" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数pageIndex校验, 负数</th>
+    <th>0.4808142</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row5-2', 'row5-2-1'],this)"></th>
+</tr>
+        <tr id="row5-2-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'pageIndex': -1, 'pageSize': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageHistory'}
+        </th>
+        </tr>
+        <tr id="row5-2" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":-1,"pageSize":1,"size":0,"startRow":0,"endRow":0,"total":0,"pages":0,"list":[],"prePage":0,"nextPage":0,"isFirstPage":false,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":true,"navigatePages":8,"navigatepageNums":[],"navigateFirstPage":0,"navigateLastPage":0,"firstPage":0,"lastPage":0}}
+        </th>
+        </tr>
+<tr id="if5-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数pageIndex校验, 字母</th>
+    <th>0.5232997</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row5-3', 'row5-3-1'],this)"></th>
+</tr>
+        <tr id="row5-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'pageIndex': 'q', 'pageSize': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageHistory'}
+        </th>
+        </tr>
+        <tr id="row5-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if5-4" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数pageSize校验, 负数</th>
+    <th>0.5864499</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row5-4', 'row5-4-1'],this)"></th>
+</tr>
+        <tr id="row5-4-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'pageIndex': 1, 'pageSize': -1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageHistory'}
+        </th>
+        </tr>
+        <tr id="row5-4" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":-1,"size":0,"startRow":0,"endRow":0,"total":0,"pages":0,"list":[],"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":8,"navigatepageNums":[],"navigateFirstPage":0,"navigateLastPage":0,"firstPage":0,"lastPage":0}}
+        </th>
+        </tr>
+<tr id="if5-5" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数pageSize校验, 字母</th>
+    <th>0.5523522</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row5-5', 'row5-5-1'],this)"></th>
+</tr>
+        <tr id="row5-5-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'pageIndex': 1, 'pageSize': 'a'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageHistory'}
+        </th>
+        </tr>
+        <tr id="row5-5" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if5-6" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数pageSize校验, 正确性校验</th>
+    <th>0.4889150</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.list: length_less_than_or_equals  2 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row5-6', 'row5-6-1'],this)"></th>
+</tr>
+        <tr id="row5-6-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'pageIndex': 1, 'pageSize': 2}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getBrokerageHistory'}
+        </th>
+        </tr>
+        <tr id="row5-6" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"pageNum":1,"pageSize":2,"size":0,"startRow":0,"endRow":0,"total":0,"pages":0,"list":[],"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":8,"navigatepageNums":[],"navigateFirstPage":0,"navigateLastPage":0,"firstPage":0,"lastPage":0}}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:seashell>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getSimpleBrokerageInfo 
+        </th>
+         <th colspan="1" style="font-size: 15">4.423191</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：6,  通过：5, 失败：1, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([6,6],this)">
+        </th>
+        </tr>
+        
+<tr id="if6-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,获取佣金的简要信息</th>
+    <th>0.4528558</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row6-1', 'row6-1-1'],this)"></th>
+</tr>
+        <tr id="row6-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'timeType': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getSimpleBrokerageInfo'}
+        </th>
+        </tr>
+        <tr id="row6-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"orderCount":0,"totalAmount":0.00}}
+        </th>
+        </tr>
+<tr id="if6-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,获取佣金的简要信息</th>
+    <th>0.5301621</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row6-2', 'row6-2-1'],this)"></th>
+</tr>
+        <tr id="row6-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'timeType': 2}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getSimpleBrokerageInfo'}
+        </th>
+        </tr>
+        <tr id="row6-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"orderCount":0,"totalAmount":0.00}}
+        </th>
+        </tr>
+<tr id="if6-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,获取佣金的简要信息</th>
+    <th>1.9967391</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row6-3', 'row6-3-1'],this)"></th>
+</tr>
+        <tr id="row6-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'timeType': 3}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getSimpleBrokerageInfo'}
+        </th>
+        </tr>
+        <tr id="row6-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"orderCount":0,"totalAmount":0.00}}
+        </th>
+        </tr>
+<tr id="if6-4" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,获取佣金的简要信息</th>
+    <th>0.5031052</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row6-4', 'row6-4-1'],this)"></th>
+</tr>
+        <tr id="row6-4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'timeType': 5}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getSimpleBrokerageInfo'}
+        </th>
+        </tr>
+        <tr id="row6-4" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"orderCount":0,"totalAmount":0.00}}
+        </th>
+        </tr>
+<tr id="if6-5" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数timeType校验, 负数</th>
+    <th>0.5104771</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row6-5', 'row6-5-1'],this)"></th>
+</tr>
+        <tr id="row6-5-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'timeType': -1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getSimpleBrokerageInfo'}
+        </th>
+        </tr>
+        <tr id="row6-5" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"orderCount":0,"totalAmount":0.00}}
+        </th>
+        </tr>
+<tr id="if6-6" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数timeType校验, 字母</th>
+    <th>0.4298518</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row6-6', 'row6-6-1'],this)"></th>
+</tr>
+        <tr id="row6-6-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'timeType': 'a'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/getSimpleBrokerageInfo'}
+        </th>
+        </tr>
+        <tr id="row6-6" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:white>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.queryAccountHistory 
+        </th>
+         <th colspan="1" style="font-size: 15">2.544058</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：5,  通过：4, 失败：1, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([7,5],this)">
+        </th>
+        </tr>
+        
+<tr id="if7-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,optType：1 获取账单历史</th>
+    <th>0.6315989</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row7-1', 'row7-1-1'],this)"></th>
+</tr>
+        <tr id="row7-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'optType': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/queryAccountHistory'}
+        </th>
+        </tr>
+        <tr id="row7-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"totalAmount":500.00,"dateRange":"2018-1~2019-1","yearList":[{"year":2018,"monthList":[{"month":12,"totalAmount":500.00,"list":[{"createTime":"2018-12-29 08:24:41","optType":1,"optDetailCode":100020003,"optDeatailName":"赠款余额--注册赠送","amount":500.00}]}]}]}}
+        </th>
+        </tr>
+<tr id="if7-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确,optType：2 获取账单历史</th>
+    <th>0.4759688</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row7-2', 'row7-2-1'],this)"></th>
+</tr>
+        <tr id="row7-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'optType': 2}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/queryAccountHistory'}
+        </th>
+        </tr>
+        <tr id="row7-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"totalAmount":0.00,"dateRange":"2018-1~2019-1","yearList":[]}}
+        </th>
+        </tr>
+<tr id="if7-3" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数optType校验，负数</th>
+    <th>0.5050139</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row7-3', 'row7-3-1'],this)"></th>
+</tr>
+        <tr id="row7-3-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'optType': -2}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/queryAccountHistory'}
+        </th>
+        </tr>
+        <tr id="row7-3" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"totalAmount":0.00,"dateRange":"2018-1~2019-1","yearList":[]}}
+        </th>
+        </tr>
+<tr id="if7-4" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数optType校验，字母</th>
+    <th>0.4913969</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row7-4', 'row7-4-1'],this)"></th>
+</tr>
+        <tr id="row7-4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'optType': 'a'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/queryAccountHistory'}
+        </th>
+        </tr>
+        <tr id="row7-4" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if7-5" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数optType校验，入参null</th>
+    <th>0.4400792</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row7-5', 'row7-5-1'],this)"></th>
+</tr>
+        <tr id="row7-5-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'params': {'optType': None}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/accounthistory/v2/queryAccountHistory'}
+        </th>
+        </tr>
+        <tr id="row7-5" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:seashell>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getCouponList 
+        </th>
+         <th colspan="1" style="font-size: 15">2.696468</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：6,  通过：6, 失败：0, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([8,6],this)">
+        </th>
+        </tr>
+        
+<tr id="if8-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 根据type:0 获取优惠券信息</th>
+    <th>0.4639909</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data[].type: all_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row8-1', 'row8-1-1'],this)"></th>
+</tr>
+        <tr id="row8-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'amount': None, 'couponName': None, 'endTime': None, 'limit': None, 'startTime': None, 'type': 0}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/coupon/v2/getCouponList'}
+        </th>
+        </tr>
+        <tr id="row8-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":[{"guid":9,"couponName":"无门槛券","rule":"{\"endTime\":1607817600000,\"limit\":0,\"limitName\":\"无门槛券\",\"startTime\":1544659500000}","createTime":"1970-01-01T07:27:17.000+0000","amount":15.00,"type":0,"typeName":"新手券"},{"guid":10,"couponName":"大佬专用优惠券","rule":"{\"endTime\":1607817600000,\"limit\":10,\"limitName\":\"满10减10\",\"startTime\":1544659500000}","createTime":"1970-01-01T01:28:34.000+0000","amount":10.00,"type":0,"typeName":"新手券"},{"guid":11,"couponName":"顾客专享1000元现金券","rule":"{\"endTime\":1607817600000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1544659200000}","createTime":"1970-01-01T02:03:11.000+0000","amount":1000.00,"type":0,"typeName":"新手券"},{"guid":14,"couponName":"新客专享50元现金券","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:21:54.000+0000","amount":50.00,"type":0,"typeName":"新手券"},{"guid":15,"couponName":"新客专享500元现金券测试优惠券看看长度变幻无穷再试试变化情况","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:22:41.000+0000","amount":500.00,"type":0,"typeName":"新手券"},{"guid":16,"couponName":"新客专享300元现金券","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:22:55.000+0000","amount":300.00,"type":0,"typeName":"新手券"},{"guid":22,"couponName":"新客专享100元现金券","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T04:16:52.000+0000","amount":100.00,"type":0,"typeName":"新手券"},{"guid":29,"couponName":"满188减99元优惠券","rule":"{\"endTime\":1577750400000,\"limit\":188,\"limitName\":\"满188可用\",\"startTime\":1546300800000}","createTime":"1970-01-01T09:04:04.000+0000","amount":50.55,"type":0,"typeName":"新手券"},{"guid":30,"couponName":"满188减99元优惠券","rule":"{\"endTime\":1577750400000,\"limit\":188,\"limitName\":\"满188可用\",\"startTime\":1546300800000}","createTime":"1970-01-01T09:14:49.000+0000","amount":-5.55,"type":0,"typeName":"新手券"}]}
+        </th>
+        </tr>
+<tr id="if8-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 根据amount:1000 获取优惠券信息</th>
+    <th>0.4301822</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data[].amount: all_equals  1000 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row8-2', 'row8-2-1'],this)"></th>
+</tr>
+        <tr id="row8-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'amount': 1000, 'couponName': None, 'endTime': None, 'limit': None, 'startTime': None, 'type': None}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/coupon/v2/getCouponList'}
+        </th>
+        </tr>
+        <tr id="row8-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":[{"guid":11,"couponName":"顾客专享1000元现金券","rule":"{\"endTime\":1607817600000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1544659200000}","createTime":"1970-01-01T02:03:11.000+0000","amount":1000.00,"type":0,"typeName":"新手券"},{"guid":18,"couponName":"【邀请好友】1000元现金券","rule":"{\"endTime\":1608163200000,\"limit\":1500,\"limitName\":\"满1500可用\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:24:40.000+0000","amount":1000.00,"type":1,"typeName":"分享券"}]}
+        </th>
+        </tr>
+<tr id="if8-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 根据couponName获取优惠券信息</th>
+    <th>0.4817269</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row8-3', 'row8-3-1'],this)"></th>
+</tr>
+        <tr id="row8-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'amount': None, 'couponName': '新客专享100元现金券', 'endTime': None, 'limit': None, 'startTime': None, 'type': None}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/coupon/v2/getCouponList'}
+        </th>
+        </tr>
+        <tr id="row8-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":[{"guid":22,"couponName":"新客专享100元现金券","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T04:16:52.000+0000","amount":100.00,"type":0,"typeName":"新手券"}]}
+        </th>
+        </tr>
+<tr id="if8-4" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 根据时间范围Time获取优惠券信息</th>
+    <th>0.4212949</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row8-4', 'row8-4-1'],this)"></th>
+</tr>
+        <tr id="row8-4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'amount': None, 'couponName': None, 'endTime': '2029-01-02T07:03:59.669Z', 'limit': 0, 'startTime': '2010-01-02T07:03:59.669Z', 'type': None}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/coupon/v2/getCouponList'}
+        </th>
+        </tr>
+        <tr id="row8-4" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":[]}
+        </th>
+        </tr>
+<tr id="if8-5" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 根据limit 获取优惠券信息</th>
+    <th>0.4466031</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row8-5', 'row8-5-1'],this)"></th>
+</tr>
+        <tr id="row8-5-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'amount': None, 'couponName': None, 'endTime': None, 'limit': 0, 'startTime': None, 'type': None}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/coupon/v2/getCouponList'}
+        </th>
+        </tr>
+        <tr id="row8-5" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":[]}
+        </th>
+        </tr>
+<tr id="if8-6" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 根据type:1 获取优惠券信息</th>
+    <th>0.4526703</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row8-6', 'row8-6-1'],this)"></th>
+</tr>
+        <tr id="row8-6-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'amount': None, 'couponName': None, 'endTime': None, 'limit': None, 'startTime': None, 'type': 1}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/coupon/v2/getCouponList'}
+        </th>
+        </tr>
+        <tr id="row8-6" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":[{"guid":12,"couponName":"【邀请好友】500元现金券","rule":"{\"endTime\":1607817600000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1544659200000}","createTime":"1970-01-01T02:03:48.000+0000","amount":500.00,"type":1,"typeName":"分享券"},{"guid":17,"couponName":"【邀请好友】300元现金券","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:23:59.000+0000","amount":300.00,"type":1,"typeName":"分享券"},{"guid":18,"couponName":"【邀请好友】1000元现金券","rule":"{\"endTime\":1608163200000,\"limit\":1500,\"limitName\":\"满1500可用\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:24:40.000+0000","amount":1000.00,"type":1,"typeName":"分享券"},{"guid":19,"couponName":"【邀请好友】2000元现金券","rule":"{\"endTime\":1608163200000,\"limit\":3000,\"limitName\":\"满3000可用\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:24:54.000+0000","amount":2000.00,"type":1,"typeName":"分享券"},{"guid":20,"couponName":"【邀请好友】3000元现金券","rule":"{\"endTime\":1608163200000,\"limit\":5000,\"limitName\":\"满5000可用\",\"startTime\":1545004800000}","createTime":"1970-01-01T01:25:05.000+0000","amount":3000.00,"type":1,"typeName":"分享券"},{"guid":21,"couponName":"【邀请好友】100元现金券","rule":"{\"endTime\":1608163200000,\"limit\":0,\"limitName\":\"无门槛 可叠加\",\"startTime\":1545004800000}","createTime":"1970-01-01T04:15:29.000+0000","amount":100.00,"type":1,"typeName":"分享券"},{"guid":32,"couponName":"满188减99元优惠券","rule":"{\"endTime\":1577750400000,\"limit\":188,\"limitName\":\"满188可用\",\"startTime\":1546300800000}","createTime":"1970-01-01T09:24:26.000+0000","amount":100001.00,"type":1,"typeName":"分享券"}]}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:white>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getCustomerInfo 
+        </th>
+         <th colspan="1" style="font-size: 15">4.299241</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：6,  通过：6, 失败：0, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([9,6],this)">
+        </th>
+        </tr>
+        
+<tr id="if9-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确，获取客户信息</th>
+    <th>0.5622141</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row9-1', 'row9-1-1'],this)"></th>
+</tr>
+        <tr id="row9-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092/boss/app/customer_info/v2/customer/10000124'}
+        </th>
+        </tr>
+        <tr id="row9-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"customerGuid":10000124,"companyName":"测试name———11","contacter":"QQ","contactPhone":"15958021797","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":2,"advertiserTypeName":"企业广告主","companyType":3,"companyTypeName":"政府组织/事业单位","licenceNo":"123412412412441","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.123.421.412/1414141.jpg","inviteCode":"u5boaxzh","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-29 16:24:41","updateTime":"2018-12-29 17:25:31","urlIdCard1":"http://122.122.214.43:21/11111.jpg","urlIdCard2":"http://122.122.214.43:21/22222.jpg","urlIdCard3":null,"urlLicenceNo":"http://1222.12.214.43:21/444444.jpg","industryCodes":["HZ_21"],"industryNames":"null ","withPayPassword":true,"checkBeanList":[{"guid":0,"customerGuid":10000124,"checkType":20,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:50","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":21,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:50","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":22,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:50","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":23,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:50","updateTime":null}],"totalBalance":1510.0}}
+        </th>
+        </tr>
+<tr id="if9-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数customerId，入参int值的最大值</th>
+    <th>0.5432141</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001026 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row9-2', 'row9-2-1'],this)"></th>
+</tr>
+        <tr id="row9-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092/boss/app/customer_info/v2/customer/2147483647'}
+        </th>
+        </tr>
+        <tr id="row9-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001026,"msg":"查询客户信息不存在","data":null}
+        </th>
+        </tr>
+<tr id="if9-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数customerId,没有传值</th>
+    <th>0.5918918</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  404 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row9-3', 'row9-3-1'],this)"></th>
+</tr>
+        <tr id="row9-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092/boss/app/customer_info/v2/customer'}
+        </th>
+        </tr>
+        <tr id="row9-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"timestamp":"2019-01-02T09:45:52.267+0000","status":404,"error":"Not Found","message":"No message available","path":"/boss/app/customer_info/v2/customer"}
+        </th>
+        </tr>
+<tr id="if9-4" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数customerId，负数</th>
+    <th>0.9043777</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001026 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row9-4', 'row9-4-1'],this)"></th>
+</tr>
+        <tr id="row9-4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092/boss/app/customer_info/v2/customer/-999'}
+        </th>
+        </tr>
+        <tr id="row9-4" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001026,"msg":"查询客户信息不存在","data":null}
+        </th>
+        </tr>
+<tr id="if9-5" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数customerId，字母</th>
+    <th>1.2815502</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row9-5', 'row9-5-1'],this)"></th>
+</tr>
+        <tr id="row9-5-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092/boss/app/customer_info/v2/customer/a'}
+        </th>
+        </tr>
+        <tr id="row9-5" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if9-6" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数customerId，超过int最大值</th>
+    <th>0.4159930</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: not_equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row9-6', 'row9-6-1'],this)"></th>
+</tr>
+        <tr id="row9-6-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092/boss/app/customer_info/v2/customer/2147483648'}
+        </th>
+        </tr>
+        <tr id="row9-6" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:seashell>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.saveCustomerInfo 
+        </th>
+         <th colspan="1" style="font-size: 15">26.200185</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：19,  通过：14, 失败：5, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([10,19],this)">
+        </th>
+        </tr>
+        
+<tr id="if10-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, advertiserType：1 保存用户信息</th>
+    <th>0.7963631</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-1', 'row10-1-1'],this)"></th>
+</tr>
+        <tr id="row10-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 1, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '15958021797', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT', 'ADV_INDUSTRY_ZSJMFW', 'ADV_INDUSTRY_HL'], 'licenceNo': '20193568', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000124,"companyName":"测试人员","contacter":"测试人员","contactPhone":"15958021797","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":1,"advertiserTypeName":"个人广告主","companyType":2,"companyTypeName":"个体工商户","licenceNo":"20193568","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"u5boaxzh","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-29 16:24:41","updateTime":"2019-01-02 17:45:56","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://1222.12.214.43:21/444444.jpg","industryCodes":["ADV_INDUSTRY_DSPT","ADV_INDUSTRY_ZSJMFW","ADV_INDUSTRY_HL"],"industryNames":"电商平台  招商加盟服务 婚恋 ","withPayPassword":true,"checkBeanList":[{"guid":0,"customerGuid":10000124,"checkType":10,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:56","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":11,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:56","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":12,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:56","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":13,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:45:56","updateTime":null}],"totalBalance":1510.0}}
+        </th>
+        </tr>
+<tr id="if10-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, advertiserType：2 保存用户信息</th>
+    <th>0.8920331</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-2', 'row10-2-1'],this)"></th>
+</tr>
+        <tr id="row10-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '15958021797', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '17809326', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000124,"companyName":"测试name11","contacter":"测试人员","contactPhone":"15958021797","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":2,"advertiserTypeName":"企业广告主","companyType":2,"companyTypeName":"个体工商户","licenceNo":"17809326","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"u5boaxzh","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-29 16:24:41","updateTime":"2019-01-02 17:46:01","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":true,"checkBeanList":[{"guid":0,"customerGuid":10000124,"checkType":20,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:01","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":21,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:01","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":22,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:01","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":23,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:01","updateTime":null}],"totalBalance":1510.0}}
+        </th>
+        </tr>
+<tr id="if10-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数advertiserType校验，大于规定值</th>
+    <th>1.8265500</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  900512 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-3', 'row10-3-1'],this)"></th>
+</tr>
+        <tr id="row10-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 3, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '96782504', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900512,"msg":"广告主类型参数超出范围(advertiserType = 3) ","data":null}
+        </th>
+        </tr>
+<tr id="if10-4" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数advertiserType校验，零值</th>
+    <th>0.4338770</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  900512 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-4', 'row10-4-1'],this)"></th>
+</tr>
+        <tr id="row10-4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 0, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '65724108', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-4" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900512,"msg":"广告主类型参数超出范围(advertiserType = 0) ","data":null}
+        </th>
+        </tr>
+<tr id="if10-5" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数advertiserType校验，大于int最大值</th>
+    <th>1.0813711</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期 900500 等于 900512 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-5', 'row10-5-1'],this)"></th>
+</tr>
+        <tr id="row10-5-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 214748364811111, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '19583046', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-5" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if10-6" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数advertiserType校验，字母</th>
+    <th>3.5596778</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期 900500 等于 900512 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-6', 'row10-6-1'],this)"></th>
+</tr>
+        <tr id="row10-6-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 'A', 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '86720453', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-6" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if10-7" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数advertiserType校验，不传值</th>
+    <th>0.8636160</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期 0 等于 900512 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-7', 'row10-7-1'],this)"></th>
+</tr>
+        <tr id="row10-7-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': None, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '68431270', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-7" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000124,"companyName":"测试name11","contacter":"测试人员","contactPhone":"13312341234","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":2,"advertiserTypeName":"企业广告主","companyType":2,"companyTypeName":"个体工商户","licenceNo":"68431270","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"u5boaxzh","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-29 16:24:41","updateTime":"2019-01-02 17:46:09","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":true,"checkBeanList":[{"guid":0,"customerGuid":10000124,"checkType":20,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:09","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":21,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:09","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":22,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:09","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":23,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:09","updateTime":null}],"totalBalance":1510.0}}
+        </th>
+        </tr>
+<tr id="if10-8" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数cityCode/provinceCode校验，不存在</th>
+    <th>0.7970753</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.region:    不包含 未知 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-8', 'row10-8-1'],this)"></th>
+</tr>
+        <tr id="row10-8-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 1, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '47065832', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '3310000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-8" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000124,"companyName":"测试人员","contacter":"测试人员","contactPhone":"13312341234","provinceCode":"3310000","cityCode":"330100","region":"","advertiserType":1,"advertiserTypeName":"个人广告主","companyType":2,"companyTypeName":"个体工商户","licenceNo":"47065832","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"u5boaxzh","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-29 16:24:41","updateTime":"2019-01-02 17:46:10","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":true,"checkBeanList":[{"guid":0,"customerGuid":10000124,"checkType":10,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:10","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":11,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:10","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":12,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:10","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":13,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:10","updateTime":null}],"totalBalance":1510.0}}
+        </th>
+        </tr>
+<tr id="if10-9" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数cityCode/provinceCode校验，不传值</th>
+    <th>0.8938460</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.region:    不包含 未知 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-9', 'row10-9-1'],this)"></th>
+</tr>
+        <tr id="row10-9-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 1, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': None, 'companyName': '测试name11', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000124, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '29843176', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': None, 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-9" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000124,"companyName":"测试人员","contacter":"测试人员","contactPhone":"13312341234","provinceCode":"3310000","cityCode":"330100","region":"","advertiserType":1,"advertiserTypeName":"个人广告主","companyType":2,"companyTypeName":"个体工商户","licenceNo":"29843176","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"u5boaxzh","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-29 16:24:41","updateTime":"2019-01-02 17:46:11","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":true,"checkBeanList":[{"guid":0,"customerGuid":10000124,"checkType":10,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:11","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":11,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:11","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":12,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:11","updateTime":null},{"guid":0,"customerGuid":10000124,"checkType":13,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:11","updateTime":null}],"totalBalance":1510.0}}
+        </th>
+        </tr>
+<tr id="if10-10" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数companyType校验，非预期值</th>
+    <th>0.9039469</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ; app.data.companyType: equals  121 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-10', 'row10-10-1'],this)"></th>
+</tr>
+        <tr id="row10-10-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 121, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '49215380', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-10" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000115,"companyName":"测试name11","contacter":"测试人员","contactPhone":"13312341234","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":2,"advertiserTypeName":"企业广告主","companyType":121,"companyTypeName":null,"licenceNo":"49215380","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"wt4osxqp","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-28 14:37:11","updateTime":"2019-01-02 17:46:12","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":false,"checkBeanList":[{"guid":0,"customerGuid":10000115,"checkType":20,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:12","updateTime":null},{"guid":0,"customerGuid":10000115,"checkType":21,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:12","updateTime":null},{"guid":0,"customerGuid":10000115,"checkType":22,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:12","updateTime":null},{"guid":0,"customerGuid":10000115,"checkType":23,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:12","updateTime":null}],"totalBalance":500.0}}
+        </th>
+        </tr>
+<tr id="if10-11" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数companyType校验，超过int最大值</th>
+    <th>5.3556449</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  900500 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-11', 'row10-11-1'],this)"></th>
+</tr>
+        <tr id="row10-11-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': 2147483648, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '49182607', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-11" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if10-12" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数companyType校验，负小数</th>
+    <th>0.7902260</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-12', 'row10-12-1'],this)"></th>
+</tr>
+        <tr id="row10-12-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': -2.19, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '23576081', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-12" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000115,"companyName":"测试name11","contacter":"测试人员","contactPhone":"13312341234","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":2,"advertiserTypeName":"企业广告主","companyType":-2,"companyTypeName":null,"licenceNo":"23576081","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"wt4osxqp","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-28 14:37:11","updateTime":"2019-01-02 17:46:19","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":"http://12.12.214.43:21/21efs.jpg","urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":false,"checkBeanList":[{"guid":0,"customerGuid":10000115,"checkType":20,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:18","updateTime":null},{"guid":0,"customerGuid":10000115,"checkType":21,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:18","updateTime":null},{"guid":0,"customerGuid":10000115,"checkType":22,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:18","updateTime":null},{"guid":0,"customerGuid":10000115,"checkType":23,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:18","updateTime":null}],"totalBalance":500.0}}
+        </th>
+        </tr>
+<tr id="if10-13" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数companyType校验，未传值</th>
+    <th>0.7220428</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-13', 'row10-13-1'],this)"></th>
+</tr>
+        <tr id="row10-13-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name11', 'companyType': None, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000112, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '53096871', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-13" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"保存成功","data":{"customerGuid":10000112,"companyName":"测试name11","contacter":"测试人员","contactPhone":"13312341234","provinceCode":"330000","cityCode":"330100","region":"浙江省-杭州市","advertiserType":2,"advertiserTypeName":"企业广告主","companyType":0,"companyTypeName":null,"licenceNo":"53096871","bankName":"zhonghang","bankAccount":"3323244224423442242","email":"qwqqw12331@qq.com","merchantsTypes":"[\"1002\",\"1003\"]","merchantsTypesNames":"社区/商圈商户 渠道商户 ","customerGrade":"ACG01","customerGradeName":"一星客户","logoUrl":"http://12.12.214.43:21/123213121efs.jpg","inviteCode":"u5joaq6a","parentInvite":null,"status":1,"applyType":3,"applyTypeName":"复审","createTime":"2018-12-28 10:24:23","updateTime":"2019-01-02 17:46:20","urlIdCard1":"http://12.12.214.43:21/21efs.jpg","urlIdCard2":"http://12.12.214.43:21/21efs.jpg","urlIdCard3":null,"urlLicenceNo":"http://12.12.214.43:21/21efs.jpg","industryCodes":["ADV_INDUSTRY_DSPT"],"industryNames":"电商平台  ","withPayPassword":false,"checkBeanList":[{"guid":0,"customerGuid":10000112,"checkType":20,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:19","updateTime":null},{"guid":0,"customerGuid":10000112,"checkType":21,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:19","updateTime":null},{"guid":0,"customerGuid":10000112,"checkType":22,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:19","updateTime":null},{"guid":0,"customerGuid":10000112,"checkType":23,"checkResult":-1,"description":"审核描述：","checkMan":"system auto check","checkTime":"2019-01-02 17:46:19","updateTime":null}],"totalBalance":500.0}}
+        </th>
+        </tr>
+<tr id="if10-14" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数companyName校验，长度超过50</th>
+    <th>0.5357552</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  900500 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-14', 'row10-14-1'],this)"></th>
+</tr>
+        <tr id="row10-14-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name113344556677889900name113344556677889900ll', 'companyType': -2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '48526731', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-14" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900500,"msg":"系统繁忙，请重试","data":null}
+        </th>
+        </tr>
+<tr id="if10-15" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数licenceNo校验，未传值</th>
+    <th>0.4159102</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  900512 ; app.msg: contains  执照 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-15', 'row10-15-1'],this)"></th>
+</tr>
+        <tr id="row10-15-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name113344556677889900', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': None, 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-15" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":900512,"msg":"营业执照或身份证号码不能为空(licenceNo) ","data":null}
+        </th>
+        </tr>
+<tr id="if10-16" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数licenceNo校验，长度过长（advertiserType：2）</th>
+    <th>0.4510889</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001035 ; app.msg: contains  执照 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-16', 'row10-16-1'],this)"></th>
+</tr>
+        <tr id="row10-16-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 2, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name113344556677889900', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '123456789012345678901234567890123456789012345678901', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-16" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001035,"msg":"请输入正确格式的营业执照注册号","data":null}
+        </th>
+        </tr>
+<tr id="if10-17" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数licenceNo校验，长度过长（advertiserType：1）</th>
+    <th>4.1706252</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001021 ; app.msg: contains  身份证 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-17', 'row10-17-1'],this)"></th>
+</tr>
+        <tr id="row10-17-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 1, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name113344556677889900', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '123456789012345678901234567890123456789012345678901', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-17" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001021,"msg":"身份证号太长，请输入18个以内字符","data":null}
+        </th>
+        </tr>
+<tr id="if10-18" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数contacter校验，长度过长</th>
+    <th>1.2718000</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001022 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-18', 'row10-18-1'],this)"></th>
+</tr>
+        <tr id="row10-18-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 1, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name113344556677889900', 'companyType': 2, 'contactPhone': '13312341234', 'contacter': '测试人员测试人员测试人员测试人员测试人员测试人员测试人员', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '123456789012345678901234567890123456789012345678901', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-18" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001022,"msg":"输入联系人名称太长，请输入20个以内字符","data":null}
+        </th>
+        </tr>
+<tr id="if10-19" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数contactPhone校验，手机号格式不对</th>
+    <th>0.4387352</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001006 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row10-19', 'row10-19-1'],this)"></th>
+</tr>
+        <tr id="row10-19-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'advertiserType': 1, 'bankAccount': '3323244224423442242', 'bankName': 'zhonghang', 'cityCode': '330100', 'companyName': '测试name113344556677889900', 'companyType': 2, 'contactPhone': '189901010101', 'contacter': '测试人员admin', 'customerGuid': 10000115, 'email': 'qwqqw12331@qq.com', 'industryCodes': ['ADV_INDUSTRY_DSPT'], 'licenceNo': '41708625', 'logoUrl': 'http://12.12.214.43:21/123213121efs.jpg', 'provinceCode': '330000', 'urlIdCard1': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard2': 'http://12.12.214.43:21/21efs.jpg', 'urlIdCard3': 'http://12.12.214.43:21/21efs.jpg', 'urlLicenceNo': 'http://12.12.214.43:21/21efs.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/save'}
+        </th>
+        </tr>
+        <tr id="row10-19" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001006,"msg":"手机号码不合法，请重新输入","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:white>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.getCustomerName 
+        </th>
+         <th colspan="1" style="font-size: 15">4.244134</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：4,  通过：4, 失败：0, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([11,4],this)">
+        </th>
+        </tr>
+        
+<tr id="if11-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 获取客户名称</th>
+    <th>0.9400272</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row11-1', 'row11-1-1'],this)"></th>
+</tr>
+        <tr id="row11-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/getCustomerName/u5uoasng'}
+        </th>
+        </tr>
+        <tr id="row11-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":{"customerGuid":10000113,"companyName":"测试name11"}}
+        </th>
+        </tr>
+<tr id="if11-2" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数inviteCode校验, 不存在</th>
+    <th>0.7573290</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001003 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row11-2', 'row11-2-1'],this)"></th>
+</tr>
+        <tr id="row11-2-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/getCustomerName/5q54213'}
+        </th>
+        </tr>
+        <tr id="row11-2" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001003,"msg":"未查到用户信息,请联系管理员","data":null}
+        </th>
+        </tr>
+<tr id="if11-3" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数inviteCode校验, 未传值</th>
+    <th>2.0118740</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  404 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row11-3', 'row11-3-1'],this)"></th>
+</tr>
+        <tr id="row11-3-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/getCustomerName'}
+        </th>
+        </tr>
+        <tr id="row11-3" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"timestamp":"2019-01-02T09:46:32.157+0000","status":404,"error":"Not Found","message":"No message available","path":"//boss/app/customer_info/v2/getCustomerName"}
+        </th>
+        </tr>
+<tr id="if11-4" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数inviteCode校验, 长度超过250</th>
+    <th>0.5349042</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  90001003 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row11-4', 'row11-4-1'],this)"></th>
+</tr>
+        <tr id="row11-4-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'get', 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/getCustomerName/5q54213qwwwwwwwwwwwwwwww23143546543234erewqeweklopiolukbfdwt45yjndbsdvafwqr3tehdsvadrtyhtdfbsvadr3t4ythdsfadrtythdsgefeyurtkmndsgfd  qeqrwtehfrthedbsvafdrewrewffrfwfweggergagdfzvadvrevervawvavavarveavrgeqtinogewmkenrh4egowmcflewfgnhoq5iy3t4mflk gwnrh3efrtwhfdgf'}
+        </th>
+        </tr>
+        <tr id="row11-4" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":90001003,"msg":"未查到用户信息,请联系管理员","data":null}
+        </th>
+        </tr>
+        <tr align="center" style=background-color:seashell>
+        <th  align="left" colspan="1" style="font-size: 15">
+        测试套件名称：app.modifyLogo 
+        </th>
+         <th colspan="1" style="font-size: 15">2.907593</th> 
+        <th  align="left" colspan="2" style="font-size: 15">
+            用例共计：4,  通过：1, 失败：3, 错误：0
+        </th>
+        <th align="center" colspan="1">
+         <input id="intest" value="查看详情" type='button' style='color:black' onclick="showRow([12,4],this)">
+        </th>
+        </tr>
+        
+<tr id="if12-1" align="center" style="background-color:white;display:none;word-break:break-all">
+    <th align="left">__参数正确, 设置用户logo</th>
+    <th>0.5977008</th>
+    <th style='color:black' >Pass</th>
+    <th align="left"> status_code: equals  200 ; app.code: equals  0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row12-1', 'row12-1-1'],this)"></th>
+</tr>
+        <tr id="row12-1-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'customerGuid': 10000124, 'url': 'http://12.123.421.412/1414141.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/modifyLogo'}
+        </th>
+        </tr>
+        <tr id="row12-1" style="display:none;color:black;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if12-2" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数customerGuid校验, 不存在guid</th>
+    <th>0.4577031</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row12-2', 'row12-2-1'],this)"></th>
+</tr>
+        <tr id="row12-2-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'customerGuid': 1001, 'url': 'http://12.123.421.412/1414141.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/modifyLogo'}
+        </th>
+        </tr>
+        <tr id="row12-2" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if12-3" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数customerGuid校验, 字母</th>
+    <th>1.4087989</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row12-3', 'row12-3-1'],this)"></th>
+</tr>
+        <tr id="row12-3-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'customerGuid': 1001, 'url': 'http://12.123.421.412/1414141.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/modifyLogo'}
+        </th>
+        </tr>
+        <tr id="row12-3" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>
+<tr id="if12-4" align="center" style="background-color:seashell;display:none;word-break:break-all">
+    <th align="left">__参数customerGuid校验, 入参null</th>
+    <th>0.4433899</th>
+    <th style='color:orchid' >Failed</th>
+    <th align="left"> status_code: equals  200 ; app.code:  预期不等于 0 ;</th>
+    <th><input id="intest" value="Show Detail" type='button' style='color:black' onclick="setDetailMsgRow(['row12-4', 'row12-4-1'],this)"></th>
+</tr>
+        <tr id="row12-4-1" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Params 
+        </th>
+        <th align="left" colspan='4' >
+        {'method': 'post', 'json': {'customerGuid': None, 'url': 'http://12.123.421.412/1414141.jpg'}, 'timeout': 5, 'headers': {'content-type': 'application/json; charset=UTF-8', 'User-Agent': 'Mozilla/5.0 ', 'advert-server': 'af60ba30-bf42-497d-aeca-f66f62c22ffe'}, 'url': 'https://test.yun-ti.com:10092//boss/app/customer_info/v2/customer/modifyLogo'}
+        </th>
+        </tr>
+        <tr id="row12-4" style="display:none;color:orchid;word-break:break-all" >
+        <th align="left" colspan='1' style="font-size:14">
+        Response Data
+        </th>
+        <th align="left" colspan='4' >
+        {"code":0,"msg":"操作成功","data":null}
+        </th>
+        </tr>  
+        </table>
+    </div> 
+    <div id="floor">
+        <div class="barchart"> 
+        <p> 测试结果统计图： <button style='color:green'onclick='javascript:drawBar(56, 22, 0)' >Show Chart</button></p>
+        <canvas id="bar" width="225" height="168" >your browser does not support the canvas tag</canvas>
+        </div>
+    <!-- <p> 测试结果统计图： <button style='color:green' onclick="setDetailMsgRow('img1',this)">Show Chart</button></p>      
+    <img id='img1' style="display:none" src="./chart.png"/> -->
+    </div>
+</body>
+</html> 

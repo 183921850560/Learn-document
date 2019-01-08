@@ -1,0 +1,10 @@
+suiteName: alipay.getOrderFrom 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      params: 
+        amount:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["alipay.code", 0]

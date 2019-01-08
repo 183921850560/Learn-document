@@ -1,0 +1,19 @@
+suiteName: accounthistory.queryTotalAccountHistoryPage 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        accountName: 
+        accountType: 
+        clienteleGuid: 
+        endTimeStr: 
+        optType: 
+        orderBy: 
+        orderField: 
+        pageIndex: 
+        pageSize: 
+        startTimeStr:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["accounthistory.code", 0]

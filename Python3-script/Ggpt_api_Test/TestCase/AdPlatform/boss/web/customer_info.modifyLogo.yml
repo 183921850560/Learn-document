@@ -1,0 +1,11 @@
+suiteName: customer_info.modifyLogo 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        customerGuid: 
+        url:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["customer_info.code", 0]

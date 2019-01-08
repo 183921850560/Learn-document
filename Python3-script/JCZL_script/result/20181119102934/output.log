@@ -1,0 +1,4 @@
+2018-11-19 10:29:34,831 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/modifyPwd
+2018-11-19 10:29:34,917 - root - INFO - data:{"oldPwd": "b52a5871aa94a01608cc49150c4badb7", "newPwd": "78a93a0858becb108bd7518037fd1b0c", "operatorUserId": 19965} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
+2018-11-19 10:29:34,917 - root - INFO - Response data: {'code': 0, 'data': None, 'message': '²Ù×÷³É¹¦£¡'} 
+2018-11-19 10:29:34,917 - root - INFO - ================================================================================================================================================================

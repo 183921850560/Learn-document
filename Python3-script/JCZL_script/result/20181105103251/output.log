@@ -1,0 +1,4 @@
+2018-11-05 10:32:51,513 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/createUser
+2018-11-05 10:32:51,536 - root - INFO - data:{'address': '陕西省西安市未央区366号', 'unitGuid': 366, 'mobilephone': 18392185056.0, 'telephone': '057185220123', 'userName': '龚小龙', 'userCode': '2224.0', 'userPwsd': 'g183921585056', 'roleGuids': [3], 'operatorUserId': 1202, 'remark': '这是第一个用例', 'expireDate': '44063.0', 'userGroupGuid': 123456789, 'loginSmsVarify': 5, 'sessionTimeOut': 1} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
+2018-11-05 10:32:51,536 - root - INFO - Response data: {'code': -1, 'data': None, 'message': '后台服务出错，请联系管理员！'} 
+2018-11-05 10:32:51,537 - root - INFO - ================================================================================================================================================================

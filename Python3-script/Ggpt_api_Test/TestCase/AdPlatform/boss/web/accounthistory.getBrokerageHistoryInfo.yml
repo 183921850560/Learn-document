@@ -1,0 +1,12 @@
+suiteName: accounthistory.getBrokerageHistoryInfo 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      params: 
+        pageIndex: 
+        pageSize: 
+        type:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["accounthistory.code", 0]

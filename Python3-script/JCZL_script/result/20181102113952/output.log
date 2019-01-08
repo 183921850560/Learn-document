@@ -1,0 +1,4 @@
+2018-11-02 11:39:52,366 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/userLogin
+2018-11-02 11:39:52,397 - root - INFO - data:{'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8', 'userCode': 'xzl', 'userPwsd': 'mS2SbHjtozc%3D'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2018-11-02 11:39:52,411 - root - INFO - Response data: {'code': 40030002, 'data': None, 'message': '应用编码不能为空！'} 
+2018-11-02 11:39:52,416 - root - INFO - ================================================================================================================================================================

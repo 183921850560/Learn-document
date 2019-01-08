@@ -1,0 +1,7 @@
+aa: &aa1
+ aa1: 123
+app.getAppInfo:
+  summary: 获取应用信息
+  method: aa
+  <<: *aa1
+  path: api/v1/app

@@ -1,0 +1,21 @@
+suiteName: material.updateAdvMaterial 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        customerGuid: 
+        guid: 
+        materialCode: 
+        materialContent: 
+        materialHeight: 
+        materialName: 
+        materialSize: 
+        materialTags: 
+        materialType: 
+        materialWidth: 
+        md5: 
+        narrowImageUrl:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["material.code", 0]

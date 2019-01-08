@@ -1,0 +1,10 @@
+suiteName: deviceSlot.getLabelDetails 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      params: 
+        code:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["deviceSlot.code", 0]

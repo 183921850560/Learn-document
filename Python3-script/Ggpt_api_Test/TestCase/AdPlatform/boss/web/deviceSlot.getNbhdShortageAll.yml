@@ -1,0 +1,14 @@
+suiteName: deviceSlot.getNbhdShortageAll 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        contentTime: 
+        endDate: 
+        frequencyTime: 
+        nbGuids: 
+        startDate:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["deviceSlot.code", 0]

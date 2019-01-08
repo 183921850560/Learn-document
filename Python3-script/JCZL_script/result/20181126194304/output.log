@@ -1,0 +1,4 @@
+2018-11-26 19:43:04,529 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/neighborhood/updateNbhd
+2018-11-26 19:43:04,577 - root - INFO - data:{"guid": 1123, "remark": "\u8fd9\u662f\u5218\u6ed4\u6ed4\u7684\u4f4f\u5740"} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
+2018-11-26 19:43:04,578 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！同个街道下面不能有同名小区'} 
+2018-11-26 19:43:04,578 - root - INFO - ================================================================================================================================================================

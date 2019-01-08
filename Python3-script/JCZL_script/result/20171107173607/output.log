@@ -1,0 +1,294 @@
+2017-11-07 17:36:07,741 - root - INFO - =======Test Start==========
+2017-11-07 17:36:07,742 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 17:36:07,750 - root - INFO - data:{'deviceID': '8A77BEC56961'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,751 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 17:36:07,751 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,751 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 17:36:07,757 - root - INFO - data:{'deviceID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,757 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 17:36:07,758 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,758 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 17:36:07,763 - root - INFO - data:{'deviceID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,763 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 17:36:07,763 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,763 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 17:36:07,771 - root - INFO - data:{'deviceID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,771 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 17:36:07,771 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,772 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/getStatus
+2017-11-07 17:36:07,779 - root - INFO - data:{'deviceID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,779 - root - INFO - Response data: {'data': {'online': 1}} 
+2017-11-07 17:36:07,779 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,779 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 17:36:07,789 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,789 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 17:36:07,789 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,790 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 17:36:07,807 - root - INFO - data:{'powerID': 'F0EEA96E8CA8'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:07,808 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 17:36:07,808 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:07,809 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 17:36:14,816 - root - INFO - data:{'powerID': '8A77BEC56961'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:14,816 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '8A77BEC56961'}} 
+2017-11-07 17:36:14,816 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:14,817 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/ctrlDc2Dc
+2017-11-07 17:36:21,825 - root - INFO - data:{'powerID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:21,825 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': 'D075BB8F9BCE'}} 
+2017-11-07 17:36:21,826 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:21,827 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 17:36:21,841 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:21,841 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'harewareVer': 10, 'softwareVer': 20, 'madeTime': '1320940800000', 'madeFactory': 20, 'customID': 30, 'manufacturer': 110, 'designTime': '1320940800000'}} 
+2017-11-07 17:36:21,841 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:21,842 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 17:36:21,853 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:21,853 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'harewareVer': 10, 'softwareVer': 20, 'madeTime': '1012492800000', 'madeFactory': 10, 'customID': 11, 'manufacturer': 10, 'designTime': '978278400000'}} 
+2017-11-07 17:36:21,854 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:21,854 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 17:36:28,870 - root - INFO - data:{'powerID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:28,870 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': 'D075BB8F9BCE'}} 
+2017-11-07 17:36:28,871 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:28,871 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevInfo
+2017-11-07 17:36:28,878 - root - INFO - data:{'powerID': 'D075BB8F1BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:28,878 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 17:36:28,879 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:28,880 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 17:36:28,898 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:28,899 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'deviceType': 2}} 
+2017-11-07 17:36:28,899 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:28,899 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 17:36:28,916 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:28,916 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'deviceType': 3}} 
+2017-11-07 17:36:28,916 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:28,916 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 17:36:35,934 - root - INFO - data:{'powerID': 'D075BB8F9BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:35,934 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': 'D075BB8F9BCE'}} 
+2017-11-07 17:36:35,934 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:35,934 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getDevType
+2017-11-07 17:36:35,943 - root - INFO - data:{'powerID': 'D075BB8F1BCE'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:35,944 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 17:36:35,944 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:35,944 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 17:36:35,954 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:35,954 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7', 'resetMinute': 1}} 
+2017-11-07 17:36:35,954 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:35,955 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 17:36:35,964 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:35,964 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497', 'resetHour': 19, 'resetMinute': 50}} 
+2017-11-07 17:36:35,964 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:35,964 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 17:36:42,972 - root - INFO - data:{'powerID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:42,973 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 17:36:42,973 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:42,973 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/getResetTime
+2017-11-07 17:36:42,982 - root - INFO - data:{'powerID': '01EE23DC7CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:42,982 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 17:36:42,983 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:42,983 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 17:36:42,994 - root - INFO - data:{'powerID': 'F0EEA96E8CA7'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:42,995 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 17:36:42,995 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:42,996 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 17:36:43,004 - root - INFO - data:{'powerID': 'B13A4FB3D497'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:43,004 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 17:36:43,004 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:43,004 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 17:36:50,012 - root - INFO - data:{'powerID': '01EE23DC6CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:50,012 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 17:36:50,012 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:50,013 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/restore
+2017-11-07 17:36:50,020 - root - INFO - data:{'powerID': '01EE23DC7CCC'} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:50,021 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 17:36:50,021 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:50,022 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 17:36:50,040 - root - INFO - data:{'powerID': 'F0EEA96E8CA7', 'alarmConfig1': 1, 'alarmConfig2': 1, 'alarmConfig3': 1, 'alarmConfig4': 1, 'res1': 1, 'res2': 1} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:50,040 - root - INFO - Response data: {'data': {'powerID': 'F0EEA96E8CA7'}} 
+2017-11-07 17:36:50,040 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:50,040 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 17:36:50,059 - root - INFO - data:{'powerID': 'B13A4FB3D497', 'alarmConfig1': 2, 'alarmConfig2': 2, 'alarmConfig3': 2, 'alarmConfig4': 2, 'res1': 2, 'res2': 2} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:50,059 - root - INFO - Response data: {'data': {'powerID': 'B13A4FB3D497'}} 
+2017-11-07 17:36:50,059 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:50,059 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 17:36:57,065 - root - INFO - data:{'powerID': '01EE23DC6CCC', 'alarmConfig1': 3, 'alarmConfig2': 3, 'alarmConfig3': 3, 'alarmConfig4': 3, 'res1': 3, 'res2': 3} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:57,065 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'time_out!', 'data': {'powerID': '01EE23DC6CCC'}} 
+2017-11-07 17:36:57,065 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:57,066 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setAlarm
+2017-11-07 17:36:57,073 - root - INFO - data:{'powerID': '01EE23DC7CCC', 'alarmConfig1': 4, 'alarmConfig2': 4, 'alarmConfig3': 4, 'alarmConfig4': 4, 'res1': 4, 'res2': 4} response status: 200  header:{'content-type': 'application/json'} files: {} timeout:15
+2017-11-07 17:36:57,074 - root - INFO - Response data: {'errCode': -1, 'errDesc': 'can not find session by elevid and devid!'} 
+2017-11-07 17:36:57,074 - root - INFO - ================================================================================================================================================================
+2017-11-07 17:36:57,074 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 17:36:57,089 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 17:36:58,110 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 17:36:59,116 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setMaintain
+2017-11-07 17:37:00,121 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 17:37:01,132 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 17:37:02,158 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 17:37:03,178 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setResetTime
+2017-11-07 17:37:04,184 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 17:37:05,204 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 17:37:06,211 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 17:37:07,216 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setRtStatusRptCyc
+2017-11-07 17:37:08,220 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 17:37:09,234 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 17:37:10,243 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 17:37:11,262 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/power/setTime
+2017-11-07 17:37:12,266 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/maintain
+2017-11-07 17:37:13,281 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/maintain
+2017-11-07 17:37:14,286 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/pcap
+2017-11-07 17:37:15,290 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/pcap
+2017-11-07 17:37:16,294 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 17:37:17,319 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 17:37:18,324 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 17:37:19,347 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 17:37:20,356 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setAlarm
+2017-11-07 17:37:21,371 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setBoardcastConfirm
+2017-11-07 17:37:22,380 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setBoardcastConfirm
+2017-11-07 17:37:23,385 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setEstAlarm
+2017-11-07 17:37:24,422 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setEstAlarm
+2017-11-07 17:37:25,427 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setEstAlarm
+2017-11-07 17:37:26,430 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setFireCtrl
+2017-11-07 17:37:27,444 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setFireCtrl
+2017-11-07 17:37:28,455 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setLogo
+2017-11-07 17:37:29,509 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setLogo
+2017-11-07 17:37:30,519 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setPlacateVideo
+2017-11-07 17:37:31,545 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setPlacateVideo
+2017-11-07 17:37:32,564 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSoundVolume
+2017-11-07 17:37:33,594 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSoundVolume
+2017-11-07 17:37:34,611 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSpeaker
+2017-11-07 17:37:35,628 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setSpeaker
+2017-11-07 17:37:36,648 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWaterPressure
+2017-11-07 17:37:37,667 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWaterPressure
+2017-11-07 17:37:38,677 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWifi
+2017-11-07 17:37:39,694 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/setWifi
+2017-11-07 17:37:40,692 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/updatePlaybill
+2017-11-07 17:37:41,712 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/updatePlaybill
+2017-11-07 17:37:42,717 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/upgrade
+2017-11-07 17:37:43,737 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/screen/upgrade
+2017-11-07 17:37:44,751 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 17:37:45,756 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 17:37:46,780 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 17:37:47,779 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 17:37:48,793 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/SetRtStatusCyc
+2017-11-07 17:37:49,807 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 17:37:50,825 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 17:37:51,832 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 17:37:52,925 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlElev
+2017-11-07 17:37:53,949 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 17:37:54,963 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 17:37:55,967 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 17:37:56,984 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs232
+2017-11-07 17:37:57,999 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 17:37:59,012 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 17:38:00,016 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 17:38:01,033 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/ctrlRs485
+2017-11-07 17:38:02,038 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 17:38:03,051 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 17:38:04,054 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 17:38:05,058 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getAI1Alarm
+2017-11-07 17:38:06,062 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 17:38:07,073 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 17:38:08,078 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 17:38:09,094 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibFloor
+2017-11-07 17:38:10,096 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 17:38:11,121 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 17:38:12,126 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 17:38:13,136 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getCalibTemp
+2017-11-07 17:38:14,147 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 17:38:15,171 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 17:38:16,177 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 17:38:17,190 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevInfo
+2017-11-07 17:38:18,203 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 17:38:19,414 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 17:38:20,430 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 17:38:21,438 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getDevType
+2017-11-07 17:38:22,443 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 17:38:23,466 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 17:38:24,489 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 17:38:25,497 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getFloorCalcComp
+2017-11-07 17:38:26,504 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 17:38:27,529 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 17:38:28,540 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 17:38:29,547 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getIOParam
+2017-11-07 17:38:30,564 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 17:38:31,578 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 17:38:32,584 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 17:38:33,589 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV1
+2017-11-07 17:38:34,592 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 17:38:35,605 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 17:38:36,611 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 17:38:37,626 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLevelInfoV2
+2017-11-07 17:38:38,636 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 17:38:39,686 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 17:38:40,699 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 17:38:41,712 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 17:38:42,718 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getLog
+2017-11-07 17:38:43,742 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 17:38:44,763 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 17:38:45,769 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 17:38:46,773 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getPhototube
+2017-11-07 17:38:47,775 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 17:38:48,799 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 17:38:49,803 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 17:38:50,807 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Data
+2017-11-07 17:38:51,840 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 17:38:52,874 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 17:38:53,873 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 17:38:54,878 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs232Param
+2017-11-07 17:38:55,911 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 17:38:56,930 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 17:38:57,934 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 17:38:58,945 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Data
+2017-11-07 17:38:59,955 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 17:39:00,981 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 17:39:01,990 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 17:39:03,003 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getRs485Param
+2017-11-07 17:39:04,006 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 17:39:05,019 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 17:39:06,024 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 17:39:07,032 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/getTime
+2017-11-07 17:39:08,035 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 17:39:09,051 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 17:39:10,060 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 17:39:11,075 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/reset
+2017-11-07 17:39:12,081 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 17:39:13,097 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 17:39:14,115 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 17:39:15,115 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/restore
+2017-11-07 17:39:16,122 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 17:39:17,128 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 17:39:18,128 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 17:39:19,137 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 17:39:20,151 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI1Alarm
+2017-11-07 17:39:21,155 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 17:39:22,172 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 17:39:23,187 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 17:39:24,191 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 17:39:25,195 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Alarm
+2017-11-07 17:39:26,212 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 17:39:27,240 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 17:39:28,251 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 17:39:29,282 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 17:39:30,288 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI2Range
+2017-11-07 17:39:31,292 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 17:39:32,317 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 17:39:33,326 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 17:39:34,343 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 17:39:35,347 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Alarm
+2017-11-07 17:39:36,360 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 17:39:37,384 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 17:39:38,388 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 17:39:39,403 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 17:39:40,406 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI3Range
+2017-11-07 17:39:41,417 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 17:39:42,441 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 17:39:43,444 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 17:39:44,455 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 17:39:45,459 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Alarm
+2017-11-07 17:39:46,473 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 17:39:47,482 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 17:39:48,490 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 17:39:49,512 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 17:39:50,525 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setAI4Range
+2017-11-07 17:39:51,526 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 17:39:52,532 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 17:39:53,535 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor
+2017-11-07 17:39:54,538 - root - INFO - set url:http://192.168.20.4:6520/v1/elevator/signal/setCalibFloor

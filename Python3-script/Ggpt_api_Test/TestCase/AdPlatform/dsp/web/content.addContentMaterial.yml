@@ -1,0 +1,14 @@
+suiteName: content.addContentMaterial 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        contentGuid: 
+        contentName: 
+        materialInfoList: 
+        orderGuid: 
+        playModeCode:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.code", 0]

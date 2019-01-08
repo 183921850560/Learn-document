@@ -1,0 +1,10 @@
+suiteName: app.deleteOrder 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      params: 
+        guids:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]

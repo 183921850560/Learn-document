@@ -1,0 +1,16 @@
+2018-11-12 16:41:34,630 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/userLogin
+2018-11-12 16:41:34,672 - root - INFO - data:{'userCode': 'xzl', 'userPwsd': 'mS2SbHjtozc%3D'} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
+2018-11-12 16:41:34,672 - root - INFO - Response data: {'code': 40040005, 'data': None, 'message': '用户名或密码错误！'} 
+2018-11-12 16:41:34,672 - root - INFO - ================================================================================================================================================================
+2018-11-12 16:41:34,675 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/userLogin
+2018-11-12 16:41:34,712 - root - INFO - data:{'userCode': 'qwertyuiopasdfghjklz', 'userPwsd': '1234567890vdsvfdsvdsvdsvdvdsvvcdsvcdvcdsvdsvdfvdfvdfvdfvdsvdsfvdvvxcvcxvxvxcvxcvxvxvxvxvvxvxvxvxqqq'} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
+2018-11-12 16:41:34,713 - root - INFO - Response data: {'code': 40040005, 'data': None, 'message': '用户名或密码错误！'} 
+2018-11-12 16:41:34,713 - root - INFO - ================================================================================================================================================================
+2018-11-12 16:41:34,714 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/userLogin
+2018-11-12 16:41:34,729 - root - INFO - data:{'userCode': '', 'userPwsd': 'qqsqssqsqsqsqsqs'} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
+2018-11-12 16:41:34,729 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！登录用户名不能为空！'} 
+2018-11-12 16:41:34,729 - root - INFO - ================================================================================================================================================================
+2018-11-12 16:41:34,730 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/userLogin
+2018-11-12 16:41:34,755 - root - INFO - data:{'userCode': '', 'userPwsd': ''} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
+2018-11-12 16:41:34,755 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！登录用户名不能为空！'} 
+2018-11-12 16:41:34,755 - root - INFO - ================================================================================================================================================================

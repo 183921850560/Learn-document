@@ -1,0 +1,393 @@
+testInterFace: analysisBusynessByHour
+method: POST
+url: /zbp-service/1.2.0/analysisBusynessByHour
+enable: 1
+data:
+  -
+    caseName: 根据电梯查询数据类型为1 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code: 0
+
+  -
+    caseName: 根据电梯查询数据类型为2  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[2],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[2]}
+    result:
+      check_code: 0
+  -
+    caseName: 根据电梯查询数据类型为3  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[3],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[3]}
+    result:
+      check_code: 0
+  -
+    caseName: 根据电梯查询数据类型为1，2，3  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2,3],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[4]}
+    result:
+      check_code: 0
+  -
+    caseName: 根据电梯查询,dayType组合数 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2,3],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1,2,5,7]}
+    result:
+      check_code: 0
+  -
+    caseName: 根据电梯查询,dayType组合数 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2,3],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[4,6,3,7]}
+    result:
+      check_code: 0
+
+
+
+# queryJson 参数校验
+  -
+    caseName: queryJson参数校验-null  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: null
+    result:
+      check_code:  $err_code
+  -
+    caseName: queryJson字段名称错误  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJsons: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+#accessToken 参数校验
+  -
+    caseName: accessToken参数校验--错误token # case name
+    paramType: data
+    data:
+      accessToken:  "1231232-3213-23"
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code: $err_code
+  -
+    caseName: accessToken参数校验--类型错误 # case name
+    paramType: data
+    data:
+      accessToken:  1231232
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code: $err_code
+  -
+    caseName: accessToken参数校验--过期token # case name
+    paramType: data
+    data:
+      accessToken:  ${get_expire_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code: $err_code
+  -
+    caseName: accessToken 字段名称错误 # case name
+    paramType: data
+    data:
+      accessTokens:  ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code: $err_code
+
+  #dataType参数校验
+  -
+    caseName: dataType参数校验-null值  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":null,"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-空数组  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-零值  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[0],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-负数 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[-1],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-不存在type  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[9],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-字母  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[q],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-字符串 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":["zq"],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-类型错误  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":["1"],"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType参数校验-非数组  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":1,"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dataType字段名称错误  # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}", dataTypes":1,"startDate":"${get_day(37)}","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  #startDate参数校验
+  -
+    caseName: startDate参数校验-非法参数 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"zq","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: startDate参数校验-类型错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":${get_day(37)},"endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: startDate参数校验-格式错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"201816","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: startDate参数校验-字母 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate": zq,"endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: startDate参数校验-null值 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate": null,"endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: startDate字段名称错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDates": "20180201","endDate":"${get_day(1)}","dayType":[1]}
+    result:
+      check_code:  $err_code
+  #endDate参数校验
+  -
+    caseName: endDate参数校验-非法参数 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate":"zq","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: endDate参数校验-类型错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate":${get_day(37)},"dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: endDate参数校验-格式错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate":"201831","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: endDate参数校验-字母 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": zq,"dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: endDate字段名称错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDates": "20180201","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: endDate小于startDate # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"20180401",endDate": "20180101","dayType":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: endDate，startDate格式不一致 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"201804",endDate": "20180101","dayType":[1]}
+    result:
+      check_code:  $err_code
+  #dayType参数校验
+  -
+    caseName: dayType参数校验-字母 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayType":[q]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dayType参数校验-不存在 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayType":[11]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dayType参数校验-类型错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayType":["1"]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dayType参数校验-非数组 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayType":1}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dayType参数校验-包含不存在day # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayType":[1,8]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dayType字段名称错误 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayTypes":[1]}
+    result:
+      check_code:  $err_code
+  -
+    caseName: dayType参数校验-null值 # case name
+    paramType: data
+    data:
+      accessToken: ${get_token()}
+      queryJson: >
+        {"elevatorId":"${get_elevatorId()}","dataType":[1,2],"startDate":"${get_day(37)}",endDate": "${get_day(37)}","dayType":null}
+    result:
+      check_code:  $err_code

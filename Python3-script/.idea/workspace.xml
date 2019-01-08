@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3a639a9-a208-4c5d-85e0-984b47862f3a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_for_Device_config_Device_config_test_DeviceConfig.coverage" NAME="Nosetests for Device_config.Device_config.test_DeviceConfig Coverage Results" MODIFIED="1545373767143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled" />
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_in_createUser_py.coverage" NAME="Nosetests in createUser.py Coverage Results" MODIFIED="1545807773864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/testCase" />
+    <SUITE FILE_PATH="coverage/Python3_script$createUser.coverage" NAME="createUser Coverage Results" MODIFIED="1545373034822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/testCase" />
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_in_curUserInfo_py.coverage" NAME="Nosetests in curUserInfo.py Coverage Results" MODIFIED="1545373180215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/testCase" />
+    <SUITE FILE_PATH="coverage/Python3_script$common.coverage" NAME="common Coverage Results" MODIFIED="1545810527994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/common" />
+    <SUITE FILE_PATH="coverage/Python3_script$log.coverage" NAME="log Coverage Results" MODIFIED="1545811744201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/common" />
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_in_fetchUser_py.coverage" NAME="Nosetests in fetchUser.py Coverage Results" MODIFIED="1545807785713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/testCase" />
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_in_Device_config_py.coverage" NAME="Nosetests in Device_config.py Coverage Results" MODIFIED="1545706659722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled" />
+    <SUITE FILE_PATH="coverage/Python3_script$readConfig.coverage" NAME="readConfig Coverage Results" MODIFIED="1545809957649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script" />
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_for__jingdong.coverage" NAME="Nosetests for 进入京东商城.jingdong Coverage Results" MODIFIED="1545707179896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7" />
+    <SUITE FILE_PATH="coverage/Python3_script$.coverage" NAME="模拟告警 Coverage Results" MODIFIED="1545718956180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4" />
+    <SUITE FILE_PATH="coverage/Python3_script$file.coverage" NAME="file Coverage Results" MODIFIED="1545794075106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7" />
+    <SUITE FILE_PATH="coverage/Python3_script$Nosetests_in__py.coverage" NAME="Nosetests in 进入京东商城.py Coverage Results" MODIFIED="1545707171238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7" />
+    <SUITE FILE_PATH="coverage/Python3_script$1.coverage" NAME="模拟告警1 Coverage Results" MODIFIED="1545709331659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4" />
+    <SUITE FILE_PATH="coverage/Python3_script$001.coverage" NAME="001 Coverage Results" MODIFIED="1545707267579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7" />
+    <SUITE FILE_PATH="coverage/Python3_script$kafka.coverage" NAME="kafka生产者数据 Coverage Results" MODIFIED="1545722595367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4" />
+    <SUITE FILE_PATH="coverage/Python3_script$configHttp.coverage" NAME="configHttp Coverage Results" MODIFIED="1545809571045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/common" />
+    <SUITE FILE_PATH="coverage/Python3_script$httpserver.coverage" NAME="httpserver Coverage Results" MODIFIED="1545707355679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7" />
+    <SUITE FILE_PATH="coverage/Python3_script$variable.coverage" NAME="variable Coverage Results" MODIFIED="1545724762366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4" />
+    <SUITE FILE_PATH="coverage/Python3_script$configDB.coverage" NAME="configDB Coverage Results" MODIFIED="1545810539097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JCZL_script/common" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="createUser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/testCase/createUser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="39" column="49" lean-forward="false" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+              <folding>
+                <marker date="1543572206770" expanded="true" signature="3062:3099" ph="delete from jczl_user... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/common/common.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding>
+                <element signature="e#22#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/common/log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configHttp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/common/configHttp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readConfig.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/readConfig.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="e#22#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetchUser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/testCase/fetchUser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#16#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configDB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JCZL_script/common/configDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <folding>
+                <element signature="e#22#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="001.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/001.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/进入京东商城.py" />
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/httpserver.py" />
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/对文件的操作.py" />
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/模拟告警.py" />
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/kafka生产者数据.py" />
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/variable.py" />
+        <option value="$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/file.py" />
+        <option value="$PROJECT_DIR$/JCZL_script/readConfig.py" />
+        <option value="$PROJECT_DIR$/JCZL_script/common/common.py" />
+        <option value="$PROJECT_DIR$/JCZL_script/common/log.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python3-script" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python3-script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python3-script" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python3-script" type="462c0819:PsiDirectoryNode" />
+              <item name="JCZL_script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python3-script" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python3-script" type="462c0819:PsiDirectoryNode" />
+              <item name="JCZL_script" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python3-script" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python3-script" type="462c0819:PsiDirectoryNode" />
+              <item name="PY-script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python3-script" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python3-script" type="462c0819:PsiDirectoryNode" />
+              <item name="PY-script" type="462c0819:PsiDirectoryNode" />
+              <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python3-script" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python3-script" type="462c0819:PsiDirectoryNode" />
+              <item name="PY-script" type="462c0819:PsiDirectoryNode" />
+              <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="untitled7" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/python3-backups/DASInterfaceTest" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.log">
+    <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JCZL_script/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python3-script" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JCZL_script/common/common.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="configDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JCZL_script/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python3-script" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JCZL_script/common/configDB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="configHttp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JCZL_script/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python3-script" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JCZL_script/common/configHttp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="log" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JCZL_script/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python3-script" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JCZL_script/common/log.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="readConfig" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JCZL_script" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python3-script" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JCZL_script/readConfig.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.common" />
+      <item index="1" class="java.lang.String" itemvalue="Python.log" />
+      <item index="2" class="java.lang.String" itemvalue="Python.configHttp" />
+      <item index="3" class="java.lang.String" itemvalue="Python.readConfig" />
+      <item index="4" class="java.lang.String" itemvalue="Python.configDB" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.log" />
+        <item index="1" class="java.lang.String" itemvalue="Python.configDB" />
+        <item index="2" class="java.lang.String" itemvalue="Python.common" />
+        <item index="3" class="java.lang.String" itemvalue="Python.readConfig" />
+        <item index="4" class="java.lang.String" itemvalue="Python.configHttp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3a639a9-a208-4c5d-85e0-984b47862f3a" name="Default Changelist" comment="" />
+      <created>1545124751200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545124751200</updated>
+      <workItem from="1545124771378" duration="1720000" />
+      <workItem from="1545185604472" duration="1029000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetests_for_Device_config_Device_config_test_DeviceConfig - 2018.12.21 at 14h 29m 27s.xml">
+      <configuration name="Nosetests for Device_config.Device_config.test_DeviceConfig" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_for_进入京东商城_jingdong - 2018.12.25 at 11h 06m 22s.xml">
+      <configuration name="Nosetests for 进入京东商城.jingdong" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_Device_config_py - 2018.12.21 at 14h 20m 07s.xml">
+      <configuration name="Nosetests in Device_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_Device_config_py - 2018.12.25 at 10h 57m 44s.xml">
+      <configuration name="Nosetests in Device_config.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_createUser_py - 2018.12.21 at 14h 19m 34s.xml">
+      <configuration name="Nosetests in createUser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_createUser_py - 2018.12.25 at 10h 58m 09s.xml">
+      <configuration name="Nosetests in createUser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_createUser_py - 2018.12.26 at 15h 02m 57s.xml">
+      <configuration name="Nosetests in createUser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_curUserInfo_py - 2018.12.21 at 14h 19m 40s.xml">
+      <configuration name="Nosetests in curUserInfo.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_fetchUser_py - 2018.12.26 at 15h 03m 06s.xml">
+      <configuration name="Nosetests in fetchUser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_进入京东商城_py - 2018.12.25 at 11h 06m 12s.xml">
+      <configuration name="Nosetests in 进入京东商城.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2749000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/JCZL_script/testCase/createUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding>
+            <marker date="1543572206770" expanded="true" signature="3062:3099" ph="delete from jczl_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/WEBtesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled2/性能并发脚本.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/11.py" />
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/抓图.py" />
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/interface.py" />
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled/Device_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#22#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/进入京东商城.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#23#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/数据结构.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1497">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/迭代器.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/WEBtesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled2/性能并发脚本.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/TriggerID触发.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/python函数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1657">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/告警过滤信息上报打印.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/httpserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding>
+            <element signature="e#15#78#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/告警信息上报服务.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/对文件的操作.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv1/Lib/site-packages/variable/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/2.3.2.2报警联动模板配置修改.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/模拟告警.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="55" column="71" lean-forward="false" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="71" />
+          <folding>
+            <element signature="e#23#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/kafka生产者数据.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/报警结束.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled4/variable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#25#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/001.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PY-script/PycharmProjects/untitled7/file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/testCase/createUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="39" column="49" lean-forward="false" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+          <folding>
+            <marker date="1543572206770" expanded="true" signature="3062:3099" ph="delete from jczl_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/testCase/fetchUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/common/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/common/configDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding>
+            <element signature="e#22#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/common/configHttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/readConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JCZL_script/common/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

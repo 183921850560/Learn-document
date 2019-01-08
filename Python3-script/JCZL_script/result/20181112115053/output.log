@@ -1,0 +1,4 @@
+2018-11-12 11:50:53,269 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/saveUser
+2018-11-12 11:50:53,549 - root - INFO - data:{'guid': 19965, 'address': '陕西省西安市雁塔区222号', 'unitGuid': 336, 'mobilephone': '18392182527', 'telephone': '057185235621', 'userName': '龚小龙', 'userPwsd': 'g183921585056', 'userCode': '22250', 'roleGuids': [3], 'operatorUserId': 1, 'remark': '这是修改22242用户的信息', 'expireDate': '2018-11-30', 'userGroupGuid': 11, 'loginSmsVarify': 5, 'sessionTimeOut': 0} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
+2018-11-12 11:50:53,549 - root - INFO - Response data: {'code': 0, 'data': None, 'message': '操作成功！'} 
+2018-11-12 11:50:53,549 - root - INFO - ================================================================================================================================================================

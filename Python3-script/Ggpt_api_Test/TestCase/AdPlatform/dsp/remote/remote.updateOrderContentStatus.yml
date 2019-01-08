@@ -1,0 +1,11 @@
+suiteName: remote.updateOrderContentStatus 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        guids: 
+        orderStatus:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["remote.code", 0]

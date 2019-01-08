@@ -1,0 +1,103 @@
+suiteName: app.userCheck 
+testCase:
+  - case 1:
+      testCaseName: 参数正确，修改信息
+      tag: test
+      setup:
+        - name: 发送手机注册验证码
+          api: [boss, sms.verifyCode]
+          params:
+            phoneNumber: $phoneNumber
+            type: 3
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["sms.code", 0]
+        - name: 获取注册验证码
+          api: [boss, sms.getVerifyCode]
+          params:
+            phoneNumber: $phoneNumber
+            type: 3
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["app.code", 0]
+            - set_data: ["sms.data.verifyCode", $file_path]
+      json:
+        phoneNumber: $phoneNumber
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 0]
+  - case 2:
+      testCaseName: 参数错误，修改手机号与验证码手机不一致
+      tag: test
+      setup:
+        - name: 发送手机注册验证码
+          api: [boss, sms.verifyCode]
+          params:
+            phoneNumber: $phoneNumber
+            type: 3
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["sms.code", 0]
+        - name: 获取注册验证码
+          api: [boss, sms.getVerifyCode]
+          params:
+            phoneNumber: $phoneNumber
+            type: 3
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["app.code", 0]
+            - set_data: ["sms.data.verifyCode", $file_path]
+      json:
+        phoneNumber: 18989898989
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 90001002]
+  - case 3:
+      testCaseName: 参数错误，修改手机号不存在
+      tag: test
+      setup:
+        - name: 发送手机注册验证码
+          api: [boss, sms.verifyCode]
+          params:
+            phoneNumber: 19989898989
+            type: 3
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["sms.code", 0]
+        - name: 获取注册验证码
+          api: [boss, sms.getVerifyCode]
+          params:
+            phoneNumber: 19989898989
+            type: 3
+          validate:
+            - eq: ["status_code", 200]
+            - eq: ["app.code", 0]
+            - set_data: ["sms.data.verifyCode", $file_path]
+      json:
+        phoneNumber: 19989898989
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 90001003]
+  - case 4:
+      testCaseName: 参数错误，手机格式不正确
+      tag: test
+
+      json:
+        phoneNumber: 199898989
+        smsVerifyCode: ${get_encode_str(word_type=sms)}
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 90001006]
+  - case 5:
+      testCaseName: 参数错误，验证编码不对
+      tag: test
+      json:
+        phoneNumber: 19989898912
+        smsVerifyCode: "ddaaqoq"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["app.code", 9000109]
+

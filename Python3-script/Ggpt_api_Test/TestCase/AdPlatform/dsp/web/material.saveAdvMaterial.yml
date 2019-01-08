@@ -1,0 +1,20 @@
+suiteName: material.saveAdvMaterial 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        materialCode: 
+        materialContent: 
+        materialHeight: 
+        materialName: 
+        materialSize: 
+        materialTags: 
+        materialType: 
+        materialWidth: 
+        md5: 
+        narrowImageUrl: 
+        videoJson:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["material.code", 0]

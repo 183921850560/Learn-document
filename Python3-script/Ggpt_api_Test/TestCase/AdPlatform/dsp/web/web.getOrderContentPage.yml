@@ -1,0 +1,18 @@
+suiteName: web.getOrderContentPage 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        clienteleName: 
+        createTime: 
+        execStatus: 
+        orderBy: 
+        orderCode: 
+        orderField: 
+        orderStatus: 
+        pageIndex: 
+        pageSize:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["web.code", 0]

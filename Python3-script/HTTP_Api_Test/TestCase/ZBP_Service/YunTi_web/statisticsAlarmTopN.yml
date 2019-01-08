@@ -1,0 +1,580 @@
+testInterFace: Statistics Alarm TopN
+method: POST  # POST/GET/PUT/DELETE
+url: /zbp-service/1.0.0/statistics/alarm/topN
+data:
+ -
+   caseName: 设置TOPN   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 40
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  size(40)
+ -
+   caseName: 根据告警等级level   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 10
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": "1","typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  key(alarmlevel:1)
+ -
+   caseName: 根据告警类型alarmType   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 10
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": "1", "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  key(alarmtype:1)
+ -
+   caseName: 根据告警内容subAlarmType  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 10
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": "1000007",
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  key(alarmcode:1#1000007)
+ -
+   caseName: 根据告警分类TypeCode   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 10
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": "9000001", "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  key(typecode:9000001)
+ -
+   caseName: 根据告警区域   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 10
+     queryJson: >
+       {"areaType": 4,"areaCode": ["330108003"],"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+ -
+   caseName: 根据统计时间   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 10
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": "20180411","collectEndDate": "20180422"}
+   result:
+     check_code: 0
+ # 校验top N参数
+ -
+   caseName: TopN参数校验-负数   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: -1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: TopN参数校验-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: zq
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: TopN参数校验-空值   # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: null
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: TopN字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topn: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+# 校验queryJson参数
+ -
+   caseName: queryJson字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryjs: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ # 校验 areaType
+ -
+   caseName: areaType参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": "4","areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaType参数-不存在的Type  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": 10,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaType参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": zq,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaType参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": "zq","areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaType参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaTypes": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ #校验areaCode参数
+ -
+   caseName: areaCode参数-非sring数组  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": [330108003],"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaCode参数-非数组  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": "330108003","alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaCode参数-string型字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": ["zq"],"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaCode参数-非string型字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": [zq],"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: areaCode参数-不存在  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": ["310118003"],"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  size(0)
+ -
+   caseName: areaType、areaCode不匹配  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": 5,"areaCode": ["330108003"],"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+ -
+   caseName: areaCode参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCodes": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ #校验alarmType 参数
+ -
+   caseName: alarmType参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmTypes": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: alarmType参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": 1, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: alarmType参数-不存在的Type  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": "10", "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  size(0)
+ -
+   caseName: alarmType参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": zq, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: alarmType参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": "zq", "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+#校验subAlarmType 参数
+ -
+   caseName: subAlarmType参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmTypes": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: subAlarmType参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": 1000007,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: subAlarmType参数-不存在的Type  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": "8000019",
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+ -
+   caseName: subAlarmType参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": zq,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: subAlarmType参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": "zq",
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+     check_data:  size(0)
+#校验alarmLevel 参数
+ -
+   caseName: alarmLevel参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevels": null,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: alarmLevel参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": 1,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: alarmLevel参数-不存在的Type  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": "100","typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+ -
+   caseName: alarmLevel参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": zq,"typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: alarmLevel参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": "zq","typeCode": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+#校验typeCode 参数
+ -
+   caseName: typeCode参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCodes": null, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: typeCode参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": 3, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: typeCode参数-不存在的Type  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": "9000009", "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code: 0
+ -
+   caseName: typeCode参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": zq, "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: typeCode参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": "zq", "collectStartDate": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+#校验collectStartDate 参数
+ -
+   caseName: collectStartDate参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDates": null,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectStartDate参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": 20180411,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectStartDate参数-负数  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": "100","typeCode": null, "collectStartDate": "-20180411","collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectStartDate参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": zq,"collectEndDate": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectStartDate参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": "zq","collectEndDate": null}
+   result:
+     check_code:  $err_code
+#校验collectEndDate 参数
+ -
+   caseName: collectEndDate 参数-字段名称错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDates": null}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectEndDate 参数-类型错误  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": 20180411}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectEndDate 参数-负数  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": "100","typeCode": null, "collectStartDate": null,"collectEndDate": "-20180411"}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectEndDate 参数-字母  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": zq}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectEndDate 参数-字符串  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": null,"collectEndDate": "zq"}
+   result:
+     check_code:  $err_code
+ -
+   caseName: collectEndDate 小于collectStartDate  # case name
+   paramType: data # json url data data
+   data:  # data dict
+     topN: 1
+     queryJson: >
+       {"areaType": null,"areaCode": null,"alarmType": null, "subAlarmType": null,
+       "alarmLevel": null,"typeCode": null, "collectStartDate": "20180422","collectEndDate": "20180411"}
+   result:
+     check_code:  $err_code
+
+
+
+
+
+
+
+

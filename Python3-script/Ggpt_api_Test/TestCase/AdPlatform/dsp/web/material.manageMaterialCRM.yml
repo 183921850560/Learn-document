@@ -1,0 +1,17 @@
+suiteName: material.manageMaterialCRM 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        checkStatus: 
+        contentName: 
+        customerName: 
+        orderBy: 
+        orderCode: 
+        orderField: 
+        pageIndex: 
+        pageSize:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["material.code", 0]

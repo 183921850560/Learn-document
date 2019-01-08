@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>InterFaceTest Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+ 
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+    font-size: 16pt;
+    color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+ 
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+ 
+.button{ 
+    border:1px solid #cccccc; 
+    cursor:pointer; 
+    margin:10px 5px; 
+    height:40px; 
+    text-align:center; 
+    border-radius: 4px; 
+    border-color: #636263 #464647 #A1A3A5; 
+    text-shadow: 0 1px 1px #F6F6F6; 
+    background-image: -moz-linear-gradient(center top, #D9D9D9, #A6A6A6 49%, #A6A6A6 50%); 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9D9D9),color-stop(1, #A6A6A6)); 
+} 
+ 
+.buttonText{ 
+    position:relative; 
+    font-weight:bold; 
+    top:10px;
+    color:#58595B; 
+}  
+ 
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+ 
+.panel .description{ 
+    border:1px solid #CCCCCC; 
+    border-color: #636263 #464647 #A1A3A5; 
+    margin:10px 5px; 
+    height:165px; 
+    border-radius: 4px; 
+} 
+.scroll-item { 
+    position: relative; 
+    width: 100%; 
+    height: 32px; 
+    border-bottom:1px solid gray; 
+    cursor: pointer; 
+} 
+.item-even { 
+    background-color: #E7E8EC; 
+} 
+       
+.item-odd { 
+    background-color: #E0ECF6; 
+} 
+.rect { 
+    float: left; 
+    margin-top: 5px; 
+    margin-left: 5px; 
+    width: 20px; 
+    height: 20px; 
+    border-radius: 3px; 
+} 
+.item-text{ 
+    margin-left: 5px; 
+    height: 100%; 
+    float: left; 
+    font-size: 14px;  
+    vertical-align: middle; 
+    display: inline-block; 
+    line-height: 30px; 
+} 
+ 
+.bg{ 
+    position:absolute; 
+    height:97%; 
+    width:80%; 
+    overflow-x: hidden; 
+    overflow-y:hidden; 
+} 
+.panel{ 
+    position:absolute; 
+    height:550px; 
+    width:750px; 
+    left:45px; 
+    top:45px; 
+    border-radius: 12px; 
+    background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF); 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF)); 
+    } 
+.panel1{ 
+    position:absolute; 
+    height:550px; 
+    width:200px; 
+    left:800px; 
+    top:45px; 
+    border-radius: 12px; 
+    background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF); 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF)); 
+    }
+.panelBg{ 
+    position:absolute; 
+    height:600px; 
+    width:1000px; 
+    left:20px; 
+    top:20px; 
+    border-radius: 12px; 
+    background-color:#000000; 
+    opacity:0.5; 
+} 
+ 
+.title{ 
+    border:1px solid green; 
+    position:relative; 
+    margin:5px; 
+    font-size:22px; 
+    font-weight:bold; 
+    text-align:center; 
+    color:#58595B; 
+}
+ 
+.piechart{ 
+    border:1px solid green; 
+    margin:5px; 
+    height:170px; 
+}
+ 
+.barchart{ 
+    border:1px solid green; 
+    margin:5px; 
+    height:170px; 
+} 
+ 
+.linechart{ 
+    border:1px solid green; 
+    margin:5px; 
+    height:170px; 
+}
+      
+.subTitle{ 
+    border:1px solid green; 
+    margin:5px;  
+    font-size:14px; 
+    height:70px; 
+    font-weight:bold; 
+    text-indent:2em; 
+    color:#6D6E71; 
+} 
+ 
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+ 
+a.popup_link:hover {
+    color: red;
+}
+ 
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+ 
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 2px solid #777;
+    padding: 3px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; font-weight: bold;}
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+ 
+#section1{ 
+    border:1px solid green; 
+    position:relative; 
+    float:left; 
+    width:235px; 
+    height:530px; 
+    top:10px; 
+    left:10px; 
+} 
+#section2{ 
+    border:1px solid green; 
+    position:relative; 
+    float:left; 
+    width:235px; 
+    height:530px; 
+    top:10px; 
+    left:20px; 
+} 
+#section3{ 
+    border:1px solid green; 
+    position:relative; 
+    float:left; 
+    width:235px; 
+    height:530px; 
+    top:10px; 
+    left:30px; 
+} 
+#section4{ 
+    border:1px solid green; 
+    position:relative; 
+    float:left; 
+    width:180px; 
+    height:530px; 
+    top:10px; 
+    left:10px; 
+} 
+ 
+.loseeffect{
+    color:black;
+    text-decoration:none;
+    cursor:text;
+}
+ 
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+ 
+</style>
+
+</head>
+<body style="background-color:#FFFFFF">
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+ 
+/* level - 0:Summary; 1:Pass; 2:Fail; 3:Error; 4:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'Ft') {
+            if (level == 2) {
+                tr.className = '';
+            }
+            else if(level == 4) {
+                tr.className = '';
+            }
+            else if(level == 5) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+        if (id.substr(0,2) == 'Pt') {
+            if (level == 1) {
+                tr.className = '';
+            }
+            else if(level == 4 ) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+        if (id.substr(0,2) == 'Et') {
+            if (level == 3) {
+                tr.className = '';
+            }
+            else if(level == 4 ) {
+                tr.className = '';
+            }
+            else if(level == 5 ) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+             
+ 
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'F' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'P' + tid0;
+            tr = document.getElementById(tid);
+            if(!tr){
+                tid = 'E' + tid0;
+                tr = document.getElementById(tid);
+            }
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+ 
+ 
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+ 
+ 
+function html_escape(s) {
+    s = s.replace(/&/g,'&');
+    s = s.replace(/</g,'<');
+    s = s.replace(/>/g,'>');
+    return s;
+}
+ 
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+ 
+<div class='heading'>
+<h1>InterFaceTest Report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2018-11-13 10:37:06</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.985125</p>
+<p class='attribute'><strong>Status:</strong> Pass 11</p>
+
+<p class='description'>Device Access Server Interface Test Project</p>
+</div>
+ 
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Pass</a>
+<a href='javascript:showCase(2)'>Fail</a>
+<a href='javascript:showCase(3)'>Error</a>
+<a href='javascript:showCase(5)'>Fail&Error</a>
+<a href='javascript:showCase(4)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>CaseShot</td>
+    <td>CaseInfo</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.userLogin_0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt1.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testuserLogin</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.1')" >
+        pass</a>
+ 
+    <div id='div_Pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.1: 用户登陆test will start....
+{'code': 0, 'data': {'address': '陕西省西安市雁塔区200号', 'createTime': '2018-01-11 03:44:28', 'expireDate': '2018-12-30 00:00:00', 'guid': 1, 'loginSmsVarify': 1, 'mobilephone': '18392184523', 'parentGuid': 43, 'remark': '这是修改guid为19964用户的信息', 'roles': [{'appCode': 'TLW', 'appName': '梯联网', 'createDate': '2018-01-04 07:57:39', 'guid': 1, 'parentRoleGuid': 0, 'remark': None, 'roleCode': 'TLW_ADMIN', 'roleName': '管理员', 'updateDate': None, 'userNum': None}], 'sessionTimeOut': 0, 'status': '1', 'telephone': '057185235622', 'unit': {'address': '', 'appCode': 'TLW', 'cellPhone': '15967169961', 'cellPhone2': '', 'cityCode': '330100', 'contactPhone': '83222296', 'contacter': '杨亮', 'createTime': '2018-03-02 04:42:55', 'creater': 1, 'guid': 54, 'manageLiftNum': None, 'provinceCode': '330000', 'reginame': '浙江省-杭州市', 'remark': None, 'status': None, 'streetCode': None, 'townCode': None, 'unitCode': '54', 'unitName': '格林费尔园区', 'unitType': '1', 'unitTypeName': '使用单位'}, 'unitGuid': 54, 'unitName': None, 'updateTime': '2018-11-12 15:51:16', 'userCode': 'admin', 'userGroupGuid': 1, 'userName': '管理员', 'userPwsd': 'mS2SbHjtozc%3D'}, 'message': '操作成功！'}
+check result------
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.userLogin_1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt2.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testuserLogin</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.1')" >
+        pass</a>
+ 
+    <div id='div_Pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.1: 超出边界的用户名密码登陆test will start....
+{'code': 40040005, 'data': None, 'message': '用户名或密码错误！'}
+check result------
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.userLogin_2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt3.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testuserLogin</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.1')" >
+        pass</a>
+ 
+    <div id='div_Pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.1: 用户名或密码为空登陆test will start....
+{'code': 40000002, 'data': None, 'message': '接口参数不正确！登录用户名不能为空！'}
+check result------
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.userLogin_3</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt4.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testuserLogin</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt4.1')" >
+        pass</a>
+ 
+    <div id='div_Pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt4.1: 必填项都为空登陆test will start....
+{'code': 40000002, 'data': None, 'message': '接口参数不正确！登录用户名不能为空！'}
+check result------
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.createUser_0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt5.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testcreateUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt5.1')" >
+        pass</a>
+ 
+    <div id='div_Pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt5.1: ['陕西省西安市未央区366号', 366, '13720498681', '057185235621', '龚小龙', '9999', '1bdb67eb4b854e7b20a147989aeaa4d8', [8], 1, '这是第一个用例', '2018-12-20', 123456789, 5, 1, 0]
+创建用户test will start....
+{'code': 0, 'data': {'userGuid': 20017}, 'message': '操作成功！'}
+check result------
+test over
+mysql connect success
+Connect DB successfully!
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'admin'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'null01'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'luss'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'lhl'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zsq'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'pengy'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'demo5'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczl'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwy01'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwb01'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwy02'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwy03'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwy04'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwy05'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'qczlwy06'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'sgryyhz'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'pdcs_wx_admin'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'd112'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'd111'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: '96333user'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'pengy2'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'pengy3'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'emcc3'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zhumingwei'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'longqiwei'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zxw'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'ylf'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zyf'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zhangmin'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'wll'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'fyqt'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'ffl'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'jnhy'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'demo'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'xzf'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zyl'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'wzx'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'llm'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'wfh'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'bjl'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zhuj'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'liujl'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'gaoy'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zwd'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'lizg'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'fjn'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'xbj'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'yangy'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'wlkjy'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'xgs'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'cxg'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'xczc02'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'xczc03'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'xczc01'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'whm'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'yyj'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zgd'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'sxy'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'ojb'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'wangw'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'tqm'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'tln'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'zhangf'")
+  result = self._query(query)
+C:\Users\chengxue\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'hqn'")
+  result = self._query(query)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.createUser_1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt6.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testcreateUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt6.1')" >
+        pass</a>
+ 
+    <div id='div_Pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt6.1: ['陕西省西安市未央区367号', 367, '18392182356', 'null', '小小', '33320', '511ed2f6d0841c0c71889f1bfa0504c0', [4], 1, 'null', '2018-08-21', 112232, 55, 1, 0]
+利用必填项来创建用户test will start....
+{'code': 0, 'data': {'userGuid': 20018}, 'message': '操作成功！'}
+check result------
+test over
+mysql connect success
+Connect DB successfully!
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.createUser_2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt7.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testcreateUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt7.1')" >
+        pass</a>
+ 
+    <div id='div_Pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt7.1: ['陕西省西安市未央区368号', 898, '18392185056', 'null', '小明', '33122', '1799e855396f65eab32a57bb1e51c90c', [5], 450, 'null', '2018-08-22', 112233, 11, 0, 40000004]
+必填项异常创建用户test will start....
+{'code': 40000004, 'data': None, 'message': '数据不存在！单位不存在，标识为：898'}
+check result------
+test over
+mysql connect success
+Connect DB successfully!
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.saveUser_0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt8.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testsaveUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt8.1')" >
+        pass</a>
+ 
+    <div id='div_Pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt8.1: [19965, '陕西省西安市雁塔区300号', 336, '18392182527', '057185235621', '龚小龙', '1bdb67eb4b854e7b20a147989aeaa4d8', '22250', [3], 1, '这是修改22242用户的信息', '2018-11-30', 11, 5, 0, 0]
+修改用户信息test will start....
+{'code': 0, 'data': None, 'message': '操作成功！'}
+hhhhhhhhhhhhhhhhhhhhhhhh
+check result------
+mysql connect success
+Connect DB successfully!
+(19965, '22250', '龚小龙', '43.1.19965.', '1bdb67eb4b854e7b20a147989aeaa4d8', '0', 1, '057185235621', '18392182527', '陕西省西安市雁塔区300号', datetime.datetime(2018, 11, 5, 17, 57, 32), datetime.datetime(2018, 11, 13, 10, 37, 4), 336, 5, 0, '这是修改22242用户的信息', datetime.datetime(2018, 11, 30, 0, 0), 11)
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.saveUser_1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt9.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testsaveUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt9.1')" >
+        pass</a>
+ 
+    <div id='div_Pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt9.1: [19966, '陕西省西安市雁塔区223号', 337, '18392185525', '057185235622', '刘滔滔', 'e4496f4163b25c9aca93282985adc258', '11100', [6], 19, '这是修改11100用户的信息', '2018-12-01', 10, 4, 0, 40000004]
+对用户的guid不存在的进行修改test will start....
+{'code': 40000004, 'data': None, 'message': '数据不存在！要操作的用户不存在！'}
+hhhhhhhhhhhhhhhhhhhhhhhh
+check result------
+mysql connect success
+Connect DB successfully!
+None
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.saveCurUser_0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt10.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testsaveCurUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt10.1')" >
+        pass</a>
+ 
+    <div id='div_Pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt10.1: [19964, '陕西省西安市雁塔区200号', '18392184555', '057185235622', '刘滔滔', '11123', 19964, '这是修改guid为19964用户的信息', '2018-12-30', 5, 0, 0]
+修改当前用户的信息test will start....
+None
+{'code': 0, 'data': None, 'message': '操作成功！'}
+check result------
+mysql connect success
+Connect DB successfully!
+(19964, '11123', '刘滔滔', '43.1.19964.', 'g183921585056', '0', 1, '057185235622', '18392184555', '陕西省西安市雁塔区200号', datetime.datetime(2018, 11, 5, 17, 0, 43), datetime.datetime(2018, 11, 13, 10, 37, 5), 366, 5, 0, '这是修改guid为19964用户的信息', datetime.datetime(2018, 12, 30, 0, 0), 123456789)
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.saveCurUser_1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Click hyperlink view</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='Pt11.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testsaveCurUser</div></td>
+    <td colspan='4' align='center'>
+ 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt11.1')" >
+        pass</a>
+ 
+    <div id='div_Pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt11.1: [19999, '陕西省西安市雁塔区201号', '18392184551', '057185235622', '刘滔滔', '11124', 19965, '这是修改guid为19999用户的信息', '2018-12-31', 6, 1, 0]
+用错误的guid修改当前的用户信息test will start....
+None
+{'code': 0, 'data': None, 'message': '操作成功！'}
+check result------
+mysql connect success
+Connect DB successfully!
+(19965, '11124', '刘滔滔', '43.1.19965.', '1bdb67eb4b854e7b20a147989aeaa4d8', '0', 1, '057185235622', '18392184551', '陕西省西安市雁塔区201号', datetime.datetime(2018, 11, 5, 17, 57, 32), datetime.datetime(2018, 11, 13, 10, 37, 5), 336, 6, 1, '这是修改guid为19999用户的信息', datetime.datetime(2018, 12, 31, 0, 0), 11)
+test over
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+ 
+    </td>
+    <td colspan='1' align='center'><a  href="javascript:void(0)" target="" class="loseeffect">picture_shot</a>
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total and Rate</td>
+    <td>11</td>
+    <td>11</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Proportion</td>
+    <td>11/11</td>
+</tr>
+</table>
+
+<div id='ending'> </div>
+<div class="bg"> 
+                       <div class="panelBg"></div> 
+                       <div class="panel">
+                       <div id="section1">
+                           <div class="title">Pie Chart</div> 
+                           <div class="subTitle">This chart is to show the rate that statis of test cases</div>
+                           <div class="piechart">  
+                               <canvas id="circle" width="225" height="168" onmousemove='javascript:drawCircle(11, 0, 0)'>your browser does not support the canvas tag</canvas>
+                           </div>
+                           <div class="description"> 
+                           <div class="scroll-item item-even"> 
+                               <div class="rect" style="background-color: #6c6; "></div> 
+                               <div class="item-text">Passcase:11</div> 
+                           </div> 
+                           <div class="scroll-item item-odd"> 
+                               <div class="rect" style="background-color: #c60; "></div> 
+                               <div class="item-text">failcase:0</div> 
+                           </div>  
+                           <div class="scroll-item item-even"> 
+                               <div class="rect" style="background-color: #c00; "></div> 
+                               <div class="item-text">errorcase:0</div> 
+                           </div>
+                           <div class="scroll-item item-odd"> 
+                           </div>
+                           <div class="scroll-item item-even">   
+                           </div>
+                       </div>
+                       <div class="button" onclick='javascript:drawCircle(11, 0, 0)'><span class="buttonText">CLICK SEE PIE CHART</span></div>
+                       </div> 
+                       <div id="section2"> 
+                       <div class="title">Bar Chart</div> 
+                           <div class="subTitle">This chart is to show the count that statis of test cases</div>
+                           <div class="barchart">  
+                               <canvas id="bar" width="225" height="168" onclick='javascript:drawBar(11, 0, 0)'>your browser does not support the canvas tag</canvas>
+                           </div>
+                           <div class="description"> 
+                           <div class="scroll-item item-even"> 
+                               <div class="rect" style="background-color: #6c6; "></div> 
+                               <div class="item-text">Passcase:11</div> 
+                           </div> 
+                           <div class="scroll-item item-odd"> 
+                               <div class="rect" style="background-color: #c60; "></div> 
+                               <div class="item-text">failcase:0</div> 
+                           </div>  
+                           <div class="scroll-item item-even"> 
+                               <div class="rect" style="background-color: #c00; "></div> 
+                               <div class="item-text">errorcase:0</div> 
+                           </div>
+                           <div class="scroll-item item-odd"> 
+                           </div>
+                           <div class="scroll-item item-even">   
+                           </div>
+                       </div>
+                       <div class="button" onclick='javascript:drawBar(11, 0, 0)'><span class="buttonText">CLICK SEE BAR CHART</span></div>
+                       </div> 
+                       <div id="section3">
+                        <div class="title">Line Chart</div> 
+                           <div class="subTitle">This chart is to show the rate that data of test cases</div>
+                           <div class="linechart">  
+                               <canvas id="line" width="225" height="168" onclick='javascript:drawline(11, 0, 0)'>your browser does not support the canvas tag</canvas>
+                           </div>
+                           <div class="description"> 
+                           <div class="scroll-item item-even"> 
+                               <div class="rect" style="background-color: #6c6; "></div> 
+                               <div class="item-text">Passcase:11</div> 
+                           </div> 
+                           <div class="scroll-item item-odd"> 
+                               <div class="rect" style="background-color: #c60; "></div> 
+                               <div class="item-text">failcase:0</div> 
+                           </div>  
+                           <div class="scroll-item item-even"> 
+                               <div class="rect" style="background-color: #c00; "></div> 
+                               <div class="item-text">errorcase:0</div> 
+                           </div>
+                           <div class="scroll-item item-odd"> 
+                           </div>
+                           <div class="scroll-item item-even">   
+                           </div>
+                       </div>
+                       <div class="button" onclick='javascript:drawline(11, 0, 0)'><span class="buttonText">CLICK SEE BAR CHART</span></div>
+                       </div> 
+                       </div>
+                       <div class="panel1">
+                       <div id="section4">
+                           <a>11 Pass cases, 0 fail cases, 0 error cases.</a>
+                       </div>
+                       </div>
+                    </div>
+</body>
+</html>
+<script type="text/javascript">
+function drawCircle(pass, fail, error){
+    var color = ["#6c6","#c60","#c00"]; 
+    var data = [pass,fail,error];
+    var canvas = document.getElementById("circle"); 
+    var ctx = canvas.getContext("2d"); 
+    var startPoint=0; 
+    for(var i=0;i<data.length;i++){ 
+        ctx.fillStyle = color[i]; 
+        ctx.beginPath(); 
+        ctx.moveTo(112,84);  
+        ctx.arc(112,84,84,startPoint,startPoint+Math.PI*2*(data[i]/(data[0]+data[1]+data[2])),false); 
+        ctx.fill(); 
+        startPoint += Math.PI*2*(data[i]/(data[0]+data[1]+data[2])); 
+    } 
+}
+ 
+function FillRect(cxt, x1, y1, width, height, color) {
+    cxt.fillStyle = color;
+    cxt.fillRect(x1, y1, width, height);
+}
+ 
+function drawBar(pass, fail, error){
+ 
+    var color = ["#6c6","#c60","#c00"]; 
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var canvas = document.getElementById("bar"); 
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        DrawLine(ctx,x[i],h[i],x[i],158,color[i]);
+        DrawLine(ctx,x[i],h[i],y[i],h[i],color[i]);
+        DrawLine(ctx,y[i],h[i],y[i],158,color[i]);
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        FillRect(ctx, x[i], h[i], 40, 158-h[i], color[i]);
+    }
+}
+ 
+function DrawP(ctx, P) {
+    with (ctx) {
+        moveTo(P[0],P[1]);
+        lineTo(P[0]+1,P[1]+1);
+     }
+}
+ 
+function DrawLine(cxt, x1, y1, x2, y2, color) {
+ 
+    cxt.strokeStyle = color;
+    cxt.beginPath();
+    cxt.moveTo(x1, y1);
+    cxt.lineTo(x2, y2);
+    cxt.stroke();
+}
+ 
+function DrawString(cxt, text, font, color, align, v_align, x, y) {
+    if (font == "") {
+        cxt.font = "10px";
+    }
+    else {
+        cxt.font = font;
+    }
+    if (color == "") {
+        cxt.fillStyle = "#000000";
+    }
+    else {
+        cxt.fillStyle = color;
+    }
+    if (align == "") {
+        cxt.textAlign = "left";
+    }
+    else {
+        cxt.textAlign = align;
+    }
+    if (v_align == "") {
+        cxt.textBaseline = "top";
+    }
+    else {
+        cxt.textBaseline = v_align;
+    }
+    cxt.fillText(text, x, y);
+}
+ 
+function drawline(pass, fail, error){
+    var color = ["#6c6","#c60","#c00"]; 
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var canvas = document.getElementById("line"); 
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        p = Array((y[i]+x[i])/2,h[i]);
+        DrawP(ctx,p);
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        if(i < 2) {
+         
+            DrawLine(ctx,(y[i]+x[i])/2,h[i],(y[i+1]+x[i+1])/2,h[i+1],'black');
+             
+        }
+         
+    }
+     
+}
+ 
+</script> 

@@ -1,0 +1,10 @@
+suiteName: plan.reserving 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        planCode:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["plan.code", 0]

@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="980c3fbe-9ec5-4105-9d33-3d78d24300c8" name="Default" comment="" />
+    <ignored path="../testProj/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$check_comparators.coverage" NAME="check_comparators Coverage Results" MODIFIED="1542718739796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$comparators.coverage" NAME="comparators Coverage Results" MODIFIED="1546410824197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$configEmail.coverage" NAME="configEmail Coverage Results" MODIFIED="1541745523367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../jczl_interface/common" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$fs_sip.coverage" NAME="fs_sip Coverage Results" MODIFIED="1545355448736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$forwardBaseInfo.coverage" NAME="forwardBaseInfo Coverage Results" MODIFIED="1540535208601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$write_caselist.coverage" NAME="write_caselist Coverage Results" MODIFIED="1542684388902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$net_calc.coverage" NAME="net_calc Coverage Results" MODIFIED="1545202341754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../test_in/lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$getDatamg.coverage" NAME="getDatamg Coverage Results" MODIFIED="1541474807078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_tree1.coverage" NAME="draw_tree1 Coverage Results" MODIFIED="1545701514456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$fs_sip__1_.coverage" NAME="fs_sip (1) Coverage Results" MODIFIED="1545354993102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$built_in.coverage" NAME="built_in Coverage Results" MODIFIED="1542718148259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../HttpRunner/httprunner" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_pig.coverage" NAME="draw_pig Coverage Results" MODIFIED="1545702187742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$GetFromYml.coverage" NAME="GetFromYml Coverage Results" MODIFIED="1543977226827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Py2" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$modif_case.coverage" NAME="modif_case Coverage Results" MODIFIED="1541579083636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$check_result.coverage" NAME="check_result Coverage Results" MODIFIED="1542768119989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$app_warn.coverage" NAME="app_warn Coverage Results" MODIFIED="1545718061895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Py2" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$alarmData.coverage" NAME="alarmData Coverage Results" MODIFIED="1537493446014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$demo.coverage" NAME="demo Coverage Results" MODIFIED="1540886075975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../protobuf/msg" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_smt.coverage" NAME="draw_smt Coverage Results" MODIFIED="1545701691106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$getonlinelist.coverage" NAME="getonlinelist Coverage Results" MODIFIED="1541043992186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$auto.coverage" NAME="auto Coverage Results" MODIFIED="1545807720780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$forwardScore.coverage" NAME="forwardScore Coverage Results" MODIFIED="1540535222958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$triggerData.coverage" NAME="triggerData Coverage Results" MODIFIED="1537859946679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_tree2.coverage" NAME="draw_tree2 Coverage Results" MODIFIED="1545701273543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$read_Json_ad.coverage" NAME="read_Json_ad Coverage Results" MODIFIED="1545273242776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$Doctests_in_realtime_status.coverage" NAME="Doctests in realtime_status Coverage Results" MODIFIED="1544003524538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Py2" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$Unittests_in_testCreateUser_py.coverage" NAME="Unittests in testCreateUser.py Coverage Results" MODIFIED="1546409408549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../jczl_interface/testCase" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$parse_Json_ad.coverage" NAME="parse_Json_ad Coverage Results" MODIFIED="1545807701489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$test_Demo.coverage" NAME="test_Demo Coverage Results" MODIFIED="1541059686670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$testResquests.coverage" NAME="testResquests Coverage Results" MODIFIED="1544767649651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$variable.coverage" NAME="variable Coverage Results" MODIFIED="1539938645328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Py2" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_catong.coverage" NAME="draw_catong Coverage Results" MODIFIED="1545701739440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_cat.coverage" NAME="draw_cat Coverage Results" MODIFIED="1545637778688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$RunAll.coverage" NAME="RunAll Coverage Results" MODIFIED="1536308471642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$parse_case.coverage" NAME="parse_case Coverage Results" MODIFIED="1542607598615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/robot_project/advert_interface/lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$queryaccount.coverage" NAME="queryaccount Coverage Results" MODIFIED="1545183879713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$forwardRescueInfo.coverage" NAME="forwardRescueInfo Coverage Results" MODIFIED="1541404184777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_tree3.coverage" NAME="draw_tree3 Coverage Results" MODIFIED="1545701393148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$configDB.coverage" NAME="configDB Coverage Results" MODIFIED="1541582751277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../jczl_interface/common" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$draw_tree.coverage" NAME="draw_tree Coverage Results" MODIFIED="1545620828707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$write_Log.coverage" NAME="write_Log Coverage Results" MODIFIED="1526881666288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Log" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$test_draw.coverage" NAME="test_draw Coverage Results" MODIFIED="1545633209627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$realTimeData.coverage" NAME="realTimeData Coverage Results" MODIFIED="1537842651151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$test.coverage" NAME="test Coverage Results" MODIFIED="1545975959073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$get_api.coverage" NAME="get_api Coverage Results" MODIFIED="1542682332497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$Run.coverage" NAME="Run Coverage Results" MODIFIED="1546422317494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$status.coverage" NAME="status Coverage Results" MODIFIED="1539832111895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zlopen" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$Flask_____RestfulServices_app_py_.coverage" NAME="Flask (../RestfulServices/app.py) Coverage Results" MODIFIED="1535442961262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$game.coverage" NAME="game Coverage Results" MODIFIED="1544690889820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Py2" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$Flask_____RestfulServices_app_py___1_.coverage" NAME="Flask (../RestfulServices/app.py) (1) Coverage Results" MODIFIED="1535442185047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$RestfulServices.coverage" NAME="RestfulServices Coverage Results" MODIFIED="1531810711767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$account_status.coverage" NAME="account_status Coverage Results" MODIFIED="1545289885504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$_global.coverage" NAME="_global Coverage Results" MODIFIED="1546420478974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestCase/AdPlatform/boss" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$auto__1_.coverage" NAME="auto (1) Coverage Results" MODIFIED="1544771821701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoPro" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$app_py.coverage" NAME="app.py Coverage Results" MODIFIED="1531810648848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$_global__1_.coverage" NAME="_global (1) Coverage Results" MODIFIED="1543305136802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestCase/AdPlatform/boss" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$requests_api.coverage" NAME="requests_api Coverage Results" MODIFIED="1542610267479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/robot_project/advert_interface/lib" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$get_online_device.coverage" NAME="get_online_device Coverage Results" MODIFIED="1541403473676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$testPy.coverage" NAME="testPy Coverage Results" MODIFIED="1542181028093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$get_online_device_to_xls_.coverage" NAME="get_online_device_to_xls_ Coverage Results" MODIFIED="1541403361340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../testProj" />
+    <SUITE FILE_PATH="coverage/HTTP_Api_Test$runAll.coverage" NAME="runAll Coverage Results" MODIFIED="1546409442754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../jczl_interface" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="HTTP_Api_Test" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="caseList.conf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestCase/caseList.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.modifyLogo.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyLogo.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comparators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lib/comparators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-589">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+              <folding>
+                <element signature="e#3931#5261#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="356" column="43" selection-start-line="356" selection-start-column="36" selection-end-line="356" selection-end-column="43" />
+              <folding>
+                <element signature="e#15#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_param_conf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lib/parse_param_conf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_global.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/_global.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="119" column="8" selection-start-line="119" selection-end-line="119" selection-end-column="17" />
+              <folding>
+                <element signature="e#15#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>auth_</find>
+      <find />
+      <find>getla</find>
+      <find>18458418559</find>
+      <find>15958021797</find>
+      <find>format</find>
+      <find>format__</find>
+      <find>print</find>
+      <find>smoke</find>
+      <find>tag</find>
+      <find>operation</find>
+      <find>saveContentInfo</find>
+      <find>savePlayCountKFK</find>
+      <find>/Ad</find>
+      <find>orderaccess</find>
+      <find>File</find>
+      <find>get_encode_str</find>
+      <find>/AdP</find>
+      <find>MessagePa</find>
+      <find>MessagePage</find>
+      <find>Login</find>
+      <find>json</find>
+      <find>verify_code</find>
+      <find>customern</find>
+      <find>\{</find>
+      <find>\$</find>
+      <find>HZ_21</find>
+      <find>app_customerGuid</find>
+      <find>customerId</find>
+      <find>getAmount</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>\Z</replace>
+      <replace>#\Z</replace>
+      <replace>get_day(-1,m)</replace>
+      <replace>-10</replace>
+      <replace>-11</replace>
+      <replace>-1</replace>
+      <replace>\$api_ver</replace>
+      <replace>dsp</replace>
+      <replace>v2</replace>
+      <replace>str</replace>
+      <replace>&quot;&quot;</replace>
+      <replace>#/A</replace>
+      <replace>app</replace>
+      <replace>#</replace>
+      <replace>smsVerifyCode</replace>
+      <replace>boss/app</replace>
+      <replace>user</replace>
+      <replace>phoneNumber</replace>
+      <replace>\$phoneNumber</replace>
+      <replace>#/Ad</replace>
+      <replace>params</replace>
+      <replace>#/AdP</replace>
+      <replace>ADV_INDUSTRY_DSPT</replace>
+      <replace>app_clienteleGuid</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\zq\PycharmProjects\HTTP_Api_Test\TestCase\ZBP_Service\YunTi_web</dir>
+      <dir>$PROJECT_DIR$/TestCase/AdPlatform/dsp</dir>
+      <dir>$PROJECT_DIR$/TestCase/paasPlatform</dir>
+      <dir>$PROJECT_DIR$/TestCase/AdPlatform/boss</dir>
+      <dir>$PROJECT_DIR$/TestCase/AdPlatform</dir>
+      <dir>$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case</dir>
+      <dir>$PROJECT_DIR$/TestCase/AdPlatform/boss/app</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../testProj" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getLable.yml" />
+        <option value="$PROJECT_DIR$/demoPro/dsp_api.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/dsp/web/orderaccess.orderRate.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/dsp/app/app.canlOrder.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/dsp/web/web.canlOrder.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/dsp/_global.py" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getAccountBalance.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.passwordLogin.yml" />
+        <option value="$PROJECT_DIR$/demoPro/parse_Json_ad.py" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/remote/remote.sendMessageByActivity.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/remote/remote.sendMessageByModelActivity.yml" />
+        <option value="$PROJECT_DIR$/API/paasPlatform_api.yml" />
+        <option value="$PROJECT_DIR$/TestCase/paasPlatform/account.allQueryAccount.yml" />
+        <option value="$PROJECT_DIR$/TestCase/paasPlatform/account.deleteAccount.yml" />
+        <option value="$PROJECT_DIR$/TestCase/paasPlatform/app.modifyAppInfo.yml" />
+        <option value="$PROJECT_DIR$/TestCase/paasPlatform/account.queryAccount.yml" />
+        <option value="$PROJECT_DIR$/TestCase/paasPlatform/account.addAccount.yml" />
+        <option value="$PROJECT_DIR$/API/dsp_api.yml" />
+        <option value="$PROJECT_DIR$/API/basePlatform_api.yml" />
+        <option value="$PROJECT_DIR$/API/boss_api.yml" />
+        <option value="$PROJECT_DIR$/demoPro/test.py" />
+        <option value="$PROJECT_DIR$/demoPro/ad_api.json" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyPhone.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyPassword.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.resetPassWord.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.verifyCodeLogin.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/common/sms.checkVerifyCode.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/common/sms.verifyCode.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.userCheck.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.setPayPassword.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.register.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getCustomerInfo.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.saveCustomerInfo.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.setPayPassword.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getActivityDetailList.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getActivityRewardList.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getAmount.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getBrokerageHistory.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getSimpleBrokerageInfo.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getBrokerageAndActivityInfo.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.queryAccountHistory.yml" />
+        <option value="$PROJECT_DIR$/../jczl_interface/config.ini" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getCouponList.yml" />
+        <option value="$PROJECT_DIR$/Lib/parse_param_conf.py" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/_global.py" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.insertCoupon.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getCustomerName.yml" />
+        <option value="$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyLogo.yml" />
+        <option value="$PROJECT_DIR$/Lib/comparators.py" />
+        <option value="$PROJECT_DIR$/Run.py" />
+        <option value="$PROJECT_DIR$/TestCase/caseList.conf" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="14" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="816" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="demoPro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
+              <item name="AdPlatform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
+              <item name="AdPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="boss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
+              <item name="AdPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="boss" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
+              <item name="AdPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="boss" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp_old_case" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTTP_Api_Test" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCase" type="462c0819:PsiDirectoryNode" />
+              <item name="paasPlatform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jczl_interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jczl_interface" type="462c0819:PsiDirectoryNode" />
+              <item name="testCase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jczl_interface" type="462c0819:PsiDirectoryNode" />
+              <item name="testFile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Py2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTTP_Api_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="advert_interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zhengqiang/robot_project/advert_interface/lib/requests_api.py" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../jczl_interface/common/configEmail.py" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+      </console-settings>
+    </option>
+    <option name="myIpythonEnabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform/boss/app" />
+      <recent name="$PROJECT_DIR$/../testProj/demo_interface_test" />
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform_tmp/boss" />
+      <recent name="$PROJECT_DIR$/demoPro" />
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform/boss" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform/boss/common" />
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform/boss/app" />
+      <recent name="$PROJECT_DIR$/API" />
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform/dsp/web" />
+      <recent name="$PROJECT_DIR$/TestCase/AdPlatform/dsp/app" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Run">
+    <configuration name="Run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HTTP_Api_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="_global" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HTTP_Api_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase/AdPlatform/boss" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCase/AdPlatform/boss/_global.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="comparators" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HTTP_Api_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lib/comparators.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="runAll" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="jczl_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../jczl_interface" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../jczl_interface/runAll.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="RestfulServices" type="Python.FlaskServer" factoryName="Flask server">
+      <option name="additionalOptions" value="--port 5500 --host 0.0.0.0" />
+      <option name="application" value="" />
+      <module name="RestfulServices" />
+      <option name="target" value="$PROJECT_DIR$/../RestfulServices/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer" factoryName="Flask server">
+      <option name="additionalOptions" value="" />
+      <option name="application" value="" />
+      <option name="flaskDebug" value="true" />
+      <module name="RestfulServices" />
+      <option name="target" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+    </configuration>
+    <configuration name="Unittests in testCreateUser.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="jczl_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../jczl_interface/testCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/../jczl_interface/testCase/testCreateUser.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.RestfulServices" />
+      <item itemvalue="Python.Run" />
+      <item itemvalue="Python._global" />
+      <item itemvalue="Python.runAll" />
+      <item itemvalue="Python tests.Unittests in testCreateUser.py" />
+      <item itemvalue="Python.comparators" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Run" />
+        <item itemvalue="Python._global" />
+        <item itemvalue="Python.comparators" />
+        <item itemvalue="Python.runAll" />
+        <item itemvalue="Python tests.Unittests in testCreateUser.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="980c3fbe-9ec5-4105-9d33-3d78d24300c8" name="Default" comment="" />
+      <created>1526633363903</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526633363903</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Doctests_in_realtime_status - 2018.12.05 at 17h 52m 40s.xml">
+      <configuration name="Doctests in realtime_status" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testCreateUser_py - 2019.01.02 at 14h 07m 35s.xml">
+      <configuration name="Unittests in testCreateUser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testCreateUser_py - 2019.01.02 at 14h 09m 08s.xml">
+      <configuration name="Unittests in testCreateUser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testCreateUser_py - 2019.01.02 at 14h 10m 11s.xml">
+      <configuration name="Unittests in testCreateUser.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="816" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3255814" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5100143" side_tool="true" weight="0.3577586" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4899857" visible="true" weight="0.28879312" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32848838" />
+      <window_info anchor="bottom" id="Python Console" order="3" sideWeight="0.49710566" weight="0.3255814" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49710566" weight="0.32848838" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4989899" visible="true" weight="0.22174536" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32331902" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49570817" weight="0.3922414" />
+      <window_info id="Favorites" order="0" sideWeight="0.5010101" side_tool="true" weight="0.20243205" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="0" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32848838" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4989899" visible="true" weight="0.22174536" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32848838" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3255814" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4899857" visible="true" weight="0.29041487" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32331902" />
+      <window_info anchor="right" id="Data View" order="0" />
+      <window_info anchor="bottom" id="Python Console" order="3" sideWeight="0.49710566" weight="0.3255814" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49570817" weight="0.39367816" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49710566" weight="0.32848838" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5100143" side_tool="true" weight="0.3577586" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32848838" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
+      <window_info id="Favorites" order="0" sideWeight="0.5010101" side_tool="true" weight="0.20243205" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="122" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.getCustomerInfo.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.register.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="49" column="15" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyPhone.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.modifyPhone.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="68" />
+          <folding>
+            <element signature="e#28#1857#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.passwordLogin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="15" lean-forward="true" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.resetPassWord.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyPassword.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.verifyCodeLogin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="106" />
+          <folding>
+            <element signature="e#32#2866#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.resetPassWord.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1402">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/sms.checkVerifyCode.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="92" />
+          <folding>
+            <element signature="e#32#2472#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.verifyCodeLogin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/sms.verifyCode.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/common/sms.verifyCode.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-826">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/common/sms.checkVerifyCode.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.userCheck.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/user.register.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/tmp_old_case/app.setPayPassword.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.userCheck.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.passwordLogin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/locust/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1548">
+          <caret line="233" column="6" selection-start-line="233" selection-start-column="6" selection-end-line="233" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/locust/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HttpRunner/httprunner/locusts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.register.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.saveCustomerInfo.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8020">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.setPayPassword.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getActivityDetailList.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="62" column="15" lean-forward="true" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getActivityRewardList.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="159" column="34" lean-forward="true" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/boss_api.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="987" column="10" selection-start-line="987" selection-start-column="4" selection-end-line="987" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getSimpleBrokerageInfo.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getBrokerageHistory.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getBrokerageAndActivityInfo.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.queryAccountHistory.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../jczl_interface/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../jczl_interface/testCase/testCreateUser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demoPro/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/paasPlatform/_global.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getCouponList.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="10" column="34" selection-start-line="10" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/check_result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-313">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/parse_param_conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-1199943126/_random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="173" column="56" selection-start-line="173" selection-start-column="56" selection-end-line="173" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.insertCoupon.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getAmount.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getCustomerInfo.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="65" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.getCustomerName.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="25" column="218" selection-start-line="25" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/_global.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="119" column="8" selection-start-line="119" selection-end-line="119" selection-end-column="17" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/AdPlatform/boss/app/app.modifyLogo.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/comparators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-589">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="e#3931#5261#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="356" column="43" selection-start-line="356" selection-start-column="36" selection-end-line="356" selection-end-column="43" />
+          <folding>
+            <element signature="e#15#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCase/caseList.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

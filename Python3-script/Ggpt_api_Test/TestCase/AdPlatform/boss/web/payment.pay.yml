@@ -1,0 +1,11 @@
+suiteName: payment.pay 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        orderGuid: 
+        payPassword:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["payment.code", 0]

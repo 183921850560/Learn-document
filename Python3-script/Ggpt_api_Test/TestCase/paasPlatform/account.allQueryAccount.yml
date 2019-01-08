@@ -1,0 +1,129 @@
+suiteName: account.allQueryAccount
+testCase:
+  - case 1:
+      testCaseName: 参数正确，获取帐号
+      tag: test
+      params:
+        pageNo: 1
+        pageSize: 15
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 0]
+        - len_eq: ["account.data.List", 15]
+  - case 2:
+      testCaseName: 参数pageNo校验，入参0值
+      tag: test
+      params:
+        pageNo: 0
+        pageSize: 10
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 3:
+      testCaseName: 参数pageNo校验，入参负值
+      tag: test
+      params:
+        pageNo: -10
+        pageSize: 10
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 4:
+      testCaseName: 参数pageNo校验，入参字母
+      tag: test
+      params:
+        pageNo: a
+        pageSize: 10
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 5:
+      testCaseName: 参数pageNo校验，入参类型错误，入参string
+      tag: test
+      params:
+        pageNo: "1"
+        pageSize: 10
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 0]
+  - case 6:
+      testCaseName: 参数pageNo校验，超过页码最大值(假定为int最大值)
+      tag: test
+      params:
+        pageNo: 2147483646
+        pageSize: 100
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 7:
+      testCaseName: 参数pageNo校验，超过int最大值
+      tag: test
+      params:
+        pageNo: 2147483648
+        pageSize: 100
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 8:
+      testCaseName: 参数pageSize校验，超过1000(文档规定最大1000)
+      tag: test
+      params:
+        pageNo: 1
+        pageSize: 1001
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 9:
+      testCaseName: 参数pageSize校验，0值
+      tag: test
+      params:
+        pageNo: 1
+        pageSize: 0
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 10:
+      testCaseName: 参数pageSize校验，负数
+      tag: test
+      params:
+        pageNo: 1
+        pageSize: -10
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 11:
+      testCaseName: 参数pageSize校验，参数类型错误，入参string
+      tag: test
+      params:
+        pageNo: 1
+        pageSize: "10"
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["account.code", 0]
+  - case 12:
+      testCaseName: 参数pageSize校验，入参字母
+      tag: test
+      params:
+        pageNo: 1
+        pageSize: a
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 13:
+      testCaseName: 参数pageSize校验，入参null
+      tag: test
+      params:
+        pageNo: 1
+        pageSize:
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]
+  - case 14:
+      testCaseName: 参数pageNo校验，入参null
+      tag: test
+      params:
+        pageNo:
+        pageSize: 10
+      validate:
+        - eq: ["status_code", 200]
+        - ne: ["account.code", 0]

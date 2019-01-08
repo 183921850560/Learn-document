@@ -1,0 +1,11 @@
+suiteName: activity.getActivityDetailList 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      params: 
+        clienteleGuid: 
+        type:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["activity.code", 0]

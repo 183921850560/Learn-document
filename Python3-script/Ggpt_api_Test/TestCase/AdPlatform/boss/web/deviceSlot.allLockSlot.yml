@@ -1,0 +1,13 @@
+suiteName: deviceSlot.allLockSlot 
+testCase:
+  - case 1:
+      testCaseName: 参数正确,
+      tag: smoke
+      json:
+        frequencyTimeGuids: 
+        nbhdGuid: 
+        slots: 
+        targetDate:   
+      validate:
+        - eq: ["status_code", 200]
+        - eq: ["deviceSlot.code", 0]

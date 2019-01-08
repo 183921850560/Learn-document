@@ -1,0 +1,545 @@
+app.addContentMaterial:
+  summary: 添加广告素材
+  method: post
+  path: /dsp/app/content/v2/addContentMaterial
+  json: 
+    contentGuid: # integer  # 广告内容Guid  
+    contentName: # string  # 广告内容  
+    materialInfoList: # array  # 素材列表  
+    orderGuid: # integer  # 订单Guid  
+    playModeCode: # string  # 播放模式  
+
+app.queryPlayMode:
+  summary: 查询播放模式
+  method: get
+  path: /dsp/app/content/v2/queryPlayMode
+  params: 
+    duration: # string  # optional duration  
+
+app.canlOrder:
+  summary: 取消订单
+  method: post
+  path: /dsp/app/order/v2/canlOrder
+  json: 
+    cancelDesc: # string  # 取消理由  
+    orderGuid: # integer  # 订单id  
+
+app.deleteOrder:
+  summary: 删除订单
+  method: delete
+  path: /dsp/app/order/v2/deleteOrders
+  params: 
+    guids: # string  # optional guids  
+
+app.getOrder:
+  summary: 获取订单详情
+  method: get
+  path: /dsp/app/order/v2/getOrder
+  params: 
+    guid: # integer  # optional guid  
+
+app.getOrderContent:
+  summary: 获取订单-广告内容
+  method: get
+  path: /dsp/app/order/v2/getOrderContent
+  params: 
+    orderGuid: # integer  # optional orderGuid  
+
+app.getOrderContentPage:
+  summary: 获取订单-广告内容分页列表
+  method: post
+  path: /dsp/app/order/v2/getOrderContentPage
+  json: 
+    execStatus: # string  # 广告内容状态  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+app.getOrderContentUsePage:
+  summary: 获取订单-广告内容分页列表（数据报告功能使用）
+  method: post
+  path: /dsp/app/order/v2/getOrderContentUsePage
+  json: 
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态集合，多个头号分隔  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+app.getOrderail:
+  summary: 获取订单失败详情
+  method: get
+  path: /dsp/app/order/v2/getOrderFail
+  params: 
+    guid: # integer  # optional guid  
+
+app.getOrderPage:
+  summary: 获取订单分页列表
+  method: post
+  path: /dsp/app/order/v2/getOrderPage
+  json: 
+    execStatus: # string  # 广告内容状态  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+app.saveOrder:
+  summary: 保存订单
+  method: post
+  path: /dsp/app/order/v2/saveOrder
+  json: 
+    ageCodes: # array  # 年龄筛选条件  
+    budgetAmount: # number  # 订单预算金额  
+    communitys: # array  # 小区筛选条件  
+    contentTime: # integer  # 订单广告内容时长  
+    couponGuid: # integer  # 使用优惠券的guid  
+    endDate: # string  # 订单选择结束时间  
+    nbhdGuids: # array  # 订单购买购买小区  
+    sexCode: # string  # 性别筛选条件  
+    startDate: # string  # 订单选择开始时间  
+    timeSlots: # array  # 订单购买频次  
+
+app.updateOrderStatus:
+  summary: 修改订单支付状态
+  method: post
+  path: /dsp/app/order/v2/updateOrderStatus
+  json: 
+    guids: # integer  # 订单主键  
+    orderStatus: # string  # 订单支付状态  
+
+content.addContentMaterial:
+  summary: 添加广告素材
+  method: post
+  path: /dsp/content/v2/addContentMaterial
+  json: 
+    contentGuid: # integer  # 广告内容Guid  
+    contentName: # string  # 广告内容  
+    materialInfoList: # array  # 素材列表  
+    orderGuid: # integer  # 订单Guid  
+    playModeCode: # string  # 播放模式  
+
+content.addContentMaterialCRM:
+  summary: 添加广告素材CRM系统使用
+  method: post
+  path: /dsp/content/v2/addContentMaterialCRM
+  json: 
+    contentGuid: # integer  # 广告内容Guid  
+    contentName: # string  # 广告内容  
+    materialInfoList: # array  # 素材列表  
+    orderGuid: # integer  # 订单Guid  
+    playModeCode: # string  # 播放模式  
+
+content.queryContentByOrder:
+  summary: 根据订单查询广告内容
+  method: get
+  path: /dsp/content/v2/queryContentByOrder
+  params: 
+    orderGuid: # integer  # optional orderGuid  
+
+content.queryContentByOrderCRM:
+  summary: 根据订单查询广告内容(CRM用)
+  method: get
+  path: /dsp/content/v2/queryContentByOrderCRM
+  params: 
+    orderGuid: # integer  # optional orderGuid  
+
+content.queryPlayMode:
+  summary: 查询播放模式
+  method: get
+  path: /dsp/content/v2/queryPlayMode
+  params: 
+    duration: # string  # optional duration  
+
+content.verify:
+  summary: 审核
+  method: post
+  path: /dsp/content/v2/verify
+  json: 
+    contentGuid: # integer  # 内容主键  
+    status: # integer  # 审核状态  
+
+material.batchDeleteMaterial:
+  summary: 批量删除素材
+  method: delete
+  path: /dsp/material/v2/batchDeleteMaterial
+  params: 
+    guids: # string  # optional guids  
+
+material.checkIfMaterialExists:
+  summary: 检查素材名是否存在
+  method: get
+  path: /dsp/material/v2/checkIfMaterialExists
+  params: 
+    materialName: # string  # optional materialName  
+
+material.manageMaterialCRM:
+  summary: 素材管理（CRM系统管理用）
+  method: post
+  path: /dsp/material/v2/manageMaterialCRM
+  json: 
+    checkStatus: # string  # 审核状态  
+    contentName: # string  # 广告名称  
+    customerName: # string  # 广告主名称  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderCode: # string  # 订单编号  
+    orderField: # string  # 需要排序的字段名  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+material.queryMaterialPage:
+  summary: 查询素材分页列表
+  method: post
+  path: /dsp/material/v2/queryMaterialPage
+  json: 
+    checkStatus: # string  # 审核状态  
+    createTimeEarlierThan: # string  # 上传时间早于  
+    createTimeLaterThan: # string  # 上传时间晚于  
+    materialCode: # string  # 素材编号  
+    materialName: # string  # 素材名  
+    materialType: # string  # 素材类型  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+material.saveAdvMaterial:
+  summary: 保存用户素材
+  method: post
+  path: /dsp/material/v2/saveAdvMaterial
+  json: 
+    materialCode: # string  # 素材编号  
+    materialContent: # string  # 素材内容  
+    materialHeight: # string  # 素材高度  
+    materialName: # string  # 素材名  
+    materialSize: # integer  # 大小  
+    materialTags: # string  # 素材标签，用于点位匹配  
+    materialType: # integer  # 素材类型  
+    materialWidth: # string  # 素材宽度  
+    md5: # string  # md5加密  
+    narrowImageUrl: # string  # 缩略图存放地址  
+    videoJson: # string  # 视频基本信息json  
+
+material.updateAdvMaterial:
+  summary: 更新用户素材
+  method: post
+  path: /dsp/material/v2/updateAdvMaterial
+  json: 
+    customerGuid: # integer  # 客户id  
+    guid: # integer  # 素材主键  
+    materialCode: # string  # 素材编号  
+    materialContent: # string  # 素材存放地址  
+    materialHeight: # string  # 素材高度  
+    materialName: # string  # 素材名  
+    materialSize: # integer  # 大小  
+    materialTags: # string  # 素材标签，用于点位匹配  
+    materialType: # integer  # 素材类型  
+    materialWidth: # string  # 素材宽度  
+    md5: # string  # md5加密  
+    narrowImageUrl: # string  # 缩略图存放地址  
+
+material.updateCheckStatus:
+  summary: 批量更新审核状态
+  method: post
+  path: /dsp/material/v2/updateCheckStatus
+  json: 
+    guids: # string  # 素材ids不能为空  
+    status: # string  # 审核状态  
+
+orderaccess.orderCanlReason:
+  summary: 订单取消原因
+  method: post
+  path: /dsp/orderaccess/v2/orderCanlReason
+  json: 
+    cancelDesc: # string  # 取消理由  
+    orderGuid: # integer  # 订单id  
+
+orderaccess.orderRate:
+  summary: 订单评价
+  method: post
+  path: /dsp/orderaccess/v2/orderRate
+  json: 
+    appraisal: # string  # 评价  
+    orderGuid: # integer  # 订单id  
+    rate: # string  # 评级  
+
+plan.querySendResult:
+  summary: 查询下发结果
+  method: post
+  path: /dsp/plan/v2/querySendResult
+  json: 
+    contentGuid: # integer  # 内容主键  
+    execStatus: # integer  # 结果状态  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+plan.reserving:
+  summary: 重新投放失败结果
+  method: post
+  path: /dsp/plan/v2/reserving
+  json: 
+    planCode: # string  # 下发计划编码  
+
+plan.startServing:
+  summary: 投放
+  method: post
+  path: /dsp/plan/v2/startServing
+  json: 
+    contentGuid: # integer  # 内容主键  
+
+web.getCommunityTree:
+  summary: 获取小区结构树-当前客户权限
+  method: get
+  path: /dsp/web/jczl/v2/getCommunityTree
+
+web.updateOrderStatus:
+  summary: 取消订单
+  method: post
+  path: /dsp/web/order/v2/canlOrder
+  json: 
+    cancelDesc: # string  # 取消理由  
+    orderGuid: # integer  # 订单id  
+
+web.deleteOrder:
+  summary: 删除订单
+  method: delete
+  path: /dsp/web/order/v2/deleteOrders
+  params: 
+    guids: # string  # optional guids  
+
+web.getHomeOrderSum:
+  summary: 获取首页符合状态的订单/点位总数
+  method: get
+  path: /dsp/web/order/v2/getHomeOrderSum
+  params: 
+    orderStatusList: # string  # optional orderStatusList  
+
+web.getOrder:
+  summary: 获取订单详情
+  method: get
+  path: /dsp/web/order/v2/getOrder
+  params: 
+    guid: # integer  # optional guid  
+
+web.getOrderByCode:
+  summary: 通过订单Code获取订单-广告内容详情（数据报告功能使用）
+  method: get
+  path: /dsp/web/order/v2/getOrderByCode
+  params: 
+    orderCode: # string  # optional orderCode  
+
+web.getOrderCRM:
+  summary: 获取订单详情(CRM用)
+  method: get
+  path: /dsp/web/order/v2/getOrderCRM
+  params: 
+    guid: # integer  # optional guid  
+
+web.getOrderContentPage:
+  summary: 获取订单-广告内容分页列表
+  method: post
+  path: /dsp/web/order/v2/getOrderContentPage
+  json: 
+    clienteleName: # string  # 广告主名称  
+    createTime: # string  # 订单支付时间，yyyy-MM-dd  
+    execStatus: # string  # 广告内容状态  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderCode: # string  # 订单Code  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+web.getOrderContentUsePage:
+  summary: 获取订单-广告内容分页列表（数据报告功能使用）
+  method: post
+  path: /dsp/web/order/v2/getOrderContentUsePage
+  json: 
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态集合，多个头号分隔  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+web.getOrderail:
+  summary: 获取订单失败详情
+  method: get
+  path: /dsp/web/order/v2/getOrderFail
+  params: 
+    guid: # integer  # optional guid  
+
+web.getOrderPage:
+  summary: 获取订单分页列表
+  method: post
+  path: /dsp/web/order/v2/getOrderPage
+  json: 
+    clienteleName: # string  # 广告主名称  
+    createTime: # string  # 订单支付时间，yyyy-MM-dd  
+    execStatus: # string  # 广告内容状态  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderCode: # string  # 订单Code  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+web.getOrderPageCRM:
+  summary: 获取订单分页列表(CRM用)
+  method: post
+  path: /dsp/web/order/v2/getOrderPageCRM
+  json: 
+    clienteleName: # string  # 广告主名称  
+    createTime: # string  # 订单支付时间，yyyy-MM-dd  
+    execStatus: # string  # 广告内容状态  
+    orderBy: # string  # 排序(DESC or ASC)  
+    orderCode: # string  # 订单Code  
+    orderField: # string  # 需要排序的字段名  
+    orderStatus: # string  # 订单支付状态  
+    pageIndex: # integer  # 当前页码  
+    pageSize: # integer  # 每页显示条数  
+
+web.saveOrder:
+  summary: 保存订单
+  method: post
+  path: /dsp/web/order/v2/saveOrder
+  json: 
+    ageCodes: # array  # 年龄筛选条件  
+    budgetAmount: # number  # 订单预算金额  
+    communitys: # array  # 小区筛选条件  
+    contentTime: # integer  # 订单广告内容时长  
+    couponGuid: # integer  # 使用优惠券的guid  
+    endDate: # string  # 订单选择结束时间  
+    nbhdGuids: # array  # 订单购买购买小区  
+    sexCode: # string  # 性别筛选条件  
+    startDate: # string  # 订单选择开始时间  
+    timeSlots: # array  # 订单购买频次  
+
+web.updateOrderStatus:
+  summary: 修改订单支付状态
+  method: post
+  path: /dsp/web/order/v2/updateOrderStatus
+  json: 
+    guids: # integer  # 订单主键  
+    orderStatus: # string  # 订单支付状态  
+
+
+remote.queryContent:
+  summary: 查询广告内容
+  method: get
+  path: /dsp/remote/content/v2/queryContent
+  params: 
+    contentGuid: # integer  # optional contentGuid  
+
+remote.queryContentByOrder:
+  summary: 根据订单查询广告内容
+  method: post
+  path: /dsp/remote/content/v2/queryContentByOrder
+  json: 
+    orderGuids: # array  required
+
+remote.getOrder:
+  summary: 获取订单详情
+  method: get
+  path: /dsp/remote/order/v2/getOrder
+  params: 
+    guid: # integer  # optional guid  
+
+remote.getOrderByGuid:
+  summary: 获取订单主体信息
+  method: get
+  path: /dsp/remote/order/v2/getOrderByGuid
+  params: 
+    guid: # integer  # optional guid  
+
+remote.getOrderCodesByStatus:
+  summary: 获取订单Code集合
+  method: get
+  path: /dsp/remote/order/v2/getOrderCodesByStatusJob
+  params: 
+    deadline: # string  # optional yyyy-MM-dd  
+    status: # string  # optional 多个状态','号分隔  
+
+remote.getOrderForServing:
+  summary: 获取订单详情-下发接口用
+  method: get
+  path: /dsp/remote/order/v2/getOrderForServing
+  params: 
+    guid: # integer  # optional guid  
+
+remote.getOrderGuidListByStatusCRM:
+  summary: 输入订单状态，获取订单编号，
+  method: get
+  path: /dsp/remote/order/v2/getOrderGuidListByStatusCRM
+  params: 
+    status: # string  # optional status  
+
+remote.getOrderGuidsByStatus:
+  summary: 获取订单编号
+  method: get
+  path: /dsp/remote/order/v2/getOrderGuidsByStatus
+  params: 
+    status: # string  # optional status  
+
+remote.getOrderListByGuid:
+  summary: 获取订单主体信息
+  method: get
+  path: /dsp/remote/order/v2/getOrderListByGuid
+  params: 
+    guids: # string  # optional guids  
+
+remote.getOrderListByGuidCRM:
+  summary: 获取订单主体信息
+  method: get
+  path: /dsp/remote/order/v2/getOrderListByGuidCRM
+  params: 
+    guids: # string  # optional guids  
+
+remote.getOrderStatus:
+  summary: 获取订单的支付信息
+  method: get
+  path: /dsp/remote/order/v2/getOrderSimpleInfo
+  params: 
+    guid: # integer  # optional guid  
+
+remote.getOrderSimpleInfoActivity:
+  summary: 获取订单的支付信息
+  method: get
+  path: /dsp/remote/order/v2/getOrderSimpleInfoActivity
+  params: 
+    clienteleGuid: # integer  # optional clienteleGuid  
+    guid: # integer  # optional guid  
+
+remote.updateOrderContentStatus:
+  summary: 修改订单-广告内容状态
+  method: post
+  path: /dsp/remote/order/v2/updateOrderContentStatus
+  json: 
+    guids: # integer  # 订单主键  
+    orderStatus: # string  # 订单支付状态  
+
+remote.updateOrderStatus:
+  summary: 修改订单支付状态
+  method: post
+  path: /dsp/remote/order/v2/updateOrderStatus
+  json: 
+    guids: # integer  # 订单主键  
+    orderStatus: # string  # 订单支付状态  
+
+remote.startServing:
+  summary: 投放
+  method: post
+  path: /dsp/remote/plan/v2/startServing
+  json: 
+    contentGuid: # integer  # 内容主键  
+
+remote.updateBosResult:
+  summary: 更新接入返回状态
+  method: post
+  path: /dsp/remote/plan/v2/updateBosResult
+  json: 
+    bosResultMessageReqs: # array

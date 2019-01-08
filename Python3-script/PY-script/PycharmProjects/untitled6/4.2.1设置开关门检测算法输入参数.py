@@ -1,0 +1,155 @@
+# -*-coding:utf-8 -*-
+import json
+import requests
+import traceback
+'''
+Author:gxl
+Headline:4.2.1 设置开关门检测算法输入参数
+Time：2018-05-21
+'''
+
+#触发的URL
+url = 'http://eag-test.yun-ti.com:8100/api/v2/door/setconfig'
+
+#添加http报头信息
+header = {'Content-Type': 'application/json'}
+
+#添加触发的body（格式为json形式）
+databody = {
+	"duSerial":"139615688",
+	"sensitivityParamList":[
+		{
+			"sensitivityIndex":0,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":1,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":2,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":3,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":4,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":5,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":6,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":7,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":8,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":9,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":10,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":11,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":12,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":13,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":14,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":15,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":16,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":17,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":18,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":19,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":20,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":21,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":22,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":23,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":24,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":25,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":26,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":27,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":28,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":29,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":30,
+			"sensitivityValue":100
+		},
+		{
+			"sensitivityIndex":31,
+			"sensitivityValue":100
+		}
+	]
+}
+value = json.dumps(databody)
+request_type = requests.post(url, data=value, headers=header)
+values=request_type.text
+print(values)
+print('status_code:', request_type.status_code)
