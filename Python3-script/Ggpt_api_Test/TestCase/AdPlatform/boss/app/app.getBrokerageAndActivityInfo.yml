@@ -1,8 +1,0 @@
-suiteName: app.getBrokerageAndActivityInfo 
-testCase:
-  - case 1:
-      testCaseName: 参数正确, 获取所有佣金及佣金活动
-      tag: test
-      validate:
-        - eq: ["status_code", 200]
-        - eq: ["app.code", 0]

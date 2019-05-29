@@ -1,8 +1,0 @@
-2018-11-19 14:18:49,172 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/resetPwd
-2018-11-19 14:18:49,356 - root - INFO - data:{"operatorUserId": 20043, "pwd": "d8c02c1a0bf4d80b85a612df36e86050", "userGuid": 20043} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-19 14:18:49,356 - root - INFO - Response data: {'code': 40000003, 'data': None, 'message': '用户没有操作权限！标识为:20043的用户不能操作标识为:20043的用户!'} 
-2018-11-19 14:18:49,366 - root - INFO - ================================================================================================================================================================
-2018-11-19 14:18:49,369 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/resetPwd
-2018-11-19 14:18:49,458 - root - INFO - data:{"operatorUserId": 888888888, "pwd": "d8c02c1a0bf4d80b85a612df36e86050", "userGuid": 20043} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-19 14:18:49,458 - root - INFO - Response data: {'code': 40000001, 'data': None, 'message': '操作员不存在！操作员编号:888888888'} 
-2018-11-19 14:18:49,458 - root - INFO - ================================================================================================================================================================

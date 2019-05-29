@@ -1,8 +1,0 @@
-2018-11-13 17:16:19,910 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/fetchUsersByRoleCodes
-2018-11-13 17:16:19,979 - root - INFO - data:{'roleCodes': '[admin]'} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-13 17:16:19,980 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！JSON请求数据解析失败,请检查请求数据是否正确！'} 
-2018-11-13 17:16:19,980 - root - INFO - ================================================================================================================================================================
-2018-11-13 17:16:19,983 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/fetchUsersByRoleCodes
-2018-11-13 17:16:20,008 - root - INFO - data:{'roleCodes': '[0]'} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-13 17:16:20,008 - root - INFO - Response data: {'code': 0, 'data': [], 'message': '操作成功！'} 
-2018-11-13 17:16:20,008 - root - INFO - ================================================================================================================================================================

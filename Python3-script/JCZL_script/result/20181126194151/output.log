@@ -1,4 +1,0 @@
-2018-11-26 19:41:51,253 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/neighborhood/updateNbhd
-2018-11-26 19:41:51,309 - root - INFO - data:{"guid": 11123, "remark": "\u8fd9\u662f\u5218\u6ed4\u6ed4\u7684\u4f4f\u5740"} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-26 19:41:51,310 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！输入小区ID有误(11123)！无法查询到小区！'} 
-2018-11-26 19:41:51,332 - root - INFO - ================================================================================================================================================================

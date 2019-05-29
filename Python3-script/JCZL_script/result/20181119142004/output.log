@@ -1,8 +1,0 @@
-2018-11-19 14:20:05,892 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/resetPwd
-2018-11-19 14:20:06,725 - root - INFO - data:{"operatorUserId": 43, "pwd": "d8c02c1a0bf4d80b85a612df36e86050", "userGuid": 20043} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-19 14:20:06,726 - root - INFO - Response data: {'code': 0, 'data': None, 'message': '操作成功！'} 
-2018-11-19 14:20:06,726 - root - INFO - ================================================================================================================================================================
-2018-11-19 14:20:06,727 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/resetPwd
-2018-11-19 14:20:06,951 - root - INFO - data:{"operatorUserId": 888888888, "pwd": "d8c02c1a0bf4d80b85a612df36e86050", "userGuid": 20043} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-19 14:20:06,951 - root - INFO - Response data: {'code': 40000001, 'data': None, 'message': '操作员不存在！操作员编号:888888888'} 
-2018-11-19 14:20:06,951 - root - INFO - ================================================================================================================================================================

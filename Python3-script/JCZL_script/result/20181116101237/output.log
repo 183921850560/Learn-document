@@ -1,8 +1,0 @@
-2018-11-16 10:12:37,734 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/modifyPwd
-2018-11-16 10:12:37,881 - root - INFO - data:{"oldPwd": "1bdb67eb4b854e7b20a147989aeaa4d8", "newPwd": "z1234567890", "operatorUserId": 19965} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-16 10:12:37,881 - root - INFO - Response data: {'code': 0, 'data': None, 'message': '操作成功！'} 
-2018-11-16 10:12:37,881 - root - INFO - ================================================================================================================================================================
-2018-11-16 10:12:37,882 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/modifyPwd
-2018-11-16 10:12:37,935 - root - INFO - data:{"oldPwd": "15145515415455", "newPwd": "123456789.0", "operatorUserId": 19965} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-16 10:12:37,935 - root - INFO - Response data: {'code': 40040002, 'data': None, 'message': '密码不正确！'} 
-2018-11-16 10:12:37,935 - root - INFO - ================================================================================================================================================================

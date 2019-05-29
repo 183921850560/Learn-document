@@ -1,4 +1,0 @@
-2018-11-12 15:51:18,207 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/saveCurUser
-2018-11-12 15:51:18,323 - root - INFO - data:{'guid': 19964, 'address': '陕西省西安市雁塔区200号', 'mobilephone': '18392184523', 'telephone': '057185235622', 'userName': '刘滔滔', 'userCode': '11120', 'operatorUserId': 1, 'remark': '这是修改guid为19964用户的信息', 'expireDate': '2018-12-30', 'loginSmsVarify': 5, 'sessionTimeOut': 0} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-12 15:51:18,323 - root - INFO - Response data: {'code': 0, 'data': None, 'message': '操作成功！'} 
-2018-11-12 15:51:18,324 - root - INFO - ================================================================================================================================================================

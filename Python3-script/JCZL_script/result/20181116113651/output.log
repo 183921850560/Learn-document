@@ -1,4 +1,0 @@
-2018-11-23 10:47:01,540 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/modifyPwd
-2018-11-23 10:47:04,031 - root - INFO - data:{"oldPwd": "a5aed7c6c51d00867501f8f709c0a382", "newPwd": "d5f99ae33a2b8124f693b385e7ef5681", "operatorUserId": 19965} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-23 10:47:04,076 - root - INFO - Response data: {'code': 40000004, 'data': None, 'message': '数据不存在！用户标识为：19965'} 
-2018-11-23 10:47:04,151 - root - INFO - ================================================================================================================================================================

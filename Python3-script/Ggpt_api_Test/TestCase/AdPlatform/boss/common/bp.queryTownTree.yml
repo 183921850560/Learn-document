@@ -1,8 +1,0 @@
-suiteName: bp.queryTownTree 
-testCase:
-  - case 1:
-      testCaseName: 参数正确,
-      tag: smoke  
-      validate:
-        - eq: ["status_code", 200]
-        - eq: ["bp.code", 0]

@@ -1,4 +1,0 @@
-2018-11-05 16:50:10,076 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/saveUser
-2018-11-05 16:50:10,145 - root - INFO - data:{'guid': 110, 'address': '陕西省西安市雁塔区222号', 'unitGuid': 19963, 'mobilephone': '18392185056', 'telephone': '057185235621', 'userName': '龚小龙', 'userPwsd': 'g183921585056', 'userCode': '22248', 'roleGuids': [8, 9], 'operatorUserId': 1, 'remark': '这是修改22242用户的信息', 'expireDate': '2018-11-30', 'userGroupGuid': 11, 'loginSmsVarify': 5, 'sessionTimeOut': 1} response status: 200  header:{'content-type': 'application/json', 'appCode': 'TLW', 'verifyCode': '06b97038-e6e0-4bd0-a875-fd0fb25560e8'} files: {} timeout:15
-2018-11-05 16:50:10,146 - root - INFO - Response data: {'code': 40000004, 'data': None, 'message': '数据不存在！要操作的用户不存在！'} 
-2018-11-05 16:50:10,146 - root - INFO - ================================================================================================================================================================

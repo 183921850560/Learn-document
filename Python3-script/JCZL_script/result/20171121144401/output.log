@@ -1,1 +1,0 @@
-2017-11-21 14:44:01,100 - root - ERROR - (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''userCode',`userPwd`) VALUES ('Admin,'tes010101')' at line 1")

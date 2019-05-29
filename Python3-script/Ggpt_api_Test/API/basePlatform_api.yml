@@ -1,7 +1,0 @@
-user.deleteUser:
-  summary: 删除用户
-  path: basePlatform/user/deleteUser
-  method: delete
-  json:
-    guid: $app_guid
-    operatorUserId: 43

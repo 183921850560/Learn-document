@@ -1,8 +1,0 @@
-suiteName: remote.insertAccountCouponByGuid 
-testCase:
-  - case 1:
-      testCaseName: 参数正确,
-      tag: smoke  
-      validate:
-        - eq: ["status_code", 200]
-        - eq: ["remote.code", 0]

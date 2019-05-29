@@ -1,8 +1,0 @@
-2019-01-03 15:05:29,007 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/authUserLift
-2019-01-03 15:05:29,079 - root - INFO - data:{"dists": [{"guid": 22, "levelNum": 6}], "operatorUserId": 1, "userGuid": 458, "type": "lift", "userGroupGuid": 0} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2019-01-03 15:05:29,098 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！要操作的用户不存在，请确认！'} 
-2019-01-03 15:05:29,108 - root - INFO - ================================================================================================================================================================
-2019-01-03 15:05:29,132 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/authUserLift
-2019-01-03 15:05:29,154 - root - INFO - data:{"dists": [{"guid": 22, "levelNum": 7}], "operatorUserId": 999999999999999999, "userGuid": 458, "type": "lift", "userGroupGuid": 0} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2019-01-03 15:05:29,154 - root - INFO - Response data: {'code': -1, 'data': None, 'message': '后台服务出错，请联系管理员！'} 
-2019-01-03 15:05:29,154 - root - INFO - ================================================================================================================================================================

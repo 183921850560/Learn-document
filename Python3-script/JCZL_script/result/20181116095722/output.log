@@ -1,8 +1,0 @@
-2018-11-16 09:57:22,451 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/authUserLift
-2018-11-16 09:57:22,613 - root - INFO - data:{"dists": [{"guid": 22, "levelNum": 6}], "operatorUserId": 1, "userGuid": 458, "type": "lift", "userGroupGuid": 0} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-16 09:57:22,613 - root - INFO - Response data: {'code': 0, 'data': None, 'message': '操作成功！'} 
-2018-11-16 09:57:22,613 - root - INFO - ================================================================================================================================================================
-2018-11-16 09:57:22,615 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/authUserLift
-2018-11-16 09:57:22,631 - root - INFO - data:{"dists": [{"guid": 22, "levelNum": 7}], "operatorUserId": 999999999999999999, "userGuid": 458, "type": "lift", "userGroupGuid": 0} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-16 09:57:22,631 - root - INFO - Response data: {'code': -1, 'data': None, 'message': '后台服务出错，请联系管理员！'} 
-2018-11-16 09:57:22,631 - root - INFO - ================================================================================================================================================================

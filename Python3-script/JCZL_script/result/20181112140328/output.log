@@ -1,4 +1,0 @@
-2018-11-12 14:03:28,441 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/createUser
-2018-11-12 14:03:28,588 - root - INFO - data:{'address': '陕西省西安市未央区366号', 'unitGuid': 366, 'mobilephone': '13720498681', 'telephone': '057185235621', 'userName': '龚小龙', 'userCode': '9999', 'userPwsd': '1bdb67eb4b854e7b20a147989aeaa4d8', 'roleGuids': [8], 'operatorUserId': 1, 'remark': '这是第一个用例', 'expireDate': '2018-12-20', 'userGroupGuid': 123456789, 'loginSmsVarify': 5, 'sessionTimeOut': 1} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-12 14:03:28,588 - root - INFO - Response data: {'code': 0, 'data': {'userGuid': 19985}, 'message': '操作成功！'} 
-2018-11-12 14:03:28,588 - root - INFO - ================================================================================================================================================================

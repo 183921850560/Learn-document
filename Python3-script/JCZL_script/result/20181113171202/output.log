@@ -1,4 +1,0 @@
-2018-11-13 17:12:02,927 - root - INFO - set url:http://10.10.0.244:9999/basePlatform/user/fetchUsersByRoleGuids
-2018-11-13 17:12:02,952 - root - INFO - data:{'roleCodes': [0]} response status: 200  header:{'content-type': 'application/json', 'appCode': 'XYWPT', 'verifyCode': 'fa8ea9cf-354f-420b-a095-5781c826afef'} files: {} timeout:15
-2018-11-13 17:12:02,953 - root - INFO - Response data: {'code': 40000002, 'data': None, 'message': '接口参数不正确！角色标识为空'} 
-2018-11-13 17:12:02,953 - root - INFO - ================================================================================================================================================================
