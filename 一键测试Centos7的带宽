@@ -1,0 +1,12 @@
+1.  安装测试带宽工具
+
+Wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+
+2. 赋予权限
+chmod 777 speedtest.py
+mv speedtest.py /usr/local/bin/speedtest-cli
+
+3. 执行脚本
+speedtest-cli --share
+
+    
