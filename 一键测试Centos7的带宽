@@ -1,5 +1,16 @@
-1.  安装测试带宽工具
+一．前期准备
+1. 带宽：指单位时间能通过链路的数据量。通常以bps来表示，即每秒可传输之位数
+*********bps, bit是数据传输的单位
+*********Byte(B), KB, MB是文件大小的单位
 
+2. bps, Byte, KB, MB之间的转换
+   1Mbps(1M带宽）= 125000字节/秒=122.070KB/秒=0.119MB/秒
+   10Mbps（10M带宽）= 1.19MB
+   100Mbps（100M带宽）= 11.9MB
+   1Gbps（1024M带宽）=119MB 
+   
+二. 测试centos7的带宽
+1.  安装测试带宽工具
 Wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
 
 2. 赋予权限
@@ -8,5 +19,3 @@ mv speedtest.py /usr/local/bin/speedtest-cli
 
 3. 执行脚本
 speedtest-cli --share
-
-    
